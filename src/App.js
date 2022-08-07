@@ -1,6 +1,6 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Skills, Contact } from "./components";
+import { Navigation, Home, Page2, Page3 } from "./components";
 import React from "react";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/page2" element={<Page2 />} />
+          <Route path="/page3" element={<Page3 />} />
         </Routes>
       </Router>
     </div>

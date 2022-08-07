@@ -1,6 +1,6 @@
 import React from "react";
 
-function Skill() {
+function Page2() {
   return (
     <div className="skill">
       <div className="container">
@@ -31,4 +31,4 @@ function Skill() {
   );
 }
 
-export default Skill;
+export default Page2;
