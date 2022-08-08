@@ -2,7 +2,7 @@ import React from "react";
 
 function Page2() {
   return (
-    <div className="skill">
+    <div className="page2">
       <div className="container">
         <div className="row align-items-center my-4">
           <div className="col-sm-6 pl-4 my-5">
