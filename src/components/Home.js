@@ -4,15 +4,7 @@ function Home() {
   return (
     <div className="home">
       <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-md-6">
-            <img
-              className="img-fluid"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
-              alt="hills"
-            />
-          </div>
-          <div className="col-sm-5 ml-5 my-5">
+      <div className="col-sm-12  my-5">
             <h1 className="font-weight-light ">Hi!</h1>
             <form>
               <input
@@ -25,6 +17,80 @@ function Home() {
             </form>
             <p>Are we ready to put text here?</p>
           </div>
+        <div className="row align-items-center my-5">          
+          <div className="col-md-3">
+            <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          <div className="col-md-3">
+          <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          <div className="col-md-3">
+          <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          <div className="col-md-3">
+          <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          <div className="col-md-3">
+          <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          <div className="col-md-3">
+          <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          <div className="col-md-3">
+          <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          <div className="col-md-3 my-5">
+          <button>
+            <img
+              className="img-fluid "
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              alt="hills"
+            />
+            </button>
+          </div>
+          
           <div className="col-sm-12 my-4">
             <h1 className="font-weight-light">About:</h1>
             <p>more Text or paragraph here!</p>
