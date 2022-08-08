@@ -1,4 +1,6 @@
 # hiking_for_stars
 initial commit
 
-check in 
+### Endpoints
+Method | Path | Purpose | 
+------------- | ------------- | ------------ 
