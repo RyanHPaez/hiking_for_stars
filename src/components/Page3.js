@@ -2,7 +2,7 @@ import React from "react";
 
 function Page3() {
   return (
-    <div className="contact">
+    <div className="page3">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-sm-12 shadow-lg p-1 mb-1">
@@ -13,7 +13,7 @@ function Page3() {
             />
 
             <div className="col-sm-12">
-              <h1 className="font-weight-light">Contact</h1>
+              <h1 className="font-weight-light">New Label Here</h1>
 
               <p>any of us:</p>
 

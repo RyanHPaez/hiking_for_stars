@@ -13,7 +13,7 @@ function Navigation() {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
-                  page 1
+                  Home
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
@@ -26,7 +26,12 @@ function Navigation() {
                 <NavLink className="nav-link" to="/page3">
                 page 3
                 </NavLink>
-              </li>              
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Page4">
+                Login
+                </NavLink>
+              </li>          
             </ul>
           </div>
         </div>

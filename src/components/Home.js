@@ -14,15 +14,20 @@ function Home() {
           </div>
           <div className="col-sm-5 ml-5 my-5">
             <h1 className="font-weight-light ">Hi!</h1>
-            <p>
-              Are we ready to put text here?
-            </p>
+            <form>
+              <input
+                // ref={term}
+                type="text"
+                placeholder="Where to?"
+                // onChange={(e)=>setInput(e.target.value)}
+              />
+              <button>Search</button>
+            </form>
+            <p>Are we ready to put text here?</p>
           </div>
           <div className="col-sm-12 my-4">
             <h1 className="font-weight-light">About:</h1>
-            <p>
-              more Text or paragraph here!
-            </p>
+            <p>more Text or paragraph here!</p>
             <p>- Team Hangout</p>
           </div>
         </div>
