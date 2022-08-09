@@ -4,6 +4,7 @@ import { Navigation, Home, Page2, Page3, Page4 } from "./components";
 import React from "react";
 
 function App() {
+  
   return (
     <div className="App">
       <Router>
