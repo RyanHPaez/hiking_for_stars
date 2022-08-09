@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/userSchema');
+const Place = require('../models/PlacesSchema');
 
 router.get('/', async (req, res) => {
-    User.find()
+    Place.find()
         .then(foundUsers => {
             console.log(foundUsers)
         })
     res.render('index',
       {
-        users: User,
+        places: Place,
         title: 'Index Page'
       }
     )
