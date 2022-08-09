@@ -18,7 +18,7 @@ function Home() {
             <p>Are we ready to put text here?</p>
           </div>
         <div className="row align-items-center my-5">          
-          <div className="col-md-3">
+          <div className="col-md-3 my-2">
             <button>
             <img
               className="img-fluid "
@@ -27,7 +27,7 @@ function Home() {
             />
             </button>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2">
           <button>
             <img
               className="img-fluid "
@@ -36,7 +36,7 @@ function Home() {
             />
             </button>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2">
           <button>
             <img
               className="img-fluid "
@@ -45,7 +45,7 @@ function Home() {
             />
             </button>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2">
           <button>
             <img
               className="img-fluid "
@@ -54,7 +54,7 @@ function Home() {
             />
             </button>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2">
           <button>
             <img
               className="img-fluid "
@@ -63,7 +63,7 @@ function Home() {
             />
             </button>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2">
           <button>
             <img
               className="img-fluid "
@@ -72,7 +72,7 @@ function Home() {
             />
             </button>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2">
           <button>
             <img
               className="img-fluid "
@@ -81,7 +81,7 @@ function Home() {
             />
             </button>
           </div>
-          <div className="col-md-3 my-5">
+          <div className="col-md-3 my-2">
           <button>
             <img
               className="img-fluid "
