@@ -6,6 +6,7 @@ const { Schema } = mongoose
 const userSchema = new Schema({
   name: { type: String },
   password: { type: String },
+  email: {type: String},
   image: { type: String, default: 'http://placehold.it/500x500.png'}
 })
 
