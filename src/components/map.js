@@ -15,8 +15,17 @@ fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.219940108
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
 
-	const options = {
+	const options= {
 		method: 'POST',
+		terms:"",
+		id: "", 
+		url:"",
+		name:"",
+		city:"",
+		region: "",
+		country: "",
+		difficulty: "",
+		thumbnail: "",
 		
 		headers: {
 			'X-RapidAPI-Key': API_Key,

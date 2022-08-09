@@ -1,4 +1,5 @@
 import React from "react";
+// import SearchBar from './SearchBar'
 
 function Page2() {
   return (
