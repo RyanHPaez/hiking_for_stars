@@ -1,31 +1,41 @@
-import React from "react";
 
-function Page3() {
+import { useEffect, useState } from 'react'
+import Gallery from './Gallery'
+import SearchBar from './SearchBar'
+
+function App() {
+  let [searchTerm, setSearchTerm] = useState('')
+  let [data, setData] = useState([])
+  let [message, setMessage] = useState('Search for Music!')
+
+  useEffect(() => {
+    if (searchTerm) {
+      document.title=`${searchTerm} Music`
+      const fetchData = async () => {
+        const response = await fetch(`https://itunes.apple.com/search?term=${searchTerm}`)
+        const resData = await response.json()
+        if(resData.results.length > 0) {
+          setData(resData.results)
+        } else {
+          setMessage('Not Found')
+        }
+      }
+      fetchData()
+  }
+  }, [searchTerm])
+
+  const handleSearch = (e, term) => {
+    e.preventDefault()
+    setSearchTerm(term)
+  }
+
   return (
-    <div className="page3">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-sm-12 shadow-lg p-1 mb-1">
-            <img
-              className="rounded-circle my-3"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2L9Cs5Ckge8P0041ykigrZY9nzuI5pzw01g&usqp=CAU"
-              alt="us"
-            />
-
-            <div className="col-sm-12">
-              <h1 className="font-weight-light">New Label Here</h1>
-
-              <p>any of us:</p>
-
-              <a href={"https://www.linkedin.com/in/ryan-paez/"}>
-                Click here to go to my LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="App">
+      <SearchBar handleSearch={handleSearch} />
+      {message}
+      <Gallery data={data} />
     </div>
   );
 }
 
-export default Page3;
+export default App;
