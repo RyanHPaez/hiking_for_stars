@@ -1,4 +1,8 @@
-users.get('/', (req, res) => {
+const express = require('express');
+const router = express.Router();
+const User = require('../models/userSchema');
+
+router.get('/', async (req, res) => {
     User.find()
         .then(foundUsers => {
             console.log(foundUsers)
@@ -10,3 +14,5 @@ users.get('/', (req, res) => {
       }
     )
 })
+
+module.exports = router;
