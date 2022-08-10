@@ -11,7 +11,7 @@ function App() {
   const [placeData, setPlaceData] = useState([])
   useEffect( () => {
     axios
-      .get(`http:localhhose:3005/app/places`)
+      .get(`http:localhost:3005/app/places`)
       .then ((response) => setPlaceData(response.data));
   })
   

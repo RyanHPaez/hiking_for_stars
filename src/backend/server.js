@@ -9,7 +9,7 @@ const uri = process.env.MONGO_URI
 
 //connect to mongoose
 mongoose.connect('mongodb+srv://newUser1:8570Abr@h@m09@cluster0.mupyl.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}, 
-  () => { console.log('connected to mongo: on PORT 3001') })
+  () => { console.log('connected to mongo: on PORT 3005') })
 
   
 
