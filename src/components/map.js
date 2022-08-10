@@ -1,7 +1,23 @@
 
 import React from "react";
+import Page2 from "./Page2";
+import SearchBar from "./SearchBar";
+//map function for the search bar 
+function Map(props){
 
+    const display = props.data.map((terms, index) => {
+        return (
+            <POST terms={terms} key={index} />
+        )
+    })
 
+    return (
+        <div>
+            {display}
+        </div>
+    )
+}
+//get the api for the trails data 
 const options = {
 	method: 'GET',
 	headers: {
@@ -14,18 +30,53 @@ fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.219940108
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
-
-	const options= {
+//the method to get the search function working 
+	const searchTerm = {
 		method: 'POST',
-		terms:"",
-		id: "", 
-		url:"",
-		name:"",
-		city:"",
-		region: "",
-		country: "",
-		difficulty: "",
-		thumbnail: "",
+		terms:{
+			type:String,
+			require:true,
+
+		
+		id:{
+			type:String,
+			require:false,
+			
+		},
+		url:{
+			type:String,
+			require:false,
+
+		},
+		name:{
+			type:String,
+			require:false,
+
+		},	
+		city:{
+			type:String,
+			require:true,
+
+		},	
+		region:{
+			type:String,
+			require:true,
+
+		},	
+		country:{
+			type:String,
+			require:false,
+
+		},
+		difficulty:{
+			type:String,
+			require:true,
+
+		},thumbnail:{
+			type:String,
+			require:false,
+
+		}},
 		
 		headers: {
 			'X-RapidAPI-Key': API_Key,
@@ -38,5 +89,5 @@ fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.219940108
 		.then(response => console.log(response))
 		.catch(err => console.error(err));
 	
-	
+
     export default Map;
