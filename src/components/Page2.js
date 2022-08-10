@@ -31,7 +31,7 @@ function App();
       setSearchTerm(term)
     }
     return (
-      <div className="Search">
+      <div className="App">
         <SearchBar handleSearch={handleSearch} />
         {message}
         <Map data={data} />
