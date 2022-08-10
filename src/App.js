@@ -9,11 +9,13 @@ import { Places } from "./components"
 
 function App() {
 
+
   const [placeData, setPlaceData] = useState([])
   useEffect( () => {
     axios
       .get(`http:localhost:3005/app/places`)
       .then ((response) => setPlaceData(response.data));
+<<<<<<< HEAD
   }, [])
   // const getData = async() => {
   //   const {placeData} =await axios.get(`http:localhost:3005/app/places`);
@@ -25,6 +27,11 @@ function App() {
   // }, [])
 
 
+=======
+  })
+
+  
+>>>>>>> af3967d9eae1d8ecb44f19d86c7769013b5ef7c2
   return (
     <div className="App">
       <PlaceDataContext.Provider value={placeData}>
