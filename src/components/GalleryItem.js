@@ -1,10 +1,6 @@
 import { useState } from 'react'
 
-interface GalleryItemProps {
-    item: ItemProps
-}
-
-const GalleryItem = (props: GalleryItemProps) => {
+function GalleryItem(props){
     let [view, setView] = useState(false)
 
     const simpleView = () => {
