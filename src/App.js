@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigation, Home, Page2, Page3, Page4 } from "./components";
 import React, {useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { PlaceDataContext } from "./context/placeDataContext";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   
   return (
     <div className="App">
+      <PlaceDataContext.Provider value={placeData0}>
       <Router>
         <Navigation />
         <Routes>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/page4" element={<Page4 />} />
         </Routes>
       </Router>
+      </PlaceDataContext.Provider>
     </div>
   );
 }

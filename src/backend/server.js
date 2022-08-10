@@ -25,4 +25,4 @@ app.use('/app', placeController)
 app.get('/', (req, res) =>{
   res.send('Hello World')
 })
-app.listen(3001, () => console.log("Server is running on PORT 3001"));
+app.listen(3005, () => console.log("Server is running on PORT 3005"));
