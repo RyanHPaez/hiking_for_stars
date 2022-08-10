@@ -1,9 +1,19 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigation, Home, Page2, Page3, Page4 } from "./components";
-import React from "react";
+import React, {useContext, useEffect, useState } from "react";
+import axios from "axios";
+
 
 function App() {
+
+  const [placeData, setPlaceData] = useState([])
+  useEffect( () => {
+    axios
+      .get(`http:localhhose:3005/app/places`)
+      .then ((response) => setPlaceData(response.data));
+  })
+  
   return (
     <div className="App">
       <Router>
