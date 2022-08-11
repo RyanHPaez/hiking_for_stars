@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
 import { Places } from "./components"
-import { isCompositeComponent } from "react-dom/test-utils";
+// import { isCompositeComponent } from "react-dom/test-utils";
 
 
 function App() {

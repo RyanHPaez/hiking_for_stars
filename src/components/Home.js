@@ -1,5 +1,5 @@
-import React,{useEffect, useState, useContext} from "react";
-import { PlaceDataContext } from "../context/placeDataContext";
+// import React,{useEffect, useState, useContext} from "react";
+// import { PlaceDataContext } from "../context/placeDataContext";
 
 
 function Home() {

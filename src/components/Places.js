@@ -14,9 +14,17 @@ function Places() {
   const display = placeData.map((item, i) =>{
 
     return(<div>
+<<<<<<< HEAD
       <h2 key={i} > {item.name}</h2>
       <img src={item.thumbnail}></img>
       </div>
+=======
+    <h2 key={i} > {item.name}</h2>
+    <img src={item.thumbnail}
+      alt = 'hiking of'
+      />
+    </div>
+>>>>>>> css-styling-ryan
     )
   })
 

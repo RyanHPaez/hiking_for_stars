@@ -1,0 +1,25 @@
+body {
+    background-image: radial-gradient(  rgb(186, 186, 186),white,rgb(120, 105, 76));
+    min-height: 100vh;
+    display: flex;
+     }
+
+#root {
+        flex-grow: 1;
+        display:flow-root;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+.App {
+        width: auto;
+         height: auto;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         background-size: contain;
+         text-align: center;
+         
+     }
