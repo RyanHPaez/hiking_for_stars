@@ -11,4 +11,3 @@ router.get("/places", async (req, res) => {
   }
 });
 
-module.exports = router;
