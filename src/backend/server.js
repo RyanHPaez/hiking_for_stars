@@ -12,7 +12,7 @@ async function connect(){
     mongoose.set('bufferCommands', false);
     mongoose.connect('mongodb+srv://newUser1:newPass01@cluster0.mupyl.mongodb.net/Hiking_for_stars', 
     {useNewUrlParser: true, useUnifiedTopology: true}, 
-      (message) => { console.log(message) })
+      () => { console.log('connected to mongoDB') })
   }catch(err){
     console.log(err)
   }
