@@ -16,7 +16,6 @@ async function connect(){
   }catch(err){
     console.log(err)
   }
-
 }
 connect();
 //connect to mongoose
@@ -24,7 +23,7 @@ connect();
 // {useNewUrlParser: true, useUnifiedTopology: true}, 
 //   () => { console.log('connected to mongo:') })
 
-  
+
 
 //Middleware
 app.use(express.json());
