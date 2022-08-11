@@ -4,29 +4,26 @@ import { useContext } from "react";
 import { PlaceDataContext } from "../context/placeDataContext";
 
 function Places() {
-
   useEffect(() => {}, []);
 
   const placeData = useContext(PlaceDataContext);
-//This sets the state variable to the game that was clicked
- console.log('placeData', placeData)
+  //This sets the state variable to the game that was clicked
+  console.log("placeData", placeData);
 
-  const display = placeData.map((item, i) =>{
-
-    return(<div>
-<<<<<<< HEAD
-      <h2 key={i} > {item.name}</h2>
-      <img src={item.thumbnail}></img>
+  const display = placeData.map((item, i) => {
+    return (
+      <div className="displayItem">
+        <div>
+          <h2 key={i}> {item.name}</h2>
+          <img src={item.thumbnail} alt="hiking of 1" />
+        </div>
+        <div>
+          <h2 key={i}> {item.name}</h2>
+          <img src={item.thumbnail} alt="hiking of 2" />
+        </div>
       </div>
-=======
-    <h2 key={i} > {item.name}</h2>
-    <img src={item.thumbnail}
-      alt = 'hiking of'
-      />
-    </div>
->>>>>>> css-styling-ryan
-    )
-  })
+    );
+  });
 
   return (
     <div
@@ -37,8 +34,8 @@ function Places() {
       }}
     >
       <div>
-      {/* <a href='/cart'>Cart</a> */}
-      <h5>Trails {display} </h5>
+        {/* <a href='/cart'>Cart</a> */}
+        <h5>Trails {display} </h5>
       </div>
     </div>
   );
