@@ -12,11 +12,10 @@ async function connect(){
     mongoose.set('bufferCommands', false);
     mongoose.connect('mongodb+srv://newUser1:newPass01@cluster0.mupyl.mongodb.net/Hiking_for_stars', 
     {useNewUrlParser: true, useUnifiedTopology: true}, 
-      (message) => { console.log(message) })
+      () => { console.log('connected to mongoDB') })
   }catch(err){
     console.log(err)
   }
-
 }
 connect();
 //connect to mongoose
@@ -24,7 +23,7 @@ connect();
 // {useNewUrlParser: true, useUnifiedTopology: true}, 
 //   () => { console.log('connected to mongo:') })
 
-  
+
 
 //Middleware
 app.use(express.json());

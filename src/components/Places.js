@@ -14,9 +14,9 @@ function Places() {
   const display = placeData.map((item, i) =>{
 
     return(<div>
-    <h2 key={i} > {item.name}</h2>
-    <img src={item.thumbnail}></img>
-    </div>
+      <h2 key={i} > {item.name}</h2>
+      <img src={item.thumbnail}></img>
+      </div>
     )
   })
 

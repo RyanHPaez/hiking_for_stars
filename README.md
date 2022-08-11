@@ -7,3 +7,9 @@ Npm start will start the app or you can see it deployed here on heroku: https://
 
 setting up database: npm install mongodb, npm install axios
 
+
+**END POINTS**
+Method | Path | Purpose | 
+------------- | ------------- | ------------ 
+GET  | /  | homepage
+GET  | /places  | places
