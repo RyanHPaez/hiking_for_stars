@@ -1,9 +1,18 @@
-import React from "react";
+import React,{useEffect, useState, useContext} from "react";
+import { PlaceDataContext } from "../context/placeDataContext";
+
 
 function Home() {
+
+  // useEffect(() => {}, []);
+  // const placeData = useContext(PlaceDataContext);
+
+
   return (
+
     <div className="home">
       <div className="container">
+   
       <div className="col-sm-12  my-5">
             <h1 className="font-weight-light ">Hi!</h1>
             <form>
