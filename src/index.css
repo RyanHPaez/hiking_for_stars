@@ -1,5 +1,5 @@
 body {
-    background-image: radial-gradient(  rgb(186, 186, 186),white,rgb(120, 105, 76));
+    background-image: radial-gradient(  rgb(203, 203, 203),rgb(251, 250, 214),rgb(79, 70, 52));
     min-height: 100vh;
     display: flex;
 
@@ -26,13 +26,13 @@ body {
      }
 
 .fas {
-        color:rgb(228, 182, 18);
+        color:rgb(163, 255, 3);
         font-size: 14px;
 
      }
 
 i   {
-        color:rgb(228, 182, 18);
+        color:rgb(163, 255, 3);
         text-shadow: 1px 1px 2px red, 0 0 1em rgb(171, 171, 171), 0 0 0.2em rgb(171, 171, 171);
 
     }
@@ -48,6 +48,10 @@ img {
     
 .navigation {
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
 
             }
 

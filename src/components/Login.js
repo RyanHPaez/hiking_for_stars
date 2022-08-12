@@ -4,7 +4,7 @@ function Login() {
       <div className="container">
         <div className="row align-items-center">
           <div className="login col-sm-12 shadow-lg p-1 mb-1  my-5">
-            <div className="col-sm-12">
+            <div className="col-sm-12 shadow-lg p-3 mb-1  ">
               <h1 className="font-weight-light ">Login</h1>
 
               <div className="email">

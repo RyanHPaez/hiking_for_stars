@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <div className="navigation navbar-expand navbar-dark bg-dark col-sm-8">
+      <nav className="navbar navbar-expand navbar-dark bg-dark  col-sm-10">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
           <i>Hiking for Stars</i>
