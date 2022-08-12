@@ -19,7 +19,7 @@ function App() {
       .then ((response) => setPlaceData(response.data));
   }, [])
 
-    console.log(placeData)
+   
   // const getData = async() => {
   //   const {placeData} =await axios.get(`http:localhost:3005/app/places`);
   //   setPlaceData(placeData)

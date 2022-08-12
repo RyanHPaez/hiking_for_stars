@@ -2,15 +2,28 @@ import React,{useEffect, useState, useContext} from "react";
 import { PlaceDataContext } from "../context/placeDataContext";
 
 
-function Home() {
+async function Home(places) {
 
-  // useEffect(() => {}, []);
-  // const placeData = useContext(PlaceDataContext);
+    const Place = { PlaceDataContext }
+    
+    const [placeState, setPlaceState] = useState([])
 
+    await useEffect(() => {
+      fetch(`https://localhost:3005/app/places`).then(res => {
+      if (res.ok){
+       
+        return res.json()
+        
+      }
+    }).then(jsonResponse => setPlaceState(jsonResponse))
+   }, []);
 
+   
+ 
   return (
 
     <div className="home">
+      
       <div className="container">
    
       <div className="col-sm-12  my-5">
@@ -31,7 +44,7 @@ function Home() {
             <button>
             <img
               className="img-fluid "
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+              src=""
               alt="hills"
             />
             </button>
