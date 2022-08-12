@@ -1,9 +1,9 @@
-function Page4() {
+function Login() {
   return (
     <div className="login">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-sm-12 shadow-lg p-1 mb-1">
+          <div className="login col-sm-12 shadow-lg p-1 mb-1  my-5">
             <div className="col-sm-12">
               <h1 className="font-weight-light ">Login</h1>
 
@@ -61,4 +61,4 @@ function Page4() {
     </div>
   );
 }
-export default Page4;
+export default Login;

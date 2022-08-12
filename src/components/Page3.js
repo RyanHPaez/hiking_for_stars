@@ -1,36 +1,37 @@
+import { useEffect, useState } from "react";
+import Gallery from "./Gallery";
+import SearchBar from "./SearchBar";
 
-import { useEffect, useState } from 'react'
-import Gallery from './Gallery'
-import SearchBar from './SearchBar'
-
-function App() {
-  let [searchTerm, setSearchTerm] = useState('')
-  let [data, setData] = useState([])
-  let [message, setMessage] = useState('Search for Music!')
+function MusicSearch() {
+  let [searchTerm, setSearchTerm] = useState("");
+  let [data, setData] = useState([]);
+  let [message, setMessage] = useState("Search for Music!");
 
   useEffect(() => {
     if (searchTerm) {
-      document.title=`${searchTerm} Music`
+      document.title = `${searchTerm} Music`;
       const fetchData = async () => {
-        const response = await fetch(`https://itunes.apple.com/search?term=${searchTerm}`)
-        const resData = await response.json()
-        if(resData.results.length > 0) {
-          setData(resData.results)
+        const response = await fetch(
+          `https://itunes.apple.com/search?term=${searchTerm}`
+        );
+        const resData = await response.json();
+        if (resData.results.length > 0) {
+          setData(resData.results);
         } else {
-          setMessage('Not Found')
+          setMessage("Not Found");
         }
-      }
-      fetchData()
-  }
-  }, [searchTerm])
+      };
+      fetchData();
+    }
+  }, [searchTerm]);
 
   const handleSearch = (e, term) => {
-    e.preventDefault()
-    setSearchTerm(term)
-  }
+    e.preventDefault();
+    setSearchTerm(term);
+  };
 
   return (
-    <div className="App">
+    <div className="MusicSearch my-5">
       <SearchBar handleSearch={handleSearch} />
       {message}
       <Gallery data={data} />
@@ -38,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default MusicSearch;

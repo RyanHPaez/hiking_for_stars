@@ -19,7 +19,7 @@ function Navigation() {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page2">
-                <i class='fas fa-hiking'></i>
+                <i class='fas fa-hiking '></i>
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -28,7 +28,7 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item-login">
-                <NavLink className="nav-link" to="/Page4">
+                <NavLink className="nav-link" to="/Login">
                 <i>Login</i>
                 </NavLink>
               </li>          

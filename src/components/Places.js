@@ -38,6 +38,7 @@ function Places() {
         <h5>Trails {display} </h5>
       </div>
     </div>
+    
   );
 }
 
