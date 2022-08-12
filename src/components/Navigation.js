@@ -13,18 +13,18 @@ function Navigation() {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item-home">              
                 <NavLink className="nav-link" to="/">
-                <src img='fas fa-home' />                  
+                <i class='fas fa-home' style={{'font-size':'18px'}}></i>                 
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page2">
-                <src img='fas fa-hiking '/>
+                <i class='fas fa-hiking' style={{'font-size':'18px'}}></i>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page3">
-                <src img='fas fa-music'/>
+                <i class='fas fa-music' style={{'font-size':'18px'}}></i>
                 </NavLink>
               </li>
               <li className="nav-item-login">
