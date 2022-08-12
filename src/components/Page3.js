@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Gallery from './Gallery'
 import SearchBar from './SearchBar'
 
-function App() {
+function Music() {
   let [searchTerm, setSearchTerm] = useState('')
   let [data, setData] = useState([])
   let [message, setMessage] = useState('Search for Music!')
@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="Music">
       <SearchBar handleSearch={handleSearch} />
       {message}
       <Gallery data={data} />
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Music;
