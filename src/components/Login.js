@@ -1,4 +1,4 @@
-function Page4() {
+function Login() {
   return (
     <div className="login">
       <div className="container">
@@ -61,4 +61,4 @@ function Page4() {
     </div>
   );
 }
-export default Page4;
+export default Login;
