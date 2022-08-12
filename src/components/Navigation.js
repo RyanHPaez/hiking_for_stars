@@ -7,29 +7,29 @@ function Navigation() {
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-          Hike with the stars
+          <i>Hike with the stars</i>
           </NavLink>
           <div>
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
+              <li className="nav-item-home">              
                 <NavLink className="nav-link" to="/">
-                  Home
+                <i class='fas fa-home' ></i>                  
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page2">
-                page 2
+                <i class='fas fa-hiking'></i>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page3">
-                page 3
+                <i class='fas fa-music'></i>
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item-login">
                 <NavLink className="nav-link" to="/Page4">
-                Login
+                <i>Login</i>
                 </NavLink>
               </li>          
             </ul>
