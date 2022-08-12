@@ -37,7 +37,7 @@ i   {
     }
 
 img {
-        box-shadow: 5px 5px 5px 5px rgb(171, 171, 171);
+        box-shadow: 0 0 10px 10px rgb(171, 171, 171);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -46,7 +46,7 @@ img {
     }  
     
 .navigation {
-        box-shadow: 5px 5px 5px 5px  rgb(171, 171, 171);
+        box-shadow: 0 0 10px 10px rgb(171, 171, 171);
 
             }
 
@@ -56,6 +56,6 @@ button{
       }
 
 .login {
-    box-shadow: 5px 5px 5px 5px  rgb(171, 171, 171);
+    box-shadow: 0 0 10px 10px  rgb(171, 171, 171);
     
        }
