@@ -26,7 +26,7 @@ function Page2() {
           </div>
           <div className="imgpage2">
             <img
-              className="p grid-item ml-5 "
+              className="p grid-item  "
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
               alt="hill"
             />
