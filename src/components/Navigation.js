@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
   return (
     <div className="navigation navbar-expand navbar-dark bg-dark col-sm-8">
-      <nav className="navbar navbar-expand navbar-dark bg-dark  col-sm-10">
+      <nav className="navbar navbar-expand navbar-dark bg-dark  col-sm-9">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
           <i>Hiking for Stars</i>
@@ -13,18 +13,18 @@ function Navigation() {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item-home">              
                 <NavLink className="nav-link" to="/">
-                <i class='fas fa-home' ></i>                  
+                <src img='fas fa-home' />                  
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page2">
-                <i class='fas fa-hiking '></i>
+                <src img='fas fa-hiking '/>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page3">
-                <i class='fas fa-music'></i>
+                <src img='fas fa-music'/>
                 </NavLink>
               </li>
               <li className="nav-item-login">
