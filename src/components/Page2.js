@@ -106,4 +106,4 @@ function Page2() {
   );
 }
 
-export default page2;
+export default Page2;
