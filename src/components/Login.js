@@ -8,7 +8,11 @@ function Login ({setWelcomeUser}) {
     const [userData, setUserData] = useData([]);
     const [userName, setUserName] = useState("");
 
-
+    useEffect( () => {
+        axios
+            .get(`http://localhost:3005/signup/users`)
+            .then((response) => setUserData(response.data));
+    }, []);
 
     
 }
