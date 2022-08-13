@@ -13,6 +13,17 @@ router.get('/users', async (req, res) => {
     }
   });
 
+// find user by id
+router.get('/user', async (req, res) =>{
+  try{
+    const foundeUser = await User.findById('')
+    console.log('users', foundeUser);
+    res.status(200).json(foundeUser);
+  }catch(err){
+    res.status(500).json(err);
+  }
+})
+
   //create new user
   router.post('/newUser', async (req, res) => {
     console.log('req.body for user', req.body)
