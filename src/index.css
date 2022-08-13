@@ -49,17 +49,35 @@ i:hover {
         --_d: 100%;
         --_t: 0;
         --_c: rgb(255, 250, 250);
+        
       }
 
 img {
+    content: "";
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
-        display: flex;
+        display: absolute;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         margin: 0 auto;
+        position: relative;
+        
         
     }  
+ img:hover {
+    /* height: 450px; */
+    width: auto;
+    position:relative;
+   
+    bottom: 500px;
+    opacity: 5;
+    bottom: 1%;
+    /* z-index: 99; */
+    box-shadow: 0 0 10px 10px rgb(188, 157, 17);
+    
+    
+    
+ }   
     
 .navigation {
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
