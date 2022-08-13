@@ -5,14 +5,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
 import { Places } from "./components"
-import { isCompositeComponent } from "react-dom/test-utils";
+
 
 
 
 
 function App() {
   const [placeData, setPlaceData] = useState([]);
- 
+  const [userData, setUserData] = useState([]);
+  
   useEffect( () => {
     axios
       .get('http://localhost:3005/app/places')

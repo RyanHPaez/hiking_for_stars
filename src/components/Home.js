@@ -1,14 +1,11 @@
 import {useContext, useEffect} from 'react'
 import { PlaceDataContext } from '../context/placeDataContext';
-const axios = require('axios'); 
-
 
 function Home() {
 
   useEffect( () => {}, []);
 
   const placeData = useContext(PlaceDataContext)
- 
 
   return (
     <div className="home">
