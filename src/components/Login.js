@@ -18,7 +18,7 @@ function Login ({setWelcomeUser}) {
         e.preventDefault()
         console.log('handleSumbit')
         const loggedInUser = userData.filter( user => {
-            return user.username === userName
+            return user.user_name === userName
         })
         if(loggedInUser.length > 0){
             setWelcomeUser(loggedInUser)

@@ -13,5 +13,8 @@ router.get('/users', async (req, res) => {
     }
   });
 
+  router.post('/newUser', async (req, res) => {
+    console.log('req.body for user', req.body)
+  })
 
 module.exports = router;
