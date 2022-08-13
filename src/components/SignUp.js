@@ -1,6 +1,32 @@
-function Signup() {
+import axios from "axios";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
+function Signup() {
     
+    const [ userName, setUserName ] = useState("");
+    const [ email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState("");
+    const [ firstName, setFirstName ] = useState("");
+    const [ lastName, setLastName ] = useState("");
+    let navigate = useNavigate();
+
+    const handleSumbit = (e) => {
+        e.preventDefault();
+        const newUser ={
+            user_name: userName,
+            first_name: firstName.toLowerCase(),
+            last_name: lastName.toLowerCase(),
+            email: email.toLowerCase(),
+            password: password,
+        };
+
+        axios
+            .post(`http://localhost:3005/secapp/newUser`, newUser)
+            .then((res) => console.log(res.data))
+            .then(() => navigate("/login"))
+        }
+  
     return (
       <div className="Signup">
         <div className="container">

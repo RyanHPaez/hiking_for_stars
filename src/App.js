@@ -18,20 +18,24 @@ function App() {
     axios
       .get('http://localhost:3005/app/places')
       .then ((response) => setPlaceData(response.data));
-  }, [])
+  }, []);
 
+  //welcome user
+  const [welcomeUser, setWelcomeUser]= useState('Please log in');
+  const logInLogOut = welcomeUser === 'Please log in' ? <a href='/Login'>Log-in</a> : <a href='#'>Log-out</a>
 
   return (
     <div className="App">
+      {logInLogOut}
       <PlaceDataContext.Provider value={placeData}>
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home user={welcomeUser}/>} />
           <Route path="/page2" element={<Page2 />} />
           <Route path="/Music" element={<Music />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/Login" element={<Login setWelcomeUser={setWelcomeUser} />} />
           <Route path="/places" element={<Places />} />
         </Routes>
       </Router>

@@ -2,7 +2,7 @@ import React from "react";
 
 function Page2() {
 
-  
+
   return (
     <div className="page2">
       <div className="container">
@@ -106,4 +106,4 @@ function Page2() {
   );
 }
 
-export default page2;
+export default Page2;

@@ -15,6 +15,14 @@ router.get('/users', async (req, res) => {
 
   router.post('/newUser', async (req, res) => {
     console.log('req.body for user', req.body)
+    try{
+      User.create(req.body)
+      res.status(200).json('Success')
+    }catch(err){
+      res.status(500).send({message:err})
+    }
+
+
   })
 
 module.exports = router;
