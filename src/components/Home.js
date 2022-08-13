@@ -23,8 +23,16 @@ const favoritedTrail = (trail) => {
     return(
       <div
       style={{
-        background:"tan",
-        width: "200px",
+        background: "black",
+        width: "280px",
+        height: "200px",
+        margin: "20px",
+        textAlign: "center",
+        display: "inline-table",
+        color: "white",
+        backgroundColor: "black",
+        borderRadius: "20px",
+        position: "relative",
       }}
       >
           <form >
@@ -38,19 +46,33 @@ const favoritedTrail = (trail) => {
               Add to Favorites
             </button>
             </p>
-            <p><b>About the trail: </b>{item.description}</p>
           </form>
       </div>
     )
   })
 
   return (
-      <div>
-        <div>
+      <div className="home">
+        <div className="container">
+        <div className="col-sm-12  my-5">
+            <h1 className="font-weight-light ">Let's go HIKING!</h1>
+            <form>
+              <input
+                // ref={term}
+                type="text"
+                placeholder="Where to?"
+                // onChange={(e)=>setInput(e.target.value)}
+              />
+              <button>
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <p>Are we ready to put text here?</p>
+          </div>
           <h5>Trails: {display}</h5>
         </div>
         <div>
-          <TrailDetails trigger = {hoverPopup} setTrigger={setHoverPopup}>
+          <TrailDetails trigger = {hoverPopup} setTrigger={setHoverPopup} src={favoritedTrail.thumbnail}>
               <h3 className='trailName'>{favoritedTrail.name}</h3>
               <img className='detailViewImg' src={favoritedTrail.thumbnail} ></img>
               <div className='detailDescription'>
