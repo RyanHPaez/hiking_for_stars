@@ -7,6 +7,7 @@ router.get("/places", async (req, res) => {
     const foundPlaces = await Place.find()
     res.status(200).json(foundPlaces);
     // console.log(foundPlaces)
+    // return foundPlaces
   } catch (err) {
     res.status(500).json(err);
   }

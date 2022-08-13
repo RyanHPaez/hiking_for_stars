@@ -8,11 +8,14 @@ import { Places } from "./components"
 import { isCompositeComponent } from "react-dom/test-utils";
 
 
+
+
 function App() {
-
-  
-
-  const [placeData, setPlaceData] = useState([])
+  const [placeData, setPlaceData] = useState([]);
+  // const api = axios.create({
+  //   baseURL: `http://localhost:3005/app/games/`
+  // }
+ 
   useEffect( () => {
     axios
       .get(`http:localhost:3005/app/places`)
@@ -21,13 +24,8 @@ function App() {
 
    
   // const getData = async() => {
-  //   const {placeData} =await axios.get(`http:localhost:3005/app/places`);
-  //   setPlaceData(placeData)
-  // }
+  //   await axios.get(`http:localhost:3005/app/places`).then(response =>{console.log(response)}}
 
-  // useEffect(() => {
-  //   getData();
-  // }, [])
 
 
   return (
