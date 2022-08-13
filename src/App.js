@@ -12,8 +12,8 @@ import { Places } from "./components"
 
 function App() {
   const [placeData, setPlaceData] = useState([]);
-  const [userData, setUserData] = useState([]);
-  
+  // const [userData, setUserData] = useState([]);
+
   useEffect( () => {
     axios
       .get('http://localhost:3005/app/places')
