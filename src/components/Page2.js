@@ -1,16 +1,8 @@
-// import React,{useEffect, useState, useContext} from "react";
-// import { PlaceDataContext } from "../context/placeDataContext";
+import React from "react";
 
-function page2() {
-  // useEffect(() => {}, []);
-  // const placeData = useContext(PlaceDataContext);
-
-<<<<<<< Updated upstream
-=======
 function Page2() {
 
   
->>>>>>> Stashed changes
   return (
     <div className="page2">
       <div className="container">

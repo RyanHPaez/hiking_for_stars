@@ -16,6 +16,8 @@ function Places() {
     return(<div>
       <h2 key={i} > {item.name}</h2>
       <img src={item.thumbnail}></img>
+      <p><b>Rating:</b> {item.rating}</p>
+      <p><b>About the Trail:</b>{item.description}</p>
       </div>
     )
   })

@@ -13,8 +13,8 @@ function Login() {
                   type="email"
                   className="form-control"
                   placeholder="Enter email"
-                  // value = {email}
-                  //   onChange={(e) => setEmail(e.target.value)}
+                // value = {email}
+                //   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="password">
@@ -23,8 +23,8 @@ function Login() {
                   type="password"
                   className="form-control"
                   placeholder="Enter password"
-                  // value = {password}
-                  //   onChange={(e) => setPassword(e.target.value)}
+                // value = {password}
+                //   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="d-grid my-1">
@@ -32,9 +32,9 @@ function Login() {
                   Sign in
                 </button>
                 <p className="forgot-password text-right">
-                      {/* Forgot <a href="#">password?</a> */}
-                      Forgot password?
-                    </p>
+                  {/* Forgot <a href="#">password?</a> */}
+                  Forgot password?
+                </p>
                 <div className="custom-control custom-checkbox">
                   <input
                     type="checkbox"
