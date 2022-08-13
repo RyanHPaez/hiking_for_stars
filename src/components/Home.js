@@ -68,11 +68,12 @@ function Home() {
         position: "relative",
       }}
       >
-          <form >
+          <form onSubmit={handleClick}>
             <h2 key={i}>{item.name}</h2>
-            <img src={item.thumbnail} onMouseOver={() => {setHoverPopup(true); displayDetail(item)}}
+            <img src={item.thumbnail} onMouseOver={() => {setHoverPopup(true); displayDetail(userFavorite)}}
             onMouseOut={() => {setHoverPopup(false)}}></img>
-            <p><b>Rating: </b>{item.rating}<b/>
+            <p><b>Rating: </b>{item.rating}<b/></p>
+            <p>
             <button onClick={() => {
               favoritedTrail(item);
             }}>
@@ -110,17 +111,17 @@ function Home() {
               <p>- Team Hangout</p>
         </div> 
         <div>
-          <TrailDetails trigger = {hoverPopup} setTrigger={setHoverPopup} src={placeData.thumbnail}>
-              <h3 className='trailName'>{placeData.name}</h3>
-              <img className='detailViewImg' src={placeData.thumbnail} ></img>
+          <TrailDetails trigger = {hoverPopup} setTrigger={setHoverPopup} src={userFavorite.thumbnail}>
+              <h3 className='trailName'>{userFavorite.name}</h3>
+              <img className='detailViewImg' src={userFavorite.thumbnail} ></img>
               <div className='detailDescription'>
                 
-                <span className='description'>{placeData.description}</span>
+                <span className='description'>{userFavorite.description}</span>
                 <br/>
-                Rating: {placeData.rating}<br/>
-                Difficulty: {placeData.difficulty}<br/>
-                Address: {placeData.address}<br/>
-                City: {placeData.city}<br/>
+                Rating: {userFavorite.rating}<br/>
+                Difficulty: {userFavorite.difficulty}<br/>
+                Address: {userFavorite.address}<br/>
+                City: {userFavorite.city}<br/>
 
               </div>
           </TrailDetails>
