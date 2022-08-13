@@ -7,6 +7,8 @@ function Login ({setWelcomeUser}) {
     let navigate = useNavigate();
     const [userData, setUserData] = useState([]);
     const [userName, setUserName] = useState("");
+    const [email, setEmail] = useState("")
+    const [password, setPassword ] = useState("")
 
     useEffect( () => {
         axios
@@ -30,8 +32,8 @@ function Login ({setWelcomeUser}) {
     }
 
      return (
-        <div className="login" onSubmit={handleSubmit}>
-          <div className="container">
+        <div className="login" >
+          <form onSubmit={handleSubmit} className="container">
             <div className="row align-items-center">
               <div className="login col-sm-12 shadow-lg p-1 mb-1  my-5">
                 <div className="col-sm-12 shadow-lg p-3 mb-1  ">
@@ -40,11 +42,11 @@ function Login ({setWelcomeUser}) {
                   <div className="email">
                     <label>Email address</label>
                     <input
-                      type="email"
-                      className="form-control"
-                      placeholder="Enter email"
-                      // value = {email}
-                      //   onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        className="form-control"
+                        placeholder="Enter email"
+                        // value = {email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="password">
@@ -54,7 +56,7 @@ function Login ({setWelcomeUser}) {
                       className="form-control"
                       placeholder="Enter password"
                       // value = {password}
-                      //   onChange={(e) => setPassword(e.target.value)}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
                   <div className="d-grid my-1">
@@ -62,8 +64,7 @@ function Login ({setWelcomeUser}) {
                       Sign in
                     </button>
                     <p className="forgot-password text-right">
-                          {/* Forgot <a href="#">password?</a> */}
-                          Forgot password?
+                          <a href="#">Forgot password?</a>
                         </p>
                     <div className="custom-control custom-checkbox">
                       <input
@@ -87,7 +88,7 @@ function Login ({setWelcomeUser}) {
                 />
               </div>
             </div>
-          </div>
+          </form>
         </div>
       );
     }

@@ -11,7 +11,7 @@ function Signup() {
     const [ lastName, setLastName ] = useState("");
     let navigate = useNavigate();
 
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const newUser ={
             user_name: userName,
@@ -24,12 +24,12 @@ function Signup() {
         axios
             .post(`http://localhost:3005/secapp/newUser`, newUser)
             .then((res) => console.log(res.data))
-            .then(() => navigate("/login"))
+            .then(() => navigate("/Login"))
         }
   
     return (
       <div className="Signup">
-        <div className="container">
+        <form onSubmit={handleSubmit}  className="container">
           <div className="row align-items-center">
             <div className="Signup col-sm-12 shadow-lg p-1 mb-1  my-5">
               <div className="col-sm-12 shadow-lg p-3 mb-1  ">
@@ -42,7 +42,7 @@ function Signup() {
                     className="form-control"
                     placeholder="Enter UserName"
                     // value = {UserName}
-                    //   onChange={(e) => setUserName(e.target.value)}
+                      onChange={(e) => setUserName(e.target.value)}
                   />
                 </div>
                 <div className="FirstName">
@@ -52,7 +52,7 @@ function Signup() {
                     className="form-control"
                     placeholder="Enter FirstName"
                     // value = {FirstName}
-                    //   onChange={(e) => setFirstName(e.target.value)}
+                      onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
                 <div className="LastName">
@@ -62,7 +62,7 @@ function Signup() {
                     className="form-control"
                     placeholder="Enter LastName"
                     // value = {LastName}
-                    //   onChange={(e) => setLastName(e.target.value)}
+                      onChange={(e) => setLastName(e.target.value)}
                   />
                 </div>
 
@@ -74,7 +74,7 @@ function Signup() {
                     className="form-control"
                     placeholder="Enter email"
                     // value = {email}
-                    //   onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="password">
@@ -84,7 +84,7 @@ function Signup() {
                     className="form-control"
                     placeholder="Enter password"
                     // value = {password}
-                    //   onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <div className="d-grid my-1">
@@ -114,7 +114,7 @@ function Signup() {
               />
             </div>
           </div>
-        </div>
+        </form>
       </div>
     );
   }

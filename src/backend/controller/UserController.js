@@ -13,6 +13,7 @@ router.get('/users', async (req, res) => {
     }
   });
 
+  //create new user
   router.post('/newUser', async (req, res) => {
     console.log('req.body for user', req.body)
     try{
@@ -21,8 +22,9 @@ router.get('/users', async (req, res) => {
     }catch(err){
       res.status(500).send({message:err})
     }
-
-
   })
+
+
+//router.put update user route
 
 module.exports = router;
