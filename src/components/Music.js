@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import Gallery from "./Gallery";
+import MusicGallery from "./MusicGallery";
 import SearchBar from "./SearchBar";
-
+// these are hooks and function components
 function MusicSearch() {
+  // this is where declaring our variable,these are mulitple variables
   let [searchTerm, setSearchTerm] = useState("");
   let [data, setData] = useState([]);
   let [message, setMessage] = useState("Search for Music!");
-
+// this is where you fetch the data with the hook we made in MusicGallery. UseEffect lets us count state variables
   useEffect(() => {
     if (searchTerm) {
       document.title = `${searchTerm} Music`;
@@ -31,12 +32,13 @@ function MusicSearch() {
   };
 
   return (
-    <div className="MusicSearch my-5">
+    <div className="row align-items-start my-4 my-5">
       <SearchBar handleSearch={handleSearch} />
       {message}
-      <Gallery data={data} />
+      <MusicGallery data={data} />
     </div>
   );
+  
 }
 
 export default MusicSearch;
