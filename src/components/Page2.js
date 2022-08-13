@@ -5,6 +5,12 @@ function page2() {
   // useEffect(() => {}, []);
   // const placeData = useContext(PlaceDataContext);
 
+<<<<<<< Updated upstream
+=======
+function Page2() {
+
+  
+>>>>>>> Stashed changes
   return (
     <div className="page2">
       <div className="container">
