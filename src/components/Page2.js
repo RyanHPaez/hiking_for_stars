@@ -1,12 +1,8 @@
-// import React,{useEffect, useState, useContext} from "react";
-// import { PlaceDataContext } from "../context/placeDataContext";
+import React from "react";
 
-function page2() {
-  // useEffect(() => {}, []);
-  // const placeData = useContext(PlaceDataContext);
-
+function Page2() {
   return (
-    <div className="page2">
+    <div className="Page2">
       <div className="container">
         <div className="col-sm-12  my-5">
           <h1 className="font-weight-light ">Let's go HIKING!</h1>
@@ -108,4 +104,4 @@ function page2() {
   );
 }
 
-export default page2;
+export default Page2;
