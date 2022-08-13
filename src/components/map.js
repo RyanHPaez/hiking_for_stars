@@ -1,5 +1,5 @@
 import React from "react";
-import Page2 from "./Page2";
+import Map2 from "./Map2";
 import SearchBar from "./SearchBar";
 import APIconfig from "./APIconfig";
 //map function for the search bar 
