@@ -1,15 +1,14 @@
-import {useState} from 'react'
+import {useContext, useEffect} from 'react'
+import { PlaceDataContext } from '../context/placeDataContext';
 const axios = require('axios'); 
 
 
 function Home() {
 
-  const [placeData, setPlaceData] = useState([])
-  axios.get('http://localhost:3005/app/places')
-  .then(response => {
-   setPlaceData(response);
-   console.log('this is the response', response)
-  })
+  useEffect( () => {}, []);
+
+  const placeData = useContext(PlaceDataContext)
+ 
 
   return (
     <div className="home">
@@ -34,81 +33,90 @@ function Home() {
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[0].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[0].name}</p>
           </div>
           <div className="col-md-3 my-2">
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[1].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[1].name}</p>
           </div>
           <div className="col-md-3 my-2">
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[2].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[2].name}</p>
           </div>
           <div className="col-md-3 my-2">
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[3].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[3].name}</p>
           </div>
           <div className="col-md-3 my-2">
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[4].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[4].name}</p>
           </div>
           <div className="col-md-3 my-2">
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[5].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[5].name}</p>
           </div>
           <div className="col-md-3 my-2">
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[6].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[6].name}</p>
           </div>
           <div className="col-md-3 my-2">
             <button>
               <img
                 className="img-fluid "
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                src={placeData[7].thumbnail}
                 alt="hills"
               />
             </button>
+            <p>{placeData[7].name}</p>
           </div>
 
           <div className="col-sm-12 my-4">
             <h1 className="font-weight-light">About:</h1>
             <p>more Text or paragraph here!</p>
             <p>- Team Hangout</p>
-          </div>
+          </div> 
         </div>
+        {/* {displayPlaces} */}
       </div>
     </div>
   );
