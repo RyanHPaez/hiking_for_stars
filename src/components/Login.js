@@ -18,16 +18,17 @@ function Login ({setWelcomeUser}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('handleSumbit')
+        console.log('inside handleSumbit')
         const loggedInUser = userData.filter( user => {
-            return user.user_name === userName
+            console.log('inside loggedInUser', user.user_name)
+            return user.user_name
         })
         if(loggedInUser.length > 0){
             setWelcomeUser(loggedInUser)
-            navigate('/')
+            navigate('/page2')
         }
         else{
-            alert('Username is invalid, please try again. *Case Sensitive*')
+            alert('Email/or password are invalid. *Case Sensitive*')
         }
     }
 
