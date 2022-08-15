@@ -1,9 +1,0 @@
-img {
-    content: "";
-        box-shadow: 0 0 10px 10px rgb(171, 171, 171);
-        display: absolute;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 0 auto;
-        position: relative;}

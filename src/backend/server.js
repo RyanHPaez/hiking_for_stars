@@ -2,7 +2,7 @@ require('dotenv').config({path: '../.env'});
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose')
-// const cors = require('cors');
+const cors = require('cors');
 const uri = process.env.MONGO_URI
 
 
@@ -29,11 +29,15 @@ connect();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'))
-// app.use(cors())
+app.use(cors({
+  origin: '*'
+}));
 
 const placeController = require('../backend/controller/PlaceController');
 app.use('/app', placeController)
 
+const userController = require ('../backend/controller/UserController');
+app.use('/secapp', userController)
 
 
 app.listen(3005, () => console.log("Server is running on PORT 3005"));
