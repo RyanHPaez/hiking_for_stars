@@ -1,10 +1,6 @@
 import { PromiseProvider } from 'mongoose';
 import React, {useContext, useEffect, useState} from 'react'
 import { PlaceDataContext } from '../context/placeDataContext';
-<<<<<<< HEAD
-import Page2 from './Page2original';
-=======
->>>>>>> 2391030c4a13f6f6cc1c18c7a128aee5b45262d3
 import TrailDetails from './TrailDetails';
 
 
@@ -17,16 +13,10 @@ function Page2(props) {
 
   const placeData = useContext(PlaceDataContext)
  
-<<<<<<< HEAD
-  const welcomeMessage = !props.user[0].user_name
-    ? "Please log in or sign up"
-    : props.user[0].user_name;
-=======
 
   // const welcomeMessage = !props.user[0].user_name
   //   ? "Please log in or sign up"
   //   : props.user[0].user_name;
->>>>>>> 2391030c4a13f6f6cc1c18c7a128aee5b45262d3
 
   //favorited trail
   const favoritedTrail = (trail) => {
@@ -70,14 +60,6 @@ function Page2(props) {
   const display = placeData.map((item, i) => {
 
     return(
-<<<<<<< HEAD
-      <div
-      style={{
-        background: "black",
-        width: "280px",
-        height: "200px",
-        margin: "20px",
-=======
       <div className='col-md-3 my-2' 
       
       style={{
@@ -86,23 +68,11 @@ function Page2(props) {
         height: "200px",
         margin: "20px",
         padding: '25px 50px 75px 50px',
->>>>>>> 2391030c4a13f6f6cc1c18c7a128aee5b45262d3
         textAlign: "center",
         display: "inline-table",
         color: "white",
         backgroundColor: "black",
         borderRadius: "20px",
-<<<<<<< HEAD
-        position: "relative",
-      }}
-      >
-          <form onSubmit={handleClick}>
-            <h2 key={i}>{item.name}</h2>
-            <img src={item.thumbnail} onMouseOver={() => {setHoverPopup(true); displayDetail(userFavorite)}}
-            onMouseOut={() => {setHoverPopup(false)}}></img>
-            <p><b>Rating: </b>{item.rating}<b/></p>
-            <p>
-=======
         position: 'inherit',
         border: '1px solid',
         gridTemplateRows: 'auto',
@@ -148,7 +118,6 @@ function Page2(props) {
           <p>
             
             
->>>>>>> 2391030c4a13f6f6cc1c18c7a128aee5b45262d3
             <button onClick={() => {
               favoritedTrail(item);
             }}>
@@ -161,13 +130,8 @@ function Page2(props) {
   })
 
   return (
-<<<<<<< HEAD
-      <div className="Page2">
-        <div className="container">
-=======
       <div className="page2 col-md-12">
         <div className="container col-md-12">
->>>>>>> 2391030c4a13f6f6cc1c18c7a128aee5b45262d3
         <div className="col-sm-12  my-5">
             <h1 className="font-weight-light ">Let's go HIKING!</h1>
             <form>
@@ -182,17 +146,11 @@ function Page2(props) {
               </button>
             </form>
             <p>Are we ready to put text here?</p>
-<<<<<<< HEAD
-          </div>
-          <h5>Trails: {display}</h5>
-        </div>
-=======
             
             <div className='col-md-12 '>
               <h5> {display}</h5>
             </div>
         
->>>>>>> 2391030c4a13f6f6cc1c18c7a128aee5b45262d3
         <div className="col-sm-12 my-4">
               <h1 className="font-weight-light">About:</h1>
               <p>more Text or paragraph here!</p>
@@ -215,11 +173,8 @@ function Page2(props) {
           </TrailDetails>
         </div>
       </div>
-<<<<<<< HEAD
-=======
     </div>
     </div>
->>>>>>> 2391030c4a13f6f6cc1c18c7a128aee5b45262d3
   );
 }
    
