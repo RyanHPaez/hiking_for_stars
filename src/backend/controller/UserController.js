@@ -1,4 +1,5 @@
 const express = require('express');
+const { ReturnDocument } = require('mongodb');
 const router = express.Router();
 const User = require('../models/userSchema');
 
@@ -36,6 +37,27 @@ router.get('/user', async (req, res) =>{
   })
 
 
-//router.put update user route
+ //update user route
+  router.get('/:id/edit', async (req,res)=>{
+    console.log('hit update route')
+    res.send('Update User' + req.params.id)
+    // try{
+    //     res.render('inside update users route')
+    // }catch(err){
+    //     res.send(err)
+    // }
+  })
+  
+  //define update user route (PUT)
+  router.put('/:id', async (req, res) =>{
+    res.send('Update User' + req.params.id)
+  })
+  
+  //delete user 
+  router.delete('/:id'), async (req,res) => {
+    User.findByIdAndDelete(req.params.id)
+      .then()
+  }
+  
 
 module.exports = router;
