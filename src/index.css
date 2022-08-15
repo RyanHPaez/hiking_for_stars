@@ -112,3 +112,52 @@ button{
         align-items: center;
 
             }
+            
+            .profile{
+                display:block
+            }
+            
+            .profileRight{
+                flex:9;
+            }
+            
+            .profileCover{
+                height:320px;
+                position:relative;
+            }
+            
+            .profileCoverImg{
+                width:100%;
+                height: 250px;
+            }
+            
+            .profileUser{
+                width: 150px;
+                height:150px;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin:auto;
+                top:150px;
+                border:4px solid white;
+            }
+            
+            .profileInfo{
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content: center;
+                border:0;
+            }
+            
+            .profileName{
+                font-size:26px;
+                border: 0;
+                top:0;
+            }
+            
+            .profileBio{
+                display: fle
+            }
