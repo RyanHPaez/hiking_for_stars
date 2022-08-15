@@ -1,12 +1,12 @@
 // import React,{useEffect, useState, useContext} from "react";
 // import { PlaceDataContext } from "../context/placeDataContext";
 
-function page2() {
+function Page2() {
   // useEffect(() => {}, []);
   // const placeData = useContext(PlaceDataContext);
 
   return (
-    <div className="page2">
+    <div className="Page2">
       <div className="container">
         <div className="col-sm-12  my-5">
           <h1 className="font-weight-light ">Let's go HIKING!</h1>
@@ -108,4 +108,4 @@ function page2() {
   );
 }
 
-export default page2;
+export default Page2;

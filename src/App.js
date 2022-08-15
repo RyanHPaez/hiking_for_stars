@@ -1,6 +1,6 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Page2, Music, Login } from "./components";
+import { Navigation, Home, Page2, Music, Login, User } from "./components";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
@@ -36,6 +36,7 @@ function App() {
             <Route path="/Music" element={<Music />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/places" element={<Places />} />
+            <Route path="/User" element={<User />} />
           </Routes>
         </Router>
       </PlaceDataContext.Provider>

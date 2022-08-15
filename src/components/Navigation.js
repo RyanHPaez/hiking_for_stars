@@ -27,6 +27,11 @@ function Navigation() {
                 <i className='fas fa-music' style={{'fontSize':'18px'}}></i>
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/user">
+                <i className='fas fa-user-alt' style={{'fontSize':'18px'}}></i>
+                </NavLink>
+              </li>
               <li className="nav-item-login">
                 <NavLink className="nav-link" to="/Login">
                 <i>Login</i>
