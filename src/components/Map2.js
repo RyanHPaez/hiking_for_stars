@@ -5,10 +5,26 @@ import APIconfig from './APIconfig'
 
 //incorporating search bar to the second webpage 
 function Map2() {
-  let [searchTerm, setSearchTerm] = useState('')
-  let [data, setData] = useState([])
-  let [message, setMessage] = useState('Search for Trails!')
-  let [options] = Map
+  // return(
+  //   <div className='Map2'>
+  //   <div className='container'>
+  //   <div className='row align-items-start my-4'>
+  //     <div className='row'>
+  //       <div className='col-{breakpoint}-auto'>
+  //         <form>
+  //           <input 
+  //           type={text}
+  //           placeholder= "Where to?" />
+  //           <button>
+  //           <i class= "fas fa-search"></i>
+  //           </button>
+  //         </form>
+    [searchTerm, setSearchTerm] = useState('')
+    let [data, setData] = useState([])
+    let [message, setMessage] = useState('Search for Trails!')
+    let [options] = Map
+    // </div>
+  
 
   //the api address
   useEffect(() => {
