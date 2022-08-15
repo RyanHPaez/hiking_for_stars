@@ -22,7 +22,7 @@ function App() {
 
   //welcome user
   const [welcomeUser, setWelcomeUser]= useState('Please log in');
-  const logInLogOut = welcomeUser === 'Please log in' ? <a href='/Login'>Log-in</a> : <a href='#'>Log-out</a>
+  const logInLogOut = welcomeUser === 'Please log in' ? <a href='/Login'></a> : <a href='#'></a>
 
   return (
     <div className="App">
