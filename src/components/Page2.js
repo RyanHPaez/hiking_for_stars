@@ -13,9 +13,10 @@ function Page2(props) {
 
   const placeData = useContext(PlaceDataContext)
  
-  const welcomeMessage = !props.user[0].user_name
-    ? "Please log in or sign up"
-    : props.user[0].user_name;
+
+  // const welcomeMessage = !props.user[0].user_name
+  //   ? "Please log in or sign up"
+  //   : props.user[0].user_name;
 
   //favorited trail
   const favoritedTrail = (trail) => {
