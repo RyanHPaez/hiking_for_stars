@@ -1,9 +1,13 @@
-// import React,{useEffect, useState, useContext} from "react";
-// import { PlaceDataContext } from "../context/placeDataContext";
+import React from "react";
 
+function Page2() {
+
+<<<<<<< HEAD
 function Page2() {
   // useEffect(() => {}, []);
   // const placeData = useContext(PlaceDataContext);
+=======
+>>>>>>> 27f05785135b756320db27a312bf482512c16376
 
   return (
     <div className="Page2">

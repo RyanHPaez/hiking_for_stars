@@ -1,12 +1,19 @@
 import { PromiseProvider } from 'mongoose';
 import React, {useContext, useEffect, useState} from 'react'
 import { PlaceDataContext } from '../context/placeDataContext';
+<<<<<<< HEAD
 // import Page2 from './Page2';
+=======
+>>>>>>> 27f05785135b756320db27a312bf482512c16376
 import TrailDetails from './TrailDetails';
 
 
 
+<<<<<<< HEAD
 function Page2(props) {
+=======
+function Home(props) {
+>>>>>>> 27f05785135b756320db27a312bf482512c16376
   const [userFavorite, setUserFavorite ] = useState([])
   const [hoverPopup, setHoverPopup] = useState(false);
   
@@ -48,6 +55,7 @@ function Page2(props) {
     >
       <form>
         <h2 key={i}>{item.title}</h2>
+<<<<<<< HEAD
         <img 
         key={i} 
         alt=""
@@ -57,6 +65,10 @@ function Page2(props) {
         <p 
         key={i}>${item.price}
         </p>
+=======
+        <img key={i} src={item.gameImage}></img>
+        <p key={i}>${item.price}</p>
+>>>>>>> 27f05785135b756320db27a312bf482512c16376
        
       </form>
     </div>
@@ -83,11 +95,15 @@ function Page2(props) {
       >
           <form onSubmit={handleClick}>
             <h2 key={i}>{item.name}</h2>
+<<<<<<< HEAD
             
             <img 
             src={item.thumbnail}
             alt=""
             onMouseOver={() => {setHoverPopup(true); displayDetail(userFavorite)}}
+=======
+            <img src={item.thumbnail} onMouseOver={() => {setHoverPopup(true); displayDetail(userFavorite)}}
+>>>>>>> 27f05785135b756320db27a312bf482512c16376
             onMouseOut={() => {setHoverPopup(false)}}></img>
             <p><b>Rating: </b>{item.rating}<b/></p>
             <p>
@@ -103,7 +119,11 @@ function Page2(props) {
   })
 
   return (
+<<<<<<< HEAD
       <div className="Page2">
+=======
+      <div className="home">
+>>>>>>> 27f05785135b756320db27a312bf482512c16376
         <div className="container">
         <div className="col-sm-12  my-5">
             <h1 className="font-weight-light ">Let's go HIKING!</h1>
@@ -147,4 +167,8 @@ function Page2(props) {
   );
 }
    
+<<<<<<< HEAD
 export default Page2;
+=======
+export default Home;
+>>>>>>> 27f05785135b756320db27a312bf482512c16376
