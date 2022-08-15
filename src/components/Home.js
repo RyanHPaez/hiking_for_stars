@@ -1,10 +1,11 @@
+import { PromiseProvider } from 'mongoose';
 import React, {useContext, useEffect, useState} from 'react'
 import { PlaceDataContext } from '../context/placeDataContext';
 import TrailDetails from './TrailDetails';
 
 
 
-function Home() {
+function Home(props) {
   const [userFavorite, setUserFavorite ] = useState([])
   const [hoverPopup, setHoverPopup] = useState(false);
   
@@ -12,6 +13,10 @@ function Home() {
 
   const placeData = useContext(PlaceDataContext)
  
+  const welcomeMessage = !props.user[0].user_name
+    ? "Please log in or sign up"
+    : props.user[0].user_name;
+
   //favorited trail
   const favoritedTrail = (trail) => {
       setUserFavorite(trail)
@@ -42,8 +47,8 @@ function Home() {
     >
       <form>
         <h2 key={i}>{item.title}</h2>
-        <img src={item.gameImage}></img>
-        <p>${item.price}</p>
+        <img key={i} src={item.gameImage}></img>
+        <p key={i}>${item.price}</p>
        
       </form>
     </div>

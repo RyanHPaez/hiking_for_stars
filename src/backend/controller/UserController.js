@@ -15,6 +15,7 @@ router.get('/users', async (req, res) => {
 
 // find user by id
 router.get('/user', async (req, res) =>{
+  
   try{
     const foundeUser = await User.findById('')
     console.log('users', foundeUser);
