@@ -31,6 +31,22 @@ body {
 
      }
 
+button {
+    color:rgb(163, 255, 3);
+    text-shadow: 1px 1px 2px red, 0 0 1em rgb(171, 171, 171), 0 0 0.2em rgb(171, 171, 171);
+    
+    background: 
+    linear-gradient(#eea301 0 0) 
+    bottom/100% var(--_d, 0) no-repeat;
+    overflow: hidden;
+    transition: 0.6s
+    }
+
+    button:hover{
+        --_d: 100%;
+        --_t: 0;
+        --_c: rgb(255, 250, 250);
+    }
 /* csstricks.com */
 i   {
     line-height: var(--h);
@@ -44,6 +60,7 @@ i   {
     transition: 0.6s
 
     }
+    
 
 i:hover {
         --_d: 100%;
@@ -67,12 +84,10 @@ img {
  img:hover {
     /* height: 450px; */
     width: auto;
-    position:relative;
-   
+    position:relative;   
     bottom: 500px;
     opacity: 5;
-    bottom: 1%;
-    /* z-index: 99; */
+    bottom: 1%;    
     box-shadow: 0 0 10px 10px rgb(188, 157, 17);
     
     
