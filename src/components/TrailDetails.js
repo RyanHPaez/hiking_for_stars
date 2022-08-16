@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { PlaceDataContext } from "../context/placeDataContext";
-import '../TrailDetails.css'
+// import '../TrailDetails.css'
 
 
 function TrailDetails (props) {
@@ -10,7 +10,8 @@ function TrailDetails (props) {
     return (props.trigger) ?(
         <div className="popup">
             <div key="" className="popup-inner">
-                <img src={props.thumbnail}/>
+                <img src={props.thumbnail}
+                alt=''/>
                 {props.children}
             </div>
         </div>

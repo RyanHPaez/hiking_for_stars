@@ -29,7 +29,7 @@ function Navigation() {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/User">
-                <i className='fas fa-user' style={{'fontSize':'18px'}}></i>
+                <i className='fas fa-user-alt' style={{'fontSize':'18px'}}></i>
                 </NavLink>
               </li>
               <li className="nav-item-login">

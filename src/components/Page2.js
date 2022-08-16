@@ -130,8 +130,9 @@ function Page2(props) {
   })
 
   return (
-      <div className="page2 col-md-12">
-        <div className="container col-md-12">
+
+    <div className="Page2">
+      <div className="container">
         <div className="col-sm-12  my-5">
             <h1 className="font-weight-light ">Let's go HIKING!</h1>
             <form>

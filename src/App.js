@@ -4,25 +4,22 @@ import { Navigation, Home, Page2, Music, Login, SignUp, User } from "./component
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
-import { Places } from "./components"
-
-
-
-
+import { Places } from "./components";
 
 function App() {
   const [placeData, setPlaceData] = useState([]);
   // const [userData, setUserData] = useState([]);
 
-  useEffect( () => {
+  useEffect(() => {
     axios
-      .get('http://localhost:3005/app/places')
-      .then ((response) => setPlaceData(response.data));
+      .get("http://localhost:3005/app/places")
+      .then((response) => setPlaceData(response.data));
   }, []);
 
   //welcome user
-  const [welcomeUser, setWelcomeUser]= useState('Please log in');
-  const logInLogOut = welcomeUser === 'Please log in' ? <a href='/Login'></a> : <a href='#'></a>
+  const [welcomeUser, setWelcomeUser] = useState("Please log in");
+  const logInLogOut =
+    welcomeUser === "Please log in" ? <a href="/Login"></a> : <a href="#"></a>;
 
   return (
     <div className="App">
@@ -42,7 +39,7 @@ function App() {
       </Router>
       </PlaceDataContext.Provider>
     </div>
-  )
+  );
 }
 
 export default App;
