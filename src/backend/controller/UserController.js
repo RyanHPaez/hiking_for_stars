@@ -40,35 +40,40 @@ router.get('/user', async (req, res) =>{
   
   //show user
   router.get('/:id', (req, res) => {
-    res.send('show user' + req.params.id)
-    // User.findById(req.params.id)
-    //     .then(foundUser => {
-    //         res.render('show', {
-    //             user: foundUser
-    //         })
-    //     })
-    //     .catch(err =>{
-    //       res.send('404')
-    //     })
-  })
-
-
- //update user route
-  router.get('/:id/edit', async (req,res)=>{
-    console.log('hit update route')
-    res.send('Edit User' + req.params.id)
-    // try{
-    //     res.render('inside update users route')
-    // }catch(err){
-    //     res.send(err)
+    // if(req.body.userName)
+    // try { 
+    //   const user= await User.findById(req.params.id)
+    //   const {password, updatedAt, ...other} = user._doc
+    //   res.status(200).json(other)
+    // }catch (err) {
+    //   res.status(500).json(err)
     // }
   })
+
+
+//  //update user route
+//   router.get('/:id/edit', async (req,res)=>{
+//     console.log('hit update route')
+//     res.send('Edit User' + req.params.id)
+//     // try{
+//     //     res.render('inside update users route')
+//     // }catch(err){
+//     //     res.send(err)
+//     // }
+//   })
   
-  //define update user route (PUT)
-  router.put('/:id', async (req, res) =>{
-    console.log('hit update route')
-    res.send('Update User' + req.params.id)
-  })
+  // // update user route 
+  // router.put('/:id', async (req, res) =>{
+  //   if(req.body.userId === req.params.id || req.user.isAdmin){
+  //     try{
+  //       const user= await User.findByIdAndUpdate(req.params.id, {})
+  //     res.status(200).json("acc was updated")
+  //     }catch 
+      
+  //   else {
+  //     return res.status(403).json('you can only update your account')
+  //   }
+  // })
   
   //delete user 
   router.delete('/:id', async (req,res)=>

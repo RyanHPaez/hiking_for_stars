@@ -4,35 +4,29 @@ const React = require('react')
 function Edit () {
     return (
       
-        <><h2>Edit a bread</h2><form action={`/breads/${bread._id}?_method=PUT`} method="POST">          <label htmlFor="name">Name</label>
+        <><h2>Edit User</h2>
+        <form action={`/users/${users._id}?_method=PUT`} method="POST">          
+        <label htmlFor="name">Name</label>
             <input
                 type="text"
                 name="name"
                 id="name"
                 required
-                defaultValue={bread.name} />
+                defaultValue={user.name} />
             <label htmlFor="image">Image</label>
             <input
                 type="text"
                 name="image"
                 id="image"
-                defaultValue={bread.image} />
-            <label htmlFor="baker">Baker</label>
-            <select name="baker" id="baker" defaultValue={bread.baker}>
-                {bakers.map((baker) => {
+                defaultValue={user.image} />
+            <label htmlFor="user">User</label>
+            <select name="user" id="user" defaultValue={bread.user}>
+                {users.map((user) => {
                     return (
-                        <option value={baker._id} key={baker._id}>{baker.name}</option>
+                        <option value={user._id} key={user._id}>{user.name}</option>
                     )
                 })}
             </select>
-            <label htmlFor="hasGluten">Has Gluten?</label>
-            <input
-                type="checkbox"
-                name="hasGluten"
-                id="hasGluten"
-                defaultChecked={bread.hasGluten} />
-            <br />
-            <input type="submit" />
         </form></>
           )
         }
