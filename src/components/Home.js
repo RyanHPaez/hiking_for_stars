@@ -15,7 +15,7 @@ function Home() {
                   // onChange={(e)=>setInput(e.target.value)}
                 />
                 <button>
-                  <i class="fas fa-search"></i>
+                  <i className="fas fa-search"></i>
                 </button>
               </form>
               <div className="row align-items-center">
