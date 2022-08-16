@@ -35,9 +35,6 @@ app.use(cors({
 const placeController = require('../backend/controller/PlaceController');
 app.use('/app', placeController)
 
-const placeController = require("../backend/controller/PlaceController");
-app.use("/app", placeController);
-
 const userController = require("../backend/controller/UserController");
 app.use("/secapp", userController);
 
