@@ -90,7 +90,7 @@ function Page2(props) {
     <div className="Page2">
       <div className="container">
         <div className="col-sm-12  my-5">
-          <h1 className="font-weight-light ">Favorite </h1>
+          <h1 className="font-weight-light ">Favorite Hiking Spots</h1>
           <form>
             <input
               // ref={term}
