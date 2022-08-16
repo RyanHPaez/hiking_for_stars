@@ -1,7 +1,7 @@
 const express = require('express');
 const { ReturnDocument } = require('mongodb');
 const router = express.Router();
-const User = require('../models/userSchema');
+const User = require('../models/UserSchema');
 
 router.get('/users', async (req, res) => {
   
