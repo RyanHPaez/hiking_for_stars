@@ -1,9 +1,10 @@
 require("dotenv").config({ path: "../.env" });
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-const cors = require("cors");
-const uri = process.env.MONGO_URI;
+const mongoose = require('mongoose')
+const cors = require('cors');
+const uri = process.env.MONGO_URI
+const methodOverride = require ('method-override')
 
 async function connect() {
   try {
@@ -23,13 +24,16 @@ connect();
 
 //Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(express.urlencoded({extended:true}));
+app.use(express.static('public'))
+//to check put and delete
+app.use(methodOverride('_method'))
+app.use(cors({
+  origin: '*'
+}));
+
+const placeController = require('../backend/controller/PlaceController');
+app.use('/app', placeController)
 
 const placeController = require("../backend/controller/PlaceController");
 app.use("/app", placeController);
