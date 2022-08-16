@@ -74,7 +74,8 @@ function MapData(props){
 		    <img src= {item.thumbnail} alt= '' default></img>
 			<div className= 'trailCity' ><p>{item.city}</p></div>
 			<div className= 'trailDifficulty'><p>{item.difficulty }</p></div>
-			<div className='trailDirections'><p>{item.Directions}</p></div>
+			<div className='trailDirections'><p>{item.directions}</p></div>
+			<div className='trailDescription'><p>{item.description}</p></div>
            
 		</div>
 		
