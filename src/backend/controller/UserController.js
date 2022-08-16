@@ -40,7 +40,7 @@ router.get('/user', async (req, res) =>{
   
   //show user
   router.get('/:id', (req, res) => {
-    const foundPlaces = await User.find()
+    const foundPlaces =  User.find()
       .then(foundUser => {
         res.render('show', {
           user: foundUser
