@@ -27,29 +27,29 @@ function Page2(props) {
     newFave = userFavorite;
   };
 
-  const displayDetail = (item, i) => {
-    return (
-      // <div
-      //   style={{
-      //     width: "280px",
-      //     height: "200px",
-      //     margin: "20px",
-      //     textAlign: "center",
-      //     display: "inline-table",
-      //     borderRadius: "20px",
-      //     position: "relative",
-      //   }}
-      // >
-        <form>
-          <h2 className="font-weight-light " key={i}>
-            {item.title}
-          </h2>
-          <img key={i} src={item.gameImage}></img>
-          <p key={i}>${item.price}</p>
-        </form>
-      // </div>
-    );
-  };
+  // const displayDetail = (item, i) => {
+  //   return (
+  //     <div
+  //       style={{
+  //         width: "280px",
+  //         height: "200px",
+  //         margin: "20px",
+  //         textAlign: "center",
+  //         display: "inline-table",
+  //         borderRadius: "20px",
+  //         position: "relative",
+  //       }}
+  //     >
+  //       <form>
+  //         <h2 className="font-weight-light " key={i}>
+  //           {item.title}
+  //         </h2>
+  //         <img key={i} src={item.gameImage}></img>
+  //         <p key={i}>${item.price}</p>
+  //       </form>
+  //     </div>
+  //   );
+  // };
 
   const display = placeData.map((item, i) => {
     return (
@@ -60,7 +60,7 @@ function Page2(props) {
           height: "200px",
           textAlign: "center",
           display: "inline-table",
-          borderRadius: "20px",
+          // borderRadius: "20px",
           position: "inherit",
           gridTemplateRows: "auto",
           gridArea: "10 / 10 / 20 / 20",
@@ -75,7 +75,7 @@ function Page2(props) {
               padding: "50px 50px 0px 50px",
               textAlign: "center",
               display: "inline-table",
-              borderRadius: "20px",
+              // borderRadius: "20px",
               position: "inherit",
               gridTemplateRows: "auto",
               gridArea: "10 / 10 / 20 / 20",
@@ -93,7 +93,7 @@ function Page2(props) {
               src={item.thumbnail}
               onMouseOver={() => {
                 setHoverPopup(true);
-                displayDetail(userFavorite);
+                // displayDetail(userFavorite);
               }}
               onMouseOut={() => {
                 setHoverPopup(false);

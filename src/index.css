@@ -34,7 +34,8 @@ button{
     line-height: var(--h);
     color:rgb(163, 255, 3);
     text-shadow: 1px 1px 2px red, 0 0 1em rgb(171, 171, 171), 0 0 0.2em rgb(171, 171, 171);
-  
+    border: none;
+    
 background: 
 linear-gradient(#eea301 0 0) 
 bottom/100% var(--_d, 0) no-repeat;
@@ -52,8 +53,8 @@ button:hover {
 /* csstricks.com */
 i   {
     line-height: var(--h);
-        color:rgb(163, 255, 3);
-        text-shadow: 1px 1px 2px red, 0 0 1em rgb(171, 171, 171), 0 0 0.2em rgb(171, 171, 171);
+    color:rgb(163, 255, 3);
+    text-shadow: 1px 1px 2px red, 0 0 1em rgb(171, 171, 171), 0 0 0.2em rgb(171, 171, 171);
       
     background: 
     linear-gradient(#eea301 0 0) 
@@ -73,12 +74,13 @@ i:hover {
 img {
     content: "";
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
-        display: absolute;
-        flex-direction: column;
+        display:inline;
+        flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin: 0 auto;
+        margin: 10px;
         position: relative;
+        
         
         
     }  
