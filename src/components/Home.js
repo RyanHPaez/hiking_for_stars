@@ -5,8 +5,8 @@ function Home() {
     <div className="Home">
       <div className="container">
         <div className="row align-items-start my-4">
-          <div className="row">
-            <div className="col-{breakpoint}-auto">
+          
+            <div className="col-sm-12">
               <form>
                 <input
                   // ref={term}
@@ -19,18 +19,18 @@ function Home() {
                 </button>
               </form>
               <div className="row align-items-center">
-                <div className="col-{breakpoint}-auto">
+                <div className="col-sm-12">
                   <h1 className="font-weight-light">
                     Search your favorite hiking spot!
                   </h1>
-                  <p>paragraph can go here!</p>
+                  
                 </div>
               </div>
-              <div className="row align-items-end">
+              <div className="row align-items-center">
                 <div className="col-md-12">
                   <img
                     className="img-fluid "
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xksVRek8uJJPEn-2VhLDD8PoOHI93xSAVQ&usqp=CAU"
+                    src="https://olyortho.com/wp-content/uploads/2020/09/AdobeStock_124565984-1-scaled.jpeg"
                     alt="hills"
                   />
                 </div>
@@ -43,7 +43,7 @@ function Home() {
           <h4>Check it out!</h4>
         </a>
       </div>
-    </div>
+    
   );
 }
 

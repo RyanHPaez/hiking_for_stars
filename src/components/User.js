@@ -41,11 +41,11 @@ function User(){
 }
 
 export default User;
-{/* <img className="profileCoverImg" src='assets/forest.jpg'
-               alt=''/>
-                    
 
-                    </div>
+
+
+{/* <img className="profileCoverImg" src='assets/forest.jpg'
+                              
                     <div className="profileInfo">
                         
                          */}

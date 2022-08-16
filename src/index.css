@@ -2,6 +2,7 @@ body {
     background-image: radial-gradient(  rgb(203, 203, 203),rgb(251, 250, 214),rgb(79, 70, 52));
     min-height: 100vh;
     display: flex;
+    
 
      }
 
@@ -35,7 +36,7 @@ button{
     color:rgb(163, 255, 3);
     text-shadow: 1px 1px 2px red, 0 0 1em rgb(171, 171, 171), 0 0 0.2em rgb(171, 171, 171);
     border: none;
-    
+
 background: 
 linear-gradient(#eea301 0 0) 
 bottom/100% var(--_d, 0) no-repeat;

@@ -56,29 +56,29 @@ function Page2(props) {
       <div
         className="col-md-3 my-2"
         style={{
-          width: "auto",
-          height: "200px",
+          // width: "auto",
+          // height: "200px",
           textAlign: "center",
           display: "inline-table",
           // borderRadius: "20px",
-          position: "inherit",
-          gridTemplateRows: "auto",
-          gridArea: "10 / 10 / 20 / 20",
+          // position: "inherit",
+          // gridTemplateRows: "auto",
+          // gridArea: "5 / 5 / 10 / 10",
         }}
       >
         <form onSubmit={handleClick}>
           <h4
             style={{
               width: "250px",
-              height: "170px",
+              height: "50px",
               margin: "20px",
-              padding: "50px 50px 0px 50px",
+              // padding: "50px 50px 0px 50px",
               textAlign: "center",
-              display: "inline-table",
+              // display: "inline-table",
               // borderRadius: "20px",
-              position: "inherit",
-              gridTemplateRows: "auto",
-              gridArea: "10 / 10 / 20 / 20",
+              // position: "inherit",
+              // gridTemplateRows: "auto",
+              // gridArea: "10 / 10 / 20 / 20",
             }}
             className="font-weight-light "
             key={i}
@@ -102,9 +102,9 @@ function Page2(props) {
           </div>
 
           <p
-            style={{
-              paddingTop: "30px",
-            }}
+            // style={{
+            //   paddingTop: "30px",
+            // }}
           >
             <b>Rating: </b>
             {item.rating}
