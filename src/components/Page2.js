@@ -34,20 +34,17 @@ function Page2(props) {
     return (
       <div
       style={{
-        background: "black",
         width: "280px",
         height: "200px",
         margin: "20px",
         textAlign: "center",
         display: "inline-table",
-        backgroundColor: "black",
-        color: "white",
         borderRadius: "20px",
         position: "relative",
       }}
     >
       <form>
-        <h2 key={i}>{item.title}</h2>
+        <h2 className="font-weight-light " key={i}>{item.title}</h2>
         <img key={i} src={item.gameImage}></img>
         <p key={i}>${item.price}</p>
        
@@ -63,56 +60,47 @@ function Page2(props) {
       <div className='col-md-3 my-2' 
       
       style={{
-        background: "black",
-        width: '280px',
+        width: 'auto',
         height: "200px",
-        margin: "20px",
-        padding: '25px 50px 75px 50px',
         textAlign: "center",
         display: "inline-table",
-        color: "white",
-        backgroundColor: "black",
         borderRadius: "20px",
-        position: 'inherit',
-        border: '1px solid',
+        position: 'inherit',        
         gridTemplateRows: 'auto',
         gridArea: '10 / 10 / 20 / 20'
       }}
       >
           <form onSubmit={handleClick}>
             <h4 
-            style={{background: "black",
+            style={{
             width: '250px',
-            height: "200px",
+            height: "170px",
             margin: "20px",
             padding: '50px 50px 0px 50px',
             textAlign: "center",
             display: "inline-table",
-            color: "white",        backgroundColor: "black",
             borderRadius: "20px",
-            position: 'inherit',
-            // borderTop:'200px',
-            // borderLeft:'200px',
-            // borderRight:'200px',
-            // borderBottom:'200px',
+            position: 'inherit',            
             gridTemplateRows: 'auto',
             gridArea: '10 / 10 / 20 / 20'}}
             
-             key={i}>{item.name}
+            className="font-weight-light " key={i}>{item.name}
              
              </h4>
              
              
              <div className='column-md-3'>
-          <img style={{ width: 'auto', height: '100px'}} 
+          <img style={{ width: 'auto', height: '200px'}} 
             className='img-fluid'
-           src={item.thumbnail} onMouseOver={() => { setHoverPopup(true); displayDetail(userFavorite) }}
+           src={item.thumbnail} 
+           onMouseOver={() => { setHoverPopup(true); 
+            displayDetail(userFavorite) }}
             onMouseOut={() => { setHoverPopup(false) }}></img>
             </div>
             
             
             <p style={{
-            paddingTop:'50px'
+            paddingTop:'30px'
           }}>
             <b>Rating: </b>{item.rating}<b /></p>
           <p>
@@ -158,8 +146,10 @@ function Page2(props) {
               <p>- Team Hangout</p>
         </div> 
         <div>
-          <TrailDetails trigger = {hoverPopup} setTrigger={setHoverPopup} src={userFavorite.thumbnail}>
-              <h3 className='trailName'>{userFavorite.name}</h3>
+          <TrailDetails trigger = {hoverPopup} 
+          setTrigger={setHoverPopup} 
+          src={userFavorite.thumbnail}>
+              <h3 className='font-weight-light trailName'>{userFavorite.name}</h3>
               <img className='detailViewImg' src={userFavorite.thumbnail} ></img>
               <div className='detailDescription'>
                 
