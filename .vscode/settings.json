@@ -1,7 +1,12 @@
 {
     "cSpell.words": [
+<<<<<<< HEAD
         "cmshbbb",
         "rapidapi"
     ],
     "liveServer.settings.port": 5501
+=======
+        "favorited"
+    ]
+>>>>>>> main
 }

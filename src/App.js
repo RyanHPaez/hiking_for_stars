@@ -1,53 +1,49 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Page2, Page3, Page4} from "./components";
+import { Navigation, Home, Page2, Music, Login, SignUp } from "./components";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
 import { Places } from "./components"
-import { isCompositeComponent } from "react-dom/test-utils";
+import Map2 from "./components/Map2";
+
+
+
 
 
 function App() {
+  const [placeData, setPlaceData] = useState([]);
+  // const [userData, setUserData] = useState([]);
 
-  
-
-  const [placeData, setPlaceData] = useState([])
   useEffect( () => {
     axios
-      .get(`http:localhost:3005/app/places`)
+      .get('http://localhost:3005/app/places')
       .then ((response) => setPlaceData(response.data));
-  }, [])
+  }, []);
 
-    console.log(placeData)
-  // const getData = async() => {
-  //   const {placeData} =await axios.get(`http:localhost:3005/app/places`);
-  //   setPlaceData(placeData)
-  // }
-
-  // useEffect(() => {
-  //   getData();
-  // }, [])
-
+  //welcome user
+  const [welcomeUser, setWelcomeUser]= useState('Please log in');
+  const logInLogOut = welcomeUser === 'Please log in' ? <a href='/Login'></a> : <a href='#'></a>
 
   return (
     <div className="App">
+      {logInLogOut}
       <PlaceDataContext.Provider value={placeData}>
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home user={welcomeUser}/>} />
           <Route path="/page2" element={<Page2 />} />
-          <Route path="/page3" element={<Page3 />} />
-          <Route path="/page4" element={<Page4 />} />
-          <Route path="/page4" element={<Page4 />} />
+          <Route path="/Music" element={<Music />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Login" element={<Login setWelcomeUser={setWelcomeUser} />} />
           <Route path="/places" element={<Places />} />
+          <Route path="/Map2" element={<Map2/>} />
         </Routes>
       </Router>
       </PlaceDataContext.Provider>
     </div>
   )
 }
-
 
 export default App;

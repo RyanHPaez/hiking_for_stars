@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import SearchBar from './SearchBar'
 import Map from './Map'
-import APIconfig from './APIconfig'
+
 
 //incorporating search bar to the second webpage 
 function Map2() {
@@ -19,10 +19,10 @@ function Map2() {
   //           <i class= "fas fa-search"></i>
   //           </button>
   //         </form>
-    [searchTerm, setSearchTerm] = useState('')
-    let [data, setData] = useState([])
-    let [message, setMessage] = useState('Search for Trails!')
-    let [options] = Map
+    const [searchTerm, setSearchTerm] = useState('')
+    const [data, setData] = useState([])
+    const[message, setMessage] = useState('Search for Trails!')
+    const[options] = Map
     // </div>
   
 

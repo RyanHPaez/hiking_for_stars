@@ -3,35 +3,40 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <div className="navigation navbar-expand navbar-dark bg-dark col-sm-8">
+      <nav className="navbar navbar-expand navbar-dark bg-dark  col-sm-9">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-          Hike with the stars
+          <i>Hiking for Stars</i>
           </NavLink>
           <div>
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
+              <li className="nav-item-home">              
                 <NavLink className="nav-link" to="/">
-                  Home
+                <i className='fas fa-home' style={{'fontSize':'18px'}}></i>                 
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/page2">
-                page 2
+                <i className='fas fa-hiking' style={{'fontSize':'18px'}}></i>
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/page3">
-                page 3
+                <NavLink className="nav-link" to="/Music">
+                <i className='fas fa-music' style={{'fontSize':'18px'}}></i>
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/Page4">
-                Login
+              <li className="nav-item-login">
+                <NavLink className="nav-link" to="/Login">
+                <i>Login</i>
                 </NavLink>
-              </li>          
+              </li>
+              <li className="nav-item-SignUp">
+                <NavLink className="nav-link" to="/SignUp">
+                <i>SignUp</i>
+                </NavLink>
+              </li>               
             </ul>
           </div>
         </div>
