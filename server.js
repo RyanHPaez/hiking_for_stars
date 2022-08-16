@@ -32,10 +32,10 @@ app.use(cors({
   origin: '*'
 }));
 
-const placeController = require('./controller/PlaceController');
+const placeController = require('./src/backend/controller/PlaceController');
 app.use('/app', placeController)
 
-const userController = require("./controller/UserController");
+const userController = require("./src/backend/controller/UserController");
 app.use("/secapp", userController);
 
 app.listen(3005, () => console.log("Server is running on PORT 3005"));
