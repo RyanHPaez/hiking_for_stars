@@ -1,45 +1,87 @@
-import React, {useState, useEffect} from "react";
+import { useState, useEffect } from "react"
+import { useHistory, useParams } from "react-router"
 
-function Edit() {
-    return (
-        <div className="container">
-          <div className="profile-header">
-              <div className="profile-img">
-                  <img src="https://image.freepik.com/free-icon/profile-user-silhouette_318-40557.jpg" width="200"/>
-          </div>
-          <div className="profile-nav-info">
-              <h3 className="user-username"> Username </h3>
-              <div className="user-first-name">Name</div>
-              <div className="user-favorite-trail">Favorite trail</div>
-          </div>
-          
-          <div className="user-options">
-              <a href={`./UpdateUser`}>
-                  <button>
-                      <i className="fas fa-edit"> Edit</i>
-                  </button>
-              </a>
-                  <button>
-                      <i className="fas fa-trash"> Delete User</i>
-                   </button>
-          </div>
-          
-          <div className='user-main'>
-              <div className='left-side-bar'>
-                  <div className="profile-side">
-                      <div className="user-bio">
-                          <p>
-                              Bio goes in here, lorem ipsum dolor sit amet, consectetur adipiscing elit. Repregenderit atque dolor quiidem.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-                  
-          </div>
-          
-        </div>
-      </div>
-      )
+function EditUserForm() {
+
+	const history = useHistory()
+
+    const { userId } = useParams()
+
+    const [user, setUser] = useState({})
+
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await fetch(`http://localhost:5000/users/${userId}`)
+			const resData = await response.json()
+			setUser(resData)
+		}
+		fetchData()
+	}, [ userId ])
+
+	async function handleSubmit(e) {
+		e.preventDefault()
+
+		await fetch(`http://localhost:5000/users/${user.userId}`, {
+			method: 'PUT',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(user)
+		})
+
+		history.push(`/users/${user.userId}`)
+	}
+
+	return (
+		<main>
+			<h1>Edit User Profile</h1>
+			<form onSubmit={handleSubmit}>
+				<div className="form-group">
+					<label htmlFor="name">Username</label>
+					<input
+						required
+						value={user.name}
+						onChange={e => setuser({ ...user, name: e.target.value })}
+						className="form-control"
+						id="name"
+						name="name"
+					/>
+				</div>
+				<div className="form-group">
+					<label htmlFor="founded">First Name</label>
+					<input
+						required
+						value={user.first_name}
+						onChange={e => setuser({ ...user, first_name: e.target.value })}
+						className="form-control"
+						id="first_name"
+						name="first_name"
+					/>
+				</div>
+				<div className="form-group">
+					<label htmlFor="city">Last Name</label>
+					<input
+						value={user.last_name}
+						onChange={e => setuser({ ...user, last_name: e.target.value })}
+						className="form-control"
+						id="city"
+						name="city"
+					/>
+				</div>
+				<div className="form-group">
+					<label htmlFor="pic">User Picture</label>
+					<input
+						value={user.pic}
+						onChange={e => setuser({ ...user, pic: e.target.value })}
+						className="form-control"
+						id="pic"
+						name="pic"
+					/>
+				</div>
+				<input className="btn btn-primary" type="submit" value="Save" />
+			</form>
+		</main>
+	)
 }
 
-export default Edit;
+export default EdituserForm
