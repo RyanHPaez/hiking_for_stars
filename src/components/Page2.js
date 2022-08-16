@@ -48,7 +48,7 @@ function Page2(props) {
     >
       <form>
         <h2 key={i}>{item.title}</h2>
-        <img key={i} src={item.gameImage}></img>
+        <img key={i} src={item.thumbnail}></img>
         <p key={i}>${item.price}</p>
        
       </form>
