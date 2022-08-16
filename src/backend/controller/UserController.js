@@ -76,16 +76,18 @@ router.get('/user', async (req, res) =>{
   // })
   
   //delete user 
-  router.delete('/:id', async (req,res)=>
-    res.send('Delete User' + req.params.id)
-    // {
-    // console.log('User: ', req.body.username)
-    // const user = req.body.user_name
-    // User.deleteOne({username: user}, function(err, obj) {
-    //     if (err) throw err;
-    //    res.status(200).send("1 document deleted");
-    //   })
-    );
+  router.delete('/:id', async (req,res)=>{
+    if(req.body.userId === req.params.id ) {
+      try {
+        const user= await User.deleteOne(req.params.id)
+        res.status(200).json("Account has been deleted")
+      } catch (err) {
+        return res.status(500).json(err)
+      }
+    }else {
+      return res.status(404)
+    }
+   });
   
 
 module.exports = router;
