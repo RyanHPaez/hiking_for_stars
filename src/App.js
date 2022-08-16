@@ -1,11 +1,11 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Page2, Music, Login, SignUp } from "./components";
+import { Navigation, Home, Page2, Music, Login, SignUp, Map } from "./components";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
 import { Places } from "./components"
-import Map from "./components/Map";
+
 
 
 

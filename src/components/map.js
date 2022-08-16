@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import SearchBar from './SearchBar'
+import TrailSearchBar from './TrailSearchBar'
 import MapData from './MapData'
+import TrailDetails from './TrailDetails';
 
 
 //incorporating search bar to the second webpage 
-function Map2() {
+function Map() {
   // return(
-  //   <div className='Map2'>
+  //   <div className='Map'>
   //   <div className='container'>
   //   <div className='row align-items-start my-4'>
   //     <div className='row'>
@@ -52,12 +53,12 @@ function Map2() {
     
     return (
       <div className="App">
-        <SearchBar handleSearch={handleSearch} />
+        <TrailSearchBar handleSearch={handleSearch} />
         {message}
         <MapData data={data} />
       </div>
     );
     }
     
-  export default Map2;
+  export default Map;
     
