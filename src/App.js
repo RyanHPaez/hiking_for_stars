@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
 import { Places } from "./components"
-import Map2 from "./components/Map2";
+import Map from "./components/Map";
 
 
 
@@ -38,7 +38,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login setWelcomeUser={setWelcomeUser} />} />
           <Route path="/places" element={<Places />} />
-          <Route path="/Map2" element={<Map2/>} />
+          <Route path="/Map" element={<Map/>} />
         </Routes>
       </Router>
       </PlaceDataContext.Provider>
