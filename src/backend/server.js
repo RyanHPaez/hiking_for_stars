@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require('mongoose')
 const cors = require('cors');
 const uri = process.env.MONGO_URI
+const methodOverride = require ('method-override')
 
 
 
@@ -29,6 +30,8 @@ connect();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'))
+//to check put and delete
+app.use(methodOverride('_method'))
 app.use(cors({
   origin: '*'
 }));
