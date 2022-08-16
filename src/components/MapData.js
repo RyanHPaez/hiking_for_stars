@@ -60,7 +60,7 @@ function MapData(props){
 		}
 	};
 	
-	fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.21994010863107&lon=-122.06889194045178&page=2&radius=50', options)
+	fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.21994010863107&lon=-122.06889194045178&page=2&radius=30', options)
 		.then((response) => response.json())
 		.then((response) => setSearchData(response.data))
 		.catch(err => console.error(err));
@@ -74,6 +74,7 @@ function MapData(props){
 		    <img src= {item.thumbnail} alt= '' default></img>
 			<div className= 'trailCity' ><p>{item.city}</p></div>
 			<div className= 'trailDifficulty'><p>{item.difficulty }</p></div>
+			<div className='trailDirections'><p>{item.Directions}</p></div>
            
 		</div>
 		
