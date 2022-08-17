@@ -1,6 +1,6 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Page2, Music, Login, SignUp } from "./components";
+import { Navigation, Home, Page2, Music, Login, SignUp, User, Map } from "./components";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
