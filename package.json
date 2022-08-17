@@ -25,7 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--max-old-space-size=8192 webpack",
+    "start": "set NODE_OPTIONS=--max-old-space-size=8192 webpack",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
