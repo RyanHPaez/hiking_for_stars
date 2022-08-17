@@ -1,14 +1,15 @@
 
-import React, {useState, useEffect, useParams} from "react";
+import React, {useState, useParams, useContext} from "react";
 import axios from 'axios'
+import { UserDataContext } from "../context/userDataContext";
 
 
-
-function User(loginUser){
-    
-    // const user = useParams();
-    
-    // const [userData, setUserData]
+function User(props){
+    console.log(props)
+    // const { user } = useParams();
+    const user = props
+    // const userData= useContext(UserDataContext)
+    // console.log('user data inside user profile', userData)
     
     // useEffect( () => {
     //     axios
@@ -17,9 +18,8 @@ function User(loginUser){
     // }, []);
     
     // const user = props.users
-    
     return(
-        <div>
+        
             <div className="profile">
                 <div className="profileRight">
                     <div className="profileRightTop">
@@ -27,21 +27,21 @@ function User(loginUser){
 
                     <img className="profileCoverImg" src='assets/forest.jpg'
                     alt=''/>
-                            <img className="profileUser" src='assets/cat.jpg'
-                            alt=''/> 
+                            {/* <img className="profileUser" src={user.thumbnail}
+                            alt=''/>  */}
                         
                         
                         
                             </div>
                             <div className="profileInfo">
-                                <h4> {loginUser.first_name} </h4>
-                                <span className="profileBio">info</span>
+                                <h4> {user.first_name} </h4>
+                                <span className="profileBio">userData.first_name</span>
                                 
-                                <a href={`/users/${loginUser.id}/edit`}>
+                                {/* <a href={`/users/${user.id}/edit`}>
                                 <button>
                                     <i class="fas fa-edit"> Edit</i>
                                 </button>
-                                </a>
+                                </a> */}
                                 <button>
                                     <i class="fas fa-trash"> Delete User</i>
                                 </button>
@@ -50,7 +50,7 @@ function User(loginUser){
                     </div>
                 </div> 
             </div>
-       </div>
+       
     )
 }
 

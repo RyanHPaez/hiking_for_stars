@@ -12,7 +12,6 @@ import { Places } from "./components"
 
 function App() {
   const [placeData, setPlaceData] = useState([]);
-  // const [userData, setUserData] = useState([]);
 
   useEffect( () => {
     axios

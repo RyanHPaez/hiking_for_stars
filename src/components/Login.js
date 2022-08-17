@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { UserDataContext } from '../context/userDataContext'
 import { faCommentDollar, faCommentsDollar } from '@fortawesome/free-solid-svg-icons';
+import User from './User'
 
 function Login ({setWelcomeUser}) {
 
     let navigate = useNavigate();
     const [userData, setUserData] = useState([]);
+    const [filteredUserData, setFilteredUserData ] = useState ([]);
     const [userName, setUserName] = useState("");
     const [userId, setUserId] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword ] = useState("")
 
+    
     useEffect( () => {
         axios
             .get(`http://localhost:3005/secapp/users`)
@@ -23,27 +27,17 @@ function Login ({setWelcomeUser}) {
 
         const loginUser = userData.find( user => user.email === email)
         
-        // const loginUser = userData.filter( user => {
-        //     if(user.email === email ){
-        //       setUserName(user.user_name);
-        //       setUserId(user.id)
-        //     }
-        //     return user.password
-        // })
-        // console.log('this is the input password', password)
-        console.log('this is returned by logged in user',loginUser.password)
-        
         if(password === loginUser.password){
-          console.log('user successfully logged in')
             setWelcomeUser(userName)
             navigate('/User', {loginUser})
-        }
-        else{
+            console.log('successful login  data', loginUser)
+        }else{
             alert('Email/or password are invalid. *Case Sensitive*')
         }
     }
 
      return (
+      <User filteredUserData={userData}>
         <div className="login" >
           <form onSubmit={handleSubmit} className="container">
             <div className="row align-items-center">
@@ -102,6 +96,7 @@ function Login ({setWelcomeUser}) {
             </div>
           </form>
         </div>
+      </User>
       );
     }
 
