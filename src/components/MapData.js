@@ -6,12 +6,7 @@ import React, { useState } from "react";
 //map function for the search bar 
 
 function MapData(props){
-	
-	
-	
-	
-	
-    // const display = props.map((item, index) => {
+	// const display = props.map((item, index) => {
     //      return (
 	// 	<div>
 
