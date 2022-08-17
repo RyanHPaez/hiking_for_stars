@@ -27,30 +27,6 @@ function Page2(props) {
     newFave = userFavorite;
   };
 
-  // const displayDetail = (item, i) => {
-  //   return (
-  //     <div
-  //       style={{
-  //         width: "280px",
-  //         height: "200px",
-  //         margin: "20px",
-  //         textAlign: "center",
-  //         display: "inline-table",
-  //         borderRadius: "20px",
-  //         position: "relative",
-  //       }}
-  //     >
-  //       <form>
-  //         <h2 className="font-weight-light " key={i}>
-  //           {item.title}
-  //         </h2>
-  //         <img key={i} src={item.gameImage}></img>
-  //         <p key={i}>${item.price}</p>
-  //       </form>
-  //     </div>
-  //   );
-  // };
-
   const display = placeData.map((item, i) => {
     return (
       <div
@@ -63,10 +39,12 @@ function Page2(props) {
         <form onSubmit={handleClick}>
           <h4
             style={{
-              width: "250px",
+              width: "auto",
               height: "50px",
-              margin: "20px",
-              textAlign: "center",
+              marginBottom: "40px",
+              marginTop:'30px',
+              padding:'5px',
+              textAlign:'center',
             }}
             className="font-weight-light "
             key={i}
@@ -124,10 +102,13 @@ function Page2(props) {
               <i class="fas fa-search"></i>
             </button>
           </form>
-          
 
-          <div className="col-md-12 ">
-            <h5> {display}</h5>
+          <div className="container">
+            <div className="row">
+              <div className="col-12 img-fluid">
+                <h5> {display}</h5>
+              </div>
+            </div>
           </div>
 
           <div className="col-sm-12 my-4">
