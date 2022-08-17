@@ -50,40 +50,27 @@ router.get('/user', async (req, res) =>{
         res.send(404)
       })
   })
-
-
-  //update user route
-    router.get('/:id/edit', async (req,res)=>{
-      console.log('hit update route')
-      res.send('Edit User' + req.params.id)
-      // try{
-      //     res.render('inside update users route')
-      // }catch(err){
-      //     res.send(err)
-      // }
-    })
   
   // update user route 
     router.put('/:id', async (req, res) =>{
-      res.send('Update User' + req.params.id)
-      // if(req.body.userId === req.params.id || req.user.isAdmin){
-      //   try{
-      //     const user= await User.findByIdAndUpdate(req.params.id, {})
-      //   res.status(200).json("acc was updated")
-      //   }catch 
-        
-      // else {
-      //   return res.status(403).json('you can only update your account')
-      // }
+      // res.send('Update User' + req.params.id)
+      User.findByIdAndUpdate(req.params.id, User)
+      .then(updatedUser => {
+        res.redirect(`/user/${req.params.id}`)
+      })
+      .catch(err => {
+        res.status(500).json(err)
+      })
     })
   
   
   // DELETE
   router.delete('/:id', (req, res) => {
-    User.findByIdAndDelete(req.params.id)
+    console.log(req)
+    User.findByIdAndDelete(req.params.id
     .then(deletedUser => {
     res.status(303).redirect('/Home')
-    })
+    }))
   })
    
   

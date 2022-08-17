@@ -44,9 +44,6 @@ function User(props){
                 <NavLink className="nav-link" to="/Edit">
                 <i className='fas fa-edit' style={{'fontSize':'16px'}}>Edit</i>
                 </NavLink>
-                    <button>
-                        <i className="fas fa-trash" style={{'fontSize':'16px'}}> Delete User</i>
-                    </button>
           </div>
               </div>
             </div>
