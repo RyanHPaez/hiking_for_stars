@@ -20,7 +20,6 @@ function Login ({setWelcomeUser}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('inside handleSumbit')
 
         const loginUser = userData.find( user => user.email === email)
         
@@ -36,8 +35,8 @@ function Login ({setWelcomeUser}) {
         
         if(password === loginUser.password){
           console.log('user successfully logged in')
-            // setWelcomeUser(userName)
-            // navigate('/User', {loginUser})
+            setWelcomeUser(userName)
+            navigate('/User', {loginUser})
         }
         else{
             alert('Email/or password are invalid. *Case Sensitive*')
