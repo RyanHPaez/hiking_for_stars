@@ -54,5 +54,9 @@
   "devDependencies": {
     "5": "^0.0.1",
     "webpack": "^5.74.0"
+  },
+  "engines": {
+    "node": "6.14.2",
+    "npm": "8.13.1"
   }
 }
