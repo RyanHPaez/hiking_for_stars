@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { faCommentDollar, faCommentsDollar } from '@fortawesome/free-solid-svg-icons';
 
 function Login ({setWelcomeUser}) {
 
     let navigate = useNavigate();
     const [userData, setUserData] = useState([]);
     const [userName, setUserName] = useState("");
+    const [userId, setUserId] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword ] = useState("")
 
@@ -19,13 +21,23 @@ function Login ({setWelcomeUser}) {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('inside handleSumbit')
-        const loggedInUser = userData.filter( user => {
-            console.log('inside loggedInUser', user.user_name)
-            return user.user_name
-        })
-        if(loggedInUser.length > 0){
-            setWelcomeUser(loggedInUser)
-            navigate('/page2')
+
+        const loginUser = userData.find( user => user.email === email)
+        
+        // const loginUser = userData.filter( user => {
+        //     if(user.email === email ){
+        //       setUserName(user.user_name);
+        //       setUserId(user.id)
+        //     }
+        //     return user.password
+        // })
+        // console.log('this is the input password', password)
+        console.log('this is returned by logged in user',loginUser.password)
+        
+        if(password === loginUser.password){
+          console.log('user successfully logged in')
+            // setWelcomeUser(userName)
+            // navigate('/User', {loginUser})
         }
         else{
             alert('Email/or password are invalid. *Case Sensitive*')

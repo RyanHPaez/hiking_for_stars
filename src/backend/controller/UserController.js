@@ -18,7 +18,7 @@ router.get('/users', async (req, res) => {
 router.get('/user', async (req, res) =>{
   
   try{
-    const foundeUser = await User.findById('')
+    const foundeUser = await User.findById('6293baa909f515f3d55c9c5b')
     console.log('users', foundeUser);
     res.status(200).json(foundeUser);
   }catch(err){

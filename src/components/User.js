@@ -1,13 +1,58 @@
-import React from "react";
 
-function User() {
-  return (
-        <div className="User">
-                        <h1>
-                        User
-                    </h1>
-        </div>   
-  );
+import React, {useState, useEffect, useParams} from "react";
+import axios from 'axios'
+
+
+
+function User(props){
+    
+    const user = useParams();
+    
+    // const [userData, setUserData]
+    
+    // useEffect( () => {
+    //     axios
+    //         .get(`http://localhost:3005/secapp/users`)
+    //         .then((response) => setUserData(response.data));
+    // }, []);
+    
+    // const user = props.users
+    
+    return(console.log(user)
+//         <>
+//        <div className="profile">
+//            <div className="profileRight">
+//                <div className="profileRightTop">
+//                     <div className="profileCover">
+
+//                <img className="profileCoverImg" src='assets/forest.jpg'
+//                alt=''/>
+//                     <img className="profileUser" src='assets/cat.jpg'
+//                     alt=''/> 
+                
+                
+                
+//                     </div>
+//                     <div className="profileInfo">
+//                         <h4> {user.first_name} </h4>
+//                         <span className="profileBio">info</span>
+                        
+//                         <a href={`/users/${user.id}/edit`}>
+//                         <button>
+//                             <i class="fas fa-edit"> Edit</i>
+//                         </button>
+//                         </a>
+//                         <button>
+//                             <i class="fas fa-trash"> Delete User</i>
+//                         </button>
+//                     </div>
+                    
+//                </div>
+//            </div> 
+//        </div>
+//        </>
+    )
 }
+
 
 export default User;
