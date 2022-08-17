@@ -39,7 +39,6 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login setWelcomeUser={setWelcomeUser} />} />
           <Route path="/places" element={<Places />} />
-          <Route path="/Edit" element={<Edit />} />
         </Routes>
       </Router>
       </PlaceDataContext.Provider>
