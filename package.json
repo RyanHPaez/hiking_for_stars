@@ -23,6 +23,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
+    "webpack-dev-middleware": "^5.3.3",
     "webpack-dev-server": "^4.10.0"
   },
   "scripts": {
@@ -59,6 +60,6 @@
   },
   "devServer": {
     "compress": true,
-    "allowedHosts": "all" 
+    "allowedHosts": "all"
   }
 }
