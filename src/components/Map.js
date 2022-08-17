@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import TrailSearchBar from './TrailSearchBar'
 import MapData from './MapData'
+
 //incorporating search bar to the second webpage 
 function Map() {
-
+  const [message, setMessage] = useState('')
   const [data, setData] = useState([])
 
   const options = {
@@ -81,21 +82,23 @@ function Map() {
 
   const handleSearch = (e, longitude, latitude) => {
     e.preventDefault()
-    console.log(longitude, latitude)
+    // console.log(longitude, latitude)
      const fetchData = async () => {
         const response = await fetch(`https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=${latitude}&lon=${longitude}&radius=30`, options)
-        const resData = await response.json()
-        console.log(resData)
+        .then(({response}) => setData(response.data))
+          
+        // console.log('fetchingdata',data)
           // if(resData.results.length > 0) {
           //   setData(resData.results)
           // } else {
-          //   setMessage('Not Found')
+          //   setMessage('Wrong coordinates')
           // }
         }
         fetchData()
+        // console.log('result data',data)
        } 
  
-
+  //  handleSearch('-122.06889194045178','37.21994010863107')
   return (
     <div className="App">
       <TrailSearchBar handleSearch={handleSearch} />
