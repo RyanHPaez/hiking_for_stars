@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { UserDataContext } from '../context/userDataContext'
@@ -14,7 +14,9 @@ function Login ({setWelcomeUser}) {
     const [userId, setUserId] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword ] = useState("")
+useEffect ( () => {}, [] )
 
+    const {logUserData, setLogUserData} = useContext(UserDataContext)
     
     useEffect( () => {
         axios
@@ -28,16 +30,20 @@ function Login ({setWelcomeUser}) {
         const loginUser = userData.find( user => user.email === email)
         
         if(password === loginUser.password){
-            setWelcomeUser(userName)
-            navigate('/User', {loginUser})
+            // setWelcomeUser(userName);
+            setLogUserData(loginUser);
             console.log('successful login  data', loginUser)
+            navigate('/User', {loginUser})
         }else{
             alert('Email/or password are invalid. *Case Sensitive*')
         }
     }
-
+// theh entire userData object is passing through to user.js need to filter out in login.js 
+// to get the user and pass only theh user object. then connect the delete and edit routes
+// 
+// 
      return (
-      <User filteredUserData={userData}>
+     
         <div className="login" >
           <form onSubmit={handleSubmit} className="container">
             <div className="row align-items-center">
@@ -95,8 +101,9 @@ function Login ({setWelcomeUser}) {
               </div>
             </div>
           </form>
+          <User filteredUserData={{userData}}> </User>
         </div>
-      </User>
+
       );
     }
 

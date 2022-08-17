@@ -4,6 +4,7 @@ import { Navigation, Home, Page2, Music, Login, SignUp, User } from "./component
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
+import { UserDataContext } from "./context/userDataContext";
 import { Places } from "./components"
 
 
@@ -12,6 +13,8 @@ import { Places } from "./components"
 
 function App() {
   const [placeData, setPlaceData] = useState([]);
+  const [logUserData, setLogUserData] = useState([]);
+ 
 
   useEffect( () => {
     axios
@@ -26,6 +29,7 @@ function App() {
   return (
     <div className="App">
       {logInLogOut}
+      <UserDataContext.Provider value={{logUserData, setLogUserData}}>
       <PlaceDataContext.Provider value={placeData}>
       <Router>
         <Navigation />
@@ -40,6 +44,7 @@ function App() {
         </Routes>
       </Router>
       </PlaceDataContext.Provider>
+      </UserDataContext.Provider>
     </div>
   )
 }
