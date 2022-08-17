@@ -25,7 +25,7 @@ function Login ({setWelcomeUser}) {
         })
         if(loggedInUser.length > 0){
             setWelcomeUser(loggedInUser)
-            navigate('/page2')
+            navigate('/User')
         }
         else{
             alert('Email/or password are invalid. *Case Sensitive*')

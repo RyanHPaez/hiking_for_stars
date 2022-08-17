@@ -7,7 +7,7 @@ function Navigation() {
       <nav className="navbar navbar-expand navbar-dark bg-dark  col-sm-9">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-          <i>Hiking for Stars</i>
+          <h1 className="NavName font-weight-light">Hiking for Stars</h1>
           </NavLink>
           <div>
             <ul className="navbar-nav ml-auto">
@@ -25,6 +25,11 @@ function Navigation() {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/Music">
                 <i className='fas fa-music' style={{'fontSize':'18px'}}></i>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/User">
+                <i className='fas fa-user-alt' style={{'fontSize':'18px'}}></i>
                 </NavLink>
               </li>
               <li className="nav-item-login">
