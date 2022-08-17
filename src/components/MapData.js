@@ -19,12 +19,12 @@ function MapData(props){
            </div>
 		    )
     })
- return (
-		console.log(props)
-        <div>
-            {display}
-        </div>
-    )
+//  return (
+// 		console.log(props)
+//         <div>
+//             {display}
+//         </div>
+//     )
 }
 
 	 export default MapData;
