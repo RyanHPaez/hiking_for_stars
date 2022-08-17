@@ -6,10 +6,11 @@ import React, { useState } from "react";
 //map function for the search bar 
 
 function MapData(props){
-	// console.log('this is props',props)
 	// const display = props.map((item, index) => {
     //      return (
 	// 	<div>
+
+		
 	// 		<div className='trailName' key= {index}><p>{item.name}</p></div>
 	// 	    <img src= {item.thumbnail} alt= '' default></img>
 	// 		<div className= 'trailCity' ><p>{item.city}</p></div>
@@ -24,11 +25,11 @@ function MapData(props){
     // })
 
     return (
-		// console.log(props)
-        <div>
-            {/* {display} */}
-        </div>
+		console.log(props)
+        // <div>
+        //     {/* {display} */}
+        // </div>
     )
 }
 
-	 export default MapData;
+     export default MapData;

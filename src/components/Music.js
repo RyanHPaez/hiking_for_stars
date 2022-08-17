@@ -6,7 +6,7 @@ function MusicSearch() {
   // this is where declaring our variable,these are multiple variables
   let [searchTerm, setSearchTerm] = useState("");
   let [data, setData] = useState([]);
-  let [message, setMessage] = useState("Search for Music!");
+  let [message, setMessage] = useState("");
 // this is where you fetch the data with the hook we made in MusicGallery. UseEffect lets us count state variables
   useEffect(() => {
     if (searchTerm) {
