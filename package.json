@@ -22,7 +22,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack-dev-middleware": "^5.3.3",
+    "webpack-dev-server": "^4.10.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,7 +44,6 @@
       "not dead",
       "not op_mini all"
     ],
-   
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -52,5 +53,13 @@
   "devDependencies": {
     "5": "^0.0.1",
     "webpack": "^5.74.0"
+  },
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.13.1"
+  },
+  "devServer": {
+    "compress": true,
+    "allowedHosts": "all"
   }
 }
