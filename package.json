@@ -42,6 +42,7 @@
       "not dead",
       "not op_mini all"
     ],
+   
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "5": "^0.0.1",
+    "webpack": "^5.74.0"
   }
 }

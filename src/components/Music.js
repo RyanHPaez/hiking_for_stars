@@ -3,7 +3,7 @@ import MusicGallery from "./MusicGallery";
 import SearchBar from "./SearchBar";
 // these are hooks and function components
 function MusicSearch() {
-  // this is where declaring our variable,these are mulitple variables
+  // this is where declaring our variable,these are multiple variables
   let [searchTerm, setSearchTerm] = useState("");
   let [data, setData] = useState([]);
   let [message, setMessage] = useState("Search for Music!");

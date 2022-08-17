@@ -4,7 +4,11 @@ import { Navigation, Home, Page2, Music, Login, SignUp, User, Edit, Map } from "
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
-import { Places } from "./components";
+import { Places } from "./components"
+
+
+
+
 
 function App() {
   const [placeData, setPlaceData] = useState([]);
@@ -36,7 +40,6 @@ function App() {
           <Route path="/Login" element={<Login setWelcomeUser={setWelcomeUser} />} />
           <Route path="/places" element={<Places />} />
           <Route path="/Edit" element={<Edit />} />
-          <Route path="/Map" element={<Map />} />
         </Routes>
       </Router>
       </PlaceDataContext.Provider>
