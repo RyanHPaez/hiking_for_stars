@@ -38,4 +38,4 @@ app.use('/app', placeController)
 const userController = require("./src/backend/controller/UserController");
 app.use("/secapp", userController);
 
-app.listen(3005, () => console.log("Server is running on PORT 3005"));
+app.listen(5000, () => console.log("Server is running on PORT 3005"));
