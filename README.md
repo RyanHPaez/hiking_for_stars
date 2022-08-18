@@ -36,6 +36,7 @@ GET  | /  | Homepage
 GET  | /places  | Find places
 GET  | /users  | Find all users
 GET  | /user  | Find user
+GET  | /map  | get personal trails
 POST  | /newUser  | Create new user
 GET  | /:id  | Show user
 PUT  | /:id  | Update user 
