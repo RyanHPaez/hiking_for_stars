@@ -62,6 +62,6 @@ import React, { useState } from "react";
         //     {/* {display} */}
         // </div>
     )
-}
+
 
      export default MapData;
