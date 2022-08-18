@@ -1,10 +1,6 @@
 import { type } from "@testing-library/user-event/dist/type";
 import React, { useState } from "react";
 
-// require('dotenv').config({path: '../.env'})
-// const API_KEY = process.env.API_KEY;
-//map function for the search bar 
-
 function MapData(props){
 	// const display = props.map((item, index) => {
     //      return (

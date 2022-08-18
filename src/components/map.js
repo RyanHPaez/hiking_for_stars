@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import TrailSearchBar from './TrailSearchBar'
 import MapData from './MapData'
-//incorporating search bar to the second webpage 
+//incorporating search bar to the map webpage 
 function Map() {
   const [message, setMessage] = useState('')
   const [data, setData] = useState([])
-
+//options from api 
   const options = {
     method: 'GET',
     terms: {
@@ -63,7 +63,7 @@ function Map() {
       'X-RapidAPI-Host': 'trailapi-trailapi.p.rapidapi.com'
     }
   };
-  //the api address
+  //the api address|example search results
   useEffect(() => {
       const fetchData = async () => {
       const response = await fetch(`https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.21994010863107&lon=-122.06889194045178&radius=30`, options)
@@ -78,7 +78,7 @@ function Map() {
       fetchData()
      }, [data]);
 
-
+//for personal coord search
   const handleSearch = (e, longitude, latitude) => {
     e.preventDefault()
     console.log(longitude, latitude)
