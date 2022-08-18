@@ -6,7 +6,7 @@ function Navigation() {
     <div className="navigation navbar-expand navbar-dark bg-dark col-sm-8">
       <nav className="navbar navbar-expand navbar-dark bg-dark  col-sm-9">
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/Home">
           <h1 className="NavName font-weight-light">Hiking for Stars</h1>
           </NavLink>
           <div>
