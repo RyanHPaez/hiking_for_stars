@@ -10,6 +10,7 @@
 - Delete account
 - Getting Data from an API
 - Add profile picture 
+- Map rendering 
 
 ## Backend Packages
 - dotenv
