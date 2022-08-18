@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3005/app/places")
+      .get("http://localhost:5000/app/places")
       .then((response) => setPlaceData(response.data));
   }, []);
 

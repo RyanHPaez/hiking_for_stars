@@ -3,14 +3,14 @@ const express = require("express");
 const app = express();
 const mongoose = require('mongoose')
 const cors = require('cors');
-// const uri = process.env.MONGO_URI
+const uri = process.env.MONGO_URI
 const methodOverride = require ('method-override')
 
 async function connect() {
   try {
     mongoose.set("bufferCommands", false);
     mongoose.connect(
-      process.env.ATLAS_URI,
+      "mongodb+srv://newUser1:newPass01@cluster0.mupyl.mongodb.net/Hiking_for_stars",
       { useNewUrlParser: true, useUnifiedTopology: true },
       () => {
         console.log("connected to mongoDB");
@@ -38,4 +38,4 @@ app.use('/app', placeController)
 const userController = require("./src/backend/controller/UserController");
 app.use("/secapp", userController);
 
-app.listen(process.env.PORT || 5000, () => console.log("Server is running on PORT 3005"));
+app.listen(5000, () => console.log("Server is running on PORT 3005"));
