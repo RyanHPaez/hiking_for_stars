@@ -12,7 +12,7 @@ function Navigation() {
           <div>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item-home">              
-                <NavLink className="nav-link" to="/">
+                <NavLink className="nav-link" to="/Home">
                 <i className='fas fa-home' style={{'fontSize':'18px'}}></i>                 
                   <span className="sr-only">(current)</span>
                 </NavLink>
