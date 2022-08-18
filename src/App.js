@@ -1,6 +1,6 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Page2, Music, Login, SignUp, User, Edit, Map } from "./components";
+import { Navigation, Home, Page2, Music, Login, SignUp, User, Edit, Map} from "./components";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
@@ -39,8 +39,8 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login setWelcomeUser={setWelcomeUser} />} />
           <Route path="/places" element={<Places />} />
-          <Route path="/Edit" element={<Edit />} />
           <Route path="/Map" element={<Map />} />
+          <Route path="/Edit" element={<Edit />} />
         </Routes>
       </Router>
       </PlaceDataContext.Provider>

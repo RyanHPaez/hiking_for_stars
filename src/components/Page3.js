@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import Gallery from './Gallery'
 import SearchBar from './SearchBar'
