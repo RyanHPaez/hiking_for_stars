@@ -3,7 +3,7 @@ import TrailSearchBar from './TrailSearchBar'
 import MapData from './MapData'
 //incorporating search bar to the second webpage 
 function Map() {
-
+  const [message, setMessage] = useState('')
   const [data, setData] = useState([])
 
   const options = {
@@ -97,9 +97,10 @@ function Map() {
  
 
   return (
-    <div className="App">
+ 
+<div className="col-sm-12 my-5">
       <TrailSearchBar handleSearch={handleSearch} />
-    <h2>Search for Trails!</h2> 
+    <h2 className="font-weight-light">Search for Trails!</h2> 
       <MapData data={data} />
     </div>
   )
