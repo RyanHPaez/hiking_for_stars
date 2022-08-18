@@ -32,7 +32,6 @@ useEffect ( () => {}, [] )
         if(password === loginUser.password){
             // setWelcomeUser(userName);
             setLogUserData(loginUser);
-            console.log('successful login  data', loginUser)
             navigate('/User', {loginUser})
         }else{
             alert('Email/or password are invalid. *Case Sensitive*')

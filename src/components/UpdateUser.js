@@ -1,18 +1,36 @@
-const React = require('react')
-const Default = require('./layout/Default')
+import {useContext} from "react";
+import { UserDataContext } from "../context/userDataContext";
+import { useNavigate, useLocation } from 'react-router-dom';
+const React = require('react');
 
-function Edit (bread) {
+
+
+
+function UpdateUser () {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { from } = location.state
+    const {logUserData, setLogUserData } = useContext(UserDataContext)
     return (
       <>
-        <h2>Edit User</h2>
-        <form action={`/users/${user._id}?_method=PUT`} method="POST">          
-        <label htmlFor="name">Name</label>
+        <h2>Edit Profile</h2>
+        <form action={`/users/${logUserData._id}?_method=PUT`} method="POST">          
+        <label htmlFor="name">First name</label>
           <input
             type="text"
             name="name"
             id="name"
             required
-            defaultValue={user.name}
+            defaultValue={logUserData.first_name}
+          />
+          <label htmlFor="name">Last name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            defaultValue={logUserData.last_name}
           />
           <label htmlFor="image">Image</label>
           <input
@@ -27,4 +45,4 @@ function Edit (bread) {
     )
 }
 
-module.exports = Edit
+export default UpdateUser;

@@ -2,24 +2,24 @@
 import React, {useState, useParams, useContext} from "react";
 import axios from 'axios'
 import { UserDataContext } from "../context/userDataContext";
+import { useNavigate, Link } from 'react-router-dom';
+
 
 
 function User(props){
 
+    const navigate = useNavigate(); 
+
     const {logUserData, setLogUserData } = useContext(UserDataContext)
-    console.log('this is the loguserdata', logUserData)
-    // const { user } = useParams();
-    // const user = props
-    // const userData= useContext(UserDataContext)
-    // console.log('user data inside user profile', userData)
-    
-    // useEffect( () => {
-    //     axios
-    //         .get(`http://localhost:3005/secapp/users`)
-    //         .then((response) => setUserData(response.data));
-    // }, []);
-    
-    // const user = props.users
+
+    const userId = logUserData._id;
+    const handleEditClick = (e) => {
+        e.preventDefault()
+        navigate('/UpdateUser', {logUserData})  
+    }
+
+   
+ 
     return(
         
             <div className="profile">
@@ -37,16 +37,20 @@ function User(props){
                             </div>
                             <div className="profileInfo">
                                 <h4>Welcome,  {logUserData.user_name} !</h4>
-                                <span className="profileBio">{logUserData.first_name}</span>
-                                
-                                <a href={`/users/${logUserData.id}/edit`}>
-                                <button>
+                                <span className="profileBio">Favorite Trails:{logUserData.favoriteTrails}</span>
+                                <span className="profileBio">Previously Visited: {logUserData.favoriteTrails}</span>
+                                                               
+                                <Link to="/UpdateUser/${userId}" state={{userId}}>
+
+                                <button >
                                     <i class="fas fa-edit"> Edit</i>
                                 </button>
-                                </a>
+                                </Link>
+                                <a href={`/users/delete/${logUserData._id}`}>
                                 <button>
                                     <i class="fas fa-trash"> Delete User</i>
                                 </button>
+                                </a>
                             </div>
                             
                     </div>

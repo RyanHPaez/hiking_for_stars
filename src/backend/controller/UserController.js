@@ -1,3 +1,4 @@
+const { default: userEvent } = require('@testing-library/user-event');
 const express = require('express');
 const { ReturnDocument } = require('mongodb');
 const router = express.Router();
@@ -54,7 +55,7 @@ router.get('/user', async (req, res) =>{
 
 
  //update user route
-  router.get('/:id/edit', async (req,res)=>{
+  router.get('/edit/:id', async (req,res)=>{
     console.log('hit update route')
     res.send('Edit User' + req.params.id)
     // try{
@@ -71,8 +72,17 @@ router.get('/user', async (req, res) =>{
   })
   
   //delete user 
-  router.delete('/:id', async (req,res)=>
-    res.send('Delete User' + req.params.id)
+  router.delete('/delete/:id', async (req,res)=>{
+
+    const id = req.params.id
+
+    User.findByIdAndDelete(id)
+    .then(result => {
+      res.json({ redirect: '/Home '})
+    })
+
+    console.log('user has been deleted')
+    // res.send('Delete User' + req.params.id)
     // {
     // console.log('User: ', req.body.username)
     // const user = req.body.user_name
@@ -80,7 +90,7 @@ router.get('/user', async (req, res) =>{
     //     if (err) throw err;
     //    res.status(200).send("1 document deleted");
     //   })
-    );
+  });
   
 
 module.exports = router;
