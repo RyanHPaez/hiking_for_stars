@@ -102,7 +102,7 @@ function Map() {
   return (
     <div className="App">
       <TrailSearchBar handleSearch={handleSearch} />
-    <h2 className="font-weight-light">Search for Trails!</h2> 
+    <h2>Search for Trails!</h2> 
       <MapData data={data} />
     </div>
   )
