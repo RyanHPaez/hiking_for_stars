@@ -9,7 +9,7 @@ const methodOverride = require ('method-override')
 async function connect() {
   try {
     mongoose.set("bufferCommands", false);
-    mongoose.connect(
+    await mongoose.connect(
       "mongodb+srv://newUser1:newPass01@cluster0.mupyl.mongodb.net/Hiking_for_stars",
       { useNewUrlParser: true, useUnifiedTopology: true },
       () => {

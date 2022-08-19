@@ -29,7 +29,7 @@ function User(props){
                 </a>
                 <div className="col-sm-12">
                   
-                  <h4 className="profileName font-weight-light text-center">name</h4>
+                  <h4 className="profileName font-weight-light text-center">{logUserData.first_name}</h4>
                   <div className="text-center"></div>
                 </div>
               </div>
@@ -43,26 +43,20 @@ function User(props){
                                 <span className="profileBio">Favorite Trails:{logUserData.favoriteTrails}</span>
                                 <span className="profileBio">Previously Visited: {logUserData.favoriteTrails}</span>
                                                                
-                                <Link to="/UpdateUser" value={{userId}}>
-
-                                <button >
-                                    <i class="fas fa-edit"> Edit</i>
-                                </button>
-                                </Link>
-                                <Link to="/DeleteUser" value={{userId}}>
-                                <button>
-                                    <i class="fas fa-trash"> Delete User</i>
-                                </button>
-                                </Link>
+                               
                             </div>
                 <p>- I am a hiker</p>
                 <div className="user-options">
-                <NavLink className="nav-link" to="/Edit">
-                <i className='fas fa-edit' style={{'fontSize':'16px'}}>Edit</i>
-                </NavLink>
-                    <button>
-                        <i className="fas fa-trash" style={{'fontSize':'16px'}}> Delete User</i>
-                    </button>
+                <Link to="/UpdateUser" value={{userId}}>
+                <button >
+                    <i class="fas fa-edit"> Edit</i>
+                </button>
+                </Link>
+                <Link to="/DeleteUser" value={{userId}}>
+                <button>
+                    <i class="fas fa-trash"> Delete User</i>
+                </button>
+                </Link>
               </div>
               </div>
             </div>
