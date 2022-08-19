@@ -1,5 +1,5 @@
 
-import React, {useState, useEffectm, useParams, useContext } from "react";
+import React, {useState, useEffect, useParams, useContext } from "react";
 import axios from 'axios'
 import {UserDataContext } from "../context/userDataContext";
 import { NavLink, useNavigate, Link } from "react-router-dom";
@@ -15,7 +15,7 @@ function User(props){
     const userId = logUserData._id;
    
     
-    // useEffect(() => {}, []);
+    useEffect(() => {}, []);
 
     
         return(

@@ -5,6 +5,14 @@ import axios from "axios";
 
 function UpdateUser () {
 
+  const [ userName, setUserName ] = useState("");
+  const [ email, setEmail ] = useState("");
+  const [ password, setPassword ] = useState("");
+  const [ firstName, setFirstName ] = useState("");
+  const [ lastName, setLastName ] = useState("");
+  const [ thumbnail, setThumbnail ] = useState("");
+
+  
     const navigate = useNavigate();
     const location = useLocation();
     // const { from } = location.state
@@ -16,8 +24,18 @@ function UpdateUser () {
 
     const handleSubmit = (event) =>{
       event.preventDefault();
+
+      const updateUser ={
+        user_name: userName,
+        first_name: firstName.toLowerCase(),
+        last_name: lastName.toLowerCase(),
+        email: email.toLowerCase(),
+        password: password,
+        thumbnail: thumbnail
+      };
+
       axios
-        .put(`http://localhost:3005/secapp/edit/${logUserData._id}`)
+        .put(`http://localhost:3005/secapp/edit/${logUserData._id}`, updateUser)
         .then ((response) => console.log(response.data));
       window.alert('User has been updated')
       navigate('/user', {logUserData})
@@ -40,7 +58,16 @@ function UpdateUser () {
             id="username"
             // value=
             placeholder= {logUserData.user_name}
-            onChange={(e) => setLogUserData.user_name(e.target.value)}
+            onChange={(e) =>
+              {
+                if(e.target.value > 0){
+                setUserName(e.target.value)
+                }
+                else{
+                  setUserName(logUserData.user_name)
+                }
+              }
+            }
           />
           <br/>
         <label htmlFor="password">New Password:</label>
@@ -65,7 +92,16 @@ function UpdateUser () {
             id="firstname"
             // value=
             placeholder={logUserData.first_name}
-            onChange={(e) => setLogUserData.first_name(e.target.value)}
+            onChange={(e) =>
+              {
+                if(e.target.value > 0){
+                setFirstName(e.target.value)
+                }
+                else{
+                setFirstName(logUserData.first_name)
+                }
+              }
+            }
           />
           <label htmlFor="last_name">Last name:</label>
           <input
@@ -74,7 +110,16 @@ function UpdateUser () {
             id="lastname"
             // value=
             placeholder={logUserData.last_name}
-            onChange={(e) => setLogUserData.last_name(e.target.value)}
+            onChange={(e) =>
+              {
+                if(e.target.value > 0){
+                setLastName(e.target.value)
+                }
+                else{
+                setLastName(logUserData.last_name)
+                }
+              }
+            }
           />
           <br/>
           <label htmlFor="email">Email:</label>
@@ -84,7 +129,16 @@ function UpdateUser () {
             id="email"
             // value=
             placeholder={logUserData.email}
-            onChange={(e) => setLogUserData.email(e.target.value)}
+              onChange={(e) =>
+                {
+                  if(e.target.value > 0){
+                  setEmail(e.target.value)
+                  }
+                  else{
+                  setEmail(logUserData.email)
+                  }
+                }
+              }
           />
           <br/>
           
@@ -96,7 +150,16 @@ function UpdateUser () {
             id="image"
             // value=
             placeholder={logUserData.thumbnail}
-            onChange={(e) => setLogUserData.thumbnail(e.target.value)}
+            onChange={(e) =>
+              {
+                if(e.target.value > 0){
+                setThumbnail(e.target.value)
+                }
+                else{
+                setThumbnail(logUserData.thumbnail)
+                }
+              }
+            }
           />
           
           <input type="submit" />

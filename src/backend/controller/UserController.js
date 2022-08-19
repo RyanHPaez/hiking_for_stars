@@ -55,12 +55,12 @@ router.get('/user', async (req, res) =>{
  //update user route
   router.put('/edit/:id', async (req,res)=>{
     console.log('hit update route through edit/id')
-    // res.send('Edit User' + req.params.id)
     const id = req.params.id
     User.findByIdAndUpdate(id)
     .then(result => {
-      res.json({ redirect: '/User '})
+      res.json({ redirect: '/Home '})
     })
+    res.status(200).json('Success')
     // try{
     //     res.render('inside update users route')
     // }catch(err){
