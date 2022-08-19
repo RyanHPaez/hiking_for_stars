@@ -53,7 +53,7 @@ router.get('/user', async (req, res) =>{
   })
 
  //update user route
-  router.put('/edit/:id', async (req,res)=>{
+  router.post('/edit/:id', async (req,res)=>{
     console.log('hit update route through edit/id')
     const id = req.params.id
     User.findByIdAndUpdate(id)

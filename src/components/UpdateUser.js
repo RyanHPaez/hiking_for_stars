@@ -35,7 +35,7 @@ function UpdateUser () {
       };
 
       axios
-        .put(`http://localhost:3005/secapp/edit/${logUserData._id}`, updateUser)
+        .post(`http://localhost:3005/secapp/edit/${logUserData._id}`, updateUser)
         .then ((response) => console.log(response.data));
       window.alert('User has been updated')
       navigate('/user', {logUserData})
