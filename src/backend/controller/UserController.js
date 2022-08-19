@@ -1,7 +1,7 @@
 const express = require('express');
 const { ReturnDocument } = require('mongodb');
 const router = express.Router();
-const User = require('../models/userSchema');
+const User = require('../models/UserSchema');
 
 router.get('/users', async (req, res) => {
   
@@ -40,47 +40,52 @@ router.get('/user', async (req, res) =>{
   
   //show user
   router.get('/:id', (req, res) => {
-    res.send('show user' + req.params.id)
-    // User.findById(req.params.id)
-    //     .then(foundUser => {
-    //         res.render('show', {
-    //             user: foundUser
-    //         })
-    //     })
-    //     .catch(err =>{
-    //       res.send('404')
-    //     })
+    const foundPlaces =  User.find()
+      .then(foundUser => {
+        res.render('show', {
+          user: foundUser
+        })
+      })
+      .catch(err => {
+        res.send(404)
+      })
   })
 
 
- //update user route
-  router.get('/:id/edit', async (req,res)=>{
-    console.log('hit update route')
-    res.send('Edit User' + req.params.id)
-    // try{
-    //     res.render('inside update users route')
-    // }catch(err){
-    //     res.send(err)
-    // }
-  })
+  //update user route
+    router.get('/:id/edit', async (req,res)=>{
+      console.log('hit update route')
+      res.send('Edit User' + req.params.id)
+      // try{
+      //     res.render('inside update users route')
+      // }catch(err){
+      //     res.send(err)
+      // }
+    })
   
-  //define update user route (PUT)
-  router.put('/:id', async (req, res) =>{
-    console.log('hit update route')
-    res.send('Update User' + req.params.id)
-  })
+  // update user route 
+    router.put('/:id', async (req, res) =>{
+      res.send('Update User' + req.params.id)
+      // if(req.body.userId === req.params.id || req.user.isAdmin){
+      //   try{
+      //     const user= await User.findByIdAndUpdate(req.params.id, {})
+      //   res.status(200).json("acc was updated")
+      //   }catch 
+        
+      // else {
+      //   return res.status(403).json('you can only update your account')
+      // }
+    })
   
-  //delete user 
-  router.delete('/:id', async (req,res)=>
-    res.send('Delete User' + req.params.id)
-    // {
-    // console.log('User: ', req.body.username)
-    // const user = req.body.user_name
-    // User.deleteOne({username: user}, function(err, obj) {
-    //     if (err) throw err;
-    //    res.status(200).send("1 document deleted");
-    //   })
-    );
+  
+  // DELETE
+  router.delete('/:id', (req, res) => {
+    User.findByIdAndDelete(req.params.id)
+    .then(deletedUser => {
+    res.status(303).redirect('/Home')
+    })
+  })
+   
   
 
 module.exports = router;
