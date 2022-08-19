@@ -55,20 +55,19 @@ router.get('/user', async (req, res) =>{
 
 
  //update user route
-  router.get('/edit/:id', async (req,res)=>{
-    console.log('hit update route')
-    res.send('Edit User' + req.params.id)
+  router.put('/edit/:id', async (req,res)=>{
+    console.log('hit update route through edit/id')
+    // res.send('Edit User' + req.params.id)
+    const id = req.params.id
+    User.findByIdAndUpdate(id)
+    .then(result => {
+      res.json({ redirect: '/User '})
+    })
     // try{
     //     res.render('inside update users route')
     // }catch(err){
     //     res.send(err)
     // }
-  })
-  
-  //define update user route (PUT)
-  router.put('/:id', async (req, res) =>{
-    console.log('hit update route')
-    res.send('Update User' + req.params.id)
   })
   
   //delete user 
@@ -81,15 +80,6 @@ router.get('/user', async (req, res) =>{
       res.json({ redirect: '/Home '})
     })
 
-    console.log('user has been deleted')
-    // res.send('Delete User' + req.params.id)
-    // {
-    // console.log('User: ', req.body.username)
-    // const user = req.body.user_name
-    // User.deleteOne({username: user}, function(err, obj) {
-    //     if (err) throw err;
-    //    res.status(200).send("1 document deleted");
-    //   })
   });
   
 

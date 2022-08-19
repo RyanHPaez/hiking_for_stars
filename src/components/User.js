@@ -13,13 +13,7 @@ function User(props){
     const {logUserData, setLogUserData } = useContext(UserDataContext)
 
     const userId = logUserData._id;
-    const handleEditClick = (e) => {
-        e.preventDefault()
-        navigate('/UpdateUser', {logUserData})  
-    }
-
    
- 
     return(
         
             <div className="profile">
@@ -27,9 +21,9 @@ function User(props){
                     <div className="profileRightTop">
                             <div className="profileCover">
 
-                    <img className="profileCoverImg" src='assets/forest.jpg'
-                    alt=''/>
-                            <img className="profileUser" src={logUserData.thumbnail}
+                    {/* <img className="profileCoverImg" src='https://via.placeholder.com/350x150'
+                    alt=''/> */}
+                            <img className="profileUser" src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
                             alt=''/> 
                         
                         
