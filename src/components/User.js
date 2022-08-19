@@ -40,17 +40,17 @@ function User(props){
                                 <span className="profileBio">Favorite Trails:{logUserData.favoriteTrails}</span>
                                 <span className="profileBio">Previously Visited: {logUserData.favoriteTrails}</span>
                                                                
-                                <Link to="/UpdateUser/${userId}" state={{userId}}>
+                                <Link to="/UpdateUser" value={{userId}}>
 
                                 <button >
                                     <i class="fas fa-edit"> Edit</i>
                                 </button>
                                 </Link>
-                                <a href={`/users/delete/${logUserData._id}`}>
+                                <Link to="/DeleteUser" value={{userId}}>
                                 <button>
                                     <i class="fas fa-trash"> Delete User</i>
                                 </button>
-                                </a>
+                                </Link>
                             </div>
                             
                     </div>

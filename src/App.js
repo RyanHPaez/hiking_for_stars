@@ -1,6 +1,6 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Page2, Music, Login, SignUp, User, UpdateUser } from "./components";
+import { Navigation, Home, Page2, Music, Login, SignUp, User, UpdateUser, DeleteUser } from "./components";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
@@ -42,6 +42,8 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login setWelcomeUser={setWelcomeUser} />} />
           <Route path="/places" element={<Places />} />
+          <Route path="/UpdateUser" element={<UpdateUser />} /> 
+          <Route path="/DeleteUser" element={<DeleteUser/>}/>
         </Routes>
       </Router>
       </PlaceDataContext.Provider>

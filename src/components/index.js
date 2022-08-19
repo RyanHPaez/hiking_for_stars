@@ -7,3 +7,5 @@ export { default as SignUp } from "./SignUp";
 export { default as Places } from "./Places";
 export { default as User } from "./User";
 export { default as UpdateUser } from "./UpdateUser";
+export { default as DeleteUser } from "./DeleteUser"
+

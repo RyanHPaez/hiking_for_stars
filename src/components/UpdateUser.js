@@ -10,29 +10,42 @@ function UpdateUser () {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const { from } = location.state
+    // const { from } = location.state
     const {logUserData, setLogUserData } = useContext(UserDataContext)
+ console.log('inside UpdateUser page')
+// action={`/users/${logUserData._id}?_method=PUT`} method="POST"
     return (
-      <>
+      <div className="container">
         <h2>Edit Profile</h2>
-        <form action={`/users/${logUserData._id}?_method=PUT`} method="POST">          
-        <label htmlFor="name">First name</label>
+        <form>          
+        <label htmlFor="name">First name:</label>
           <input
             type="text"
             name="name"
             id="name"
             required
-            defaultValue={logUserData.first_name}
+            value={logUserData.first_name}
           />
-          <label htmlFor="name">Last name</label>
+          <label htmlFor="name">Last name:</label>
           <input
             type="text"
             name="name"
             id="name"
             required
-            defaultValue={logUserData.last_name}
+            value={logUserData.last_name}
           />
-          <label htmlFor="image">Image</label>
+          <br/>
+          <label htmlFor="name">Email:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            defaultValue={logUserData.email}
+          />
+          <br/>
+
+          <label htmlFor="image">Image:</label>
           <input
             type="text"
             name="image"
@@ -41,7 +54,7 @@ function UpdateUser () {
           
           <input type="submit"/>
         </form>
-      </>
+      </div>
     )
 }
 

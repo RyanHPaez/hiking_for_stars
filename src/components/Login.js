@@ -100,7 +100,7 @@ useEffect ( () => {}, [] )
               </div>
             </div>
           </form>
-          <User filteredUserData={{userData}}> </User>
+          <User style="visibility:hidden;" filteredUserData={{userData}}> </User>
         </div>
 
       );
