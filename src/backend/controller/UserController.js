@@ -2,7 +2,7 @@ const { default: userEvent } = require('@testing-library/user-event');
 const express = require('express');
 const { ReturnDocument } = require('mongodb');
 const router = express.Router();
-const User = require('../models/userSchema');
+const User = require('../models/UserSchema');
 
 router.get('/users', async (req, res) => {
   
@@ -41,18 +41,16 @@ router.get('/user', async (req, res) =>{
   
   //show user
   router.get('/:id', (req, res) => {
-    res.send('show user' + req.params.id)
-    // User.findById(req.params.id)
-    //     .then(foundUser => {
-    //         res.render('show', {
-    //             user: foundUser
-    //         })
-    //     })
-    //     .catch(err =>{
-    //       res.send('404')
-    //     })
+    const foundPlaces =  User.find()
+      .then(foundUser => {
+        res.render('show', {
+          user: foundUser
+        })
+      })
+      .catch(err => {
+        res.send(404)
+      })
   })
-
 
  //update user route
   router.put('/edit/:id', async (req,res)=>{

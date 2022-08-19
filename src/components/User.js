@@ -1,9 +1,9 @@
 
-import React, {useState, useParams, useContext} from "react";
+import React, {useState, useEffectm, useParams, useContext } from "react";
 import axios from 'axios'
-import { UserDataContext } from "../context/userDataContext";
-import { useNavigate, Link } from 'react-router-dom';
-
+import {UserDataContext } from "../context/userDataContext";
+import { NavLink, useNavigate, Link } from "react-router-dom";
+import { Edit } from "./";
 
 
 function User(props){
@@ -14,22 +14,31 @@ function User(props){
 
     const userId = logUserData._id;
    
-    return(
-        
-            <div className="profile">
-                <div className="profileRight">
-                    <div className="profileRightTop">
-                            <div className="profileCover">
+    
+    // useEffect(() => {}, []);
 
-                    {/* <img className="profileCoverImg" src='https://via.placeholder.com/350x150'
-                    alt=''/> */}
-                            <img className="profileUser" src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-                            alt=''/> 
-                        
-                        
-                        
-                            </div>
-                            <div className="profileInfo">
+    
+        return(
+            <>
+          <div className="contact">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="img col-sm-12 shadow-lg p-1 mb-1">
+                <a href={"https://www.linkedin.com/in/ryan-paez/"}>
+                <img className="profileUser" src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'alt=''/> 
+                </a>
+                <div className="col-sm-12">
+                  
+                  <h4 className="profileName font-weight-light text-center">name</h4>
+                  <div className="text-center"></div>
+                </div>
+              </div>
+              <div className="col-sm-12 my-4">
+                <h1 className="font-weight-light text-center">About Me</h1>
+                <p className="text-center">
+                <span className="profileBio">info</span>
+                </p>
+                <div className="profileInfo">
                                 <h4>Welcome,  {logUserData.user_name} !</h4>
                                 <span className="profileBio">Favorite Trails:{logUserData.favoriteTrails}</span>
                                 <span className="profileBio">Previously Visited: {logUserData.favoriteTrails}</span>
@@ -46,13 +55,25 @@ function User(props){
                                 </button>
                                 </Link>
                             </div>
-                            
-                    </div>
-                </div> 
+                <p>- I am a hiker</p>
+                <div className="user-options">
+                <NavLink className="nav-link" to="/Edit">
+                <i className='fas fa-edit' style={{'fontSize':'16px'}}>Edit</i>
+                </NavLink>
+                    <button>
+                        <i className="fas fa-trash" style={{'fontSize':'16px'}}> Delete User</i>
+                    </button>
+              </div>
+              </div>
             </div>
-       
-    )
-}
-
+          </div>
+        </div>
+           </>
+        )
+    }
+    
 
 export default User;
+
+
+

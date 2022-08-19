@@ -1,6 +1,6 @@
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigation, Home, Page2, Music, Login, SignUp, User, UpdateUser, DeleteUser } from "./components";
+import { Navigation, Home, Page2, Music, Login, SignUp, User, UpdateUser, DeleteUser,Edit, Map } from "./components";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { PlaceDataContext } from "./context/placeDataContext";
@@ -16,15 +16,16 @@ function App() {
   const [logUserData, setLogUserData] = useState([]);
  
 
-  useEffect( () => {
+  useEffect(() => {
     axios
-      .get('http://localhost:3005/app/places')
-      .then ((response) => setPlaceData(response.data));
+      .get("http://localhost:3005/app/places")
+      .then((response) => setPlaceData(response.data));
   }, []);
 
   //welcome user
-  const [welcomeUser, setWelcomeUser]= useState('Please log in');
-  const logInLogOut = welcomeUser === 'Please log in' ? <a href='/Login'></a> : <a href='#'></a>
+  const [welcomeUser, setWelcomeUser] = useState("Please log in");
+  const logInLogOut =
+    welcomeUser === "Please log in" ? <a href="/Login"></a> : <a href="#"></a>;
 
   return (
     <div className="App">
@@ -44,12 +45,14 @@ function App() {
           <Route path="/places" element={<Places />} />
           <Route path="/UpdateUser" element={<UpdateUser />} /> 
           <Route path="/DeleteUser" element={<DeleteUser/>}/>
+          <Route path="/Map" element={<Map />} />
+          <Route path="/Edit" element={<Edit />} />
         </Routes>
       </Router>
       </PlaceDataContext.Provider>
       </UserDataContext.Provider>
     </div>
-  )
+  );
 }
 
 export default App;
