@@ -55,7 +55,7 @@ function Page2(props) {
   })
 
 
-  };
+
 
 
   const display = placeData.map((item, i) => {
