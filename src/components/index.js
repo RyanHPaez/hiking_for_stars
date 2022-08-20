@@ -6,5 +6,8 @@ export { default as Login } from "./Login";
 export { default as SignUp } from "./SignUp";
 export { default as Places } from "./Places";
 export { default as User } from "./User";
+export { default as UpdateUser } from "./UpdateUser";
+export { default as DeleteUser } from "./DeleteUser"
 export { default as Edit } from "./Edit";
 export { default as Map} from "./Map";
+

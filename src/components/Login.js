@@ -1,15 +1,23 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { UserDataContext } from '../context/userDataContext'
+import { faCommentDollar, faCommentsDollar } from '@fortawesome/free-solid-svg-icons';
+import User from './User'
 
 function Login ({setWelcomeUser}) {
 
     let navigate = useNavigate();
     const [userData, setUserData] = useState([]);
+    const [filteredUserData, setFilteredUserData ] = useState ([]);
     const [userName, setUserName] = useState("");
+    const [userId, setUserId] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword ] = useState("")
+useEffect ( () => {}, [] )
 
+    const {logUserData, setLogUserData} = useContext(UserDataContext)
+    
     useEffect( () => {
         axios
             .get(`http://localhost:3005/secapp/users`)
@@ -18,21 +26,23 @@ function Login ({setWelcomeUser}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('inside handleSumbit')
-        const loggedInUser = userData.filter( user => {
-            console.log('inside loggedInUser', user.user_name)
-            return user.user_name
-        })
-        if(loggedInUser.length > 0){
-            setWelcomeUser(loggedInUser)
-            navigate('/User')
-        }
-        else{
+
+        const loginUser = userData.find( user => user.email === email)
+        
+        if(password === loginUser.password){
+            // setWelcomeUser(userName);
+            setLogUserData(loginUser);
+            navigate('/User', {loginUser})
+        }else{
             alert('Email/or password are invalid. *Case Sensitive*')
         }
     }
-
+// theh entire userData object is passing through to user.js need to filter out in login.js 
+// to get the user and pass only theh user object. then connect the delete and edit routes
+// 
+// 
      return (
+     
         <div className="login" >
           <form onSubmit={handleSubmit} className="container">
             <div className="row align-items-center">
@@ -90,7 +100,9 @@ function Login ({setWelcomeUser}) {
               </div>
             </div>
           </form>
+          <User style="visibility:hidden;" filteredUserData={{userData}}> </User>
         </div>
+
       );
     }
 

@@ -25,7 +25,38 @@ function Page2(props) {
     e.preventDefault();
     let newFave = {};
     newFave = userFavorite;
-  };
+
+  }
+
+  const displayDetail = ((item, i) =>{
+    return (
+      <div
+      style={{
+        background: "black",
+        width: "280px",
+        height: "200px",
+        margin: "20px",
+        textAlign: "center",
+        display: "inline-table",
+        backgroundColor: "black",
+        color: "white",
+        borderRadius: "20px",
+        position: "relative",
+      }}
+    >
+      <form>
+        <h2 key={i}>{item.title}</h2>
+        <img key={i} src={item.thumbnail}></img>
+        <p key={i}>${item.price}</p>
+       
+      </form>
+    </div>
+    )
+  })
+
+
+
+
 
   const display = placeData.map((item, i) => {
     return (
