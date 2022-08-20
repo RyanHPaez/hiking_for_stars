@@ -90,6 +90,11 @@ i:hover {
         --_c: rgb(255, 250, 250);
         
       }
+      
+.profileUser{
+    height: 250px;
+    width: auto;
+}
 
 img {
     content: "";
