@@ -1,6 +1,10 @@
 {
   "name": "my-app",
-  "version": "0.1.0",
+  "version": "0.1.0",  
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.13.1"
+  },
   "private": true,
   "proxy": "http://localhost:3005/app/places",
   "dependencies": {
@@ -28,8 +32,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build",
+    "serve": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng serve",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,9 +57,6 @@
   "devDependencies": {
     "5": "^0.0.1",
     "webpack": "^5.74.0"
-  },
-  "engines": {
-    "node": "16.14.2",
-    "npm": "8.13.1"
   }
+  
 }
