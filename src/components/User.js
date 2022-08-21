@@ -19,14 +19,14 @@ function User(props){
 
     
         return(
-            <>
-          <div className="contact">
+            
+          
           <div className="container">
             <div className="row align-items-center">
               <div className="img col-sm-12 shadow-lg p-1 mb-1">
-                <a href={"https://www.linkedin.com/in/ryan-paez/"}>
+                
                 <img className="profileUser" src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'alt=''/> 
-                </a>
+                
                 <div className="col-sm-12">
                   
                   <h4 className="profileName font-weight-light text-center">{logUserData.first_name}</h4>
@@ -61,8 +61,8 @@ function User(props){
               </div>
             </div>
           </div>
-        </div>
-           </>
+        
+          
         )
     }
     

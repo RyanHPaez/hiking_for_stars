@@ -48,10 +48,12 @@ function UpdateUser () {
  console.log('inside UpdateUser page')
 // action={`/users/${logUserData._id}?_method=PUT`} method="POST"
     return (
-      <div className="container">
-        <h2>Edit Profile</h2>
+      <div className="container-fluid">
+        <div className="row align-items-center">
+        <div className="col-md-12 my-2">
+        <h2 className='font-weight-light'>Edit Profile</h2>
         <form onSubmit={handleSubmit}>          
-        <label htmlFor="user_name">New Username:</label>
+        <label htmlFor="user_name">New Username: </label>
           <input
             type="text"
             name="name"
@@ -70,12 +72,12 @@ function UpdateUser () {
             }
           />
           <br/>
+          <div className="col-md-12 my-2">
         <label htmlFor="password">New Password:</label>
           <input
             type="password"
             name="name"
             id="password"
-
           />
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
@@ -84,6 +86,8 @@ function UpdateUser () {
             id="confirmPassword"
           />
           <br/>
+          </div>
+          <div className="col-md-12 my-2">
           <p>First name: {logUserData.first_name} </p>
         <label htmlFor="first_name">Update First name:</label>
           <input
@@ -122,6 +126,7 @@ function UpdateUser () {
             }
           />
           <br/>
+          </div>
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -141,8 +146,6 @@ function UpdateUser () {
               }
           />
           <br/>
-          
-
           <label htmlFor="image">Image:</label>
           <input
             type="text"
@@ -164,6 +167,8 @@ function UpdateUser () {
           
           <input type="submit" />
         </form>
+      </div>
+      </div>
       </div>
     )
 }

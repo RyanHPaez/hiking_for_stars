@@ -3,12 +3,10 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="navigation navbar-expand navbar-dark bg-dark col-sm-8">
+    <div className="navigation navbar-expand navbar-dark bg-dark col-sm-11">
       <nav className="navbar navbar-expand navbar-dark bg-dark  col-sm-9">
-        <div className="container">
-          <div className="navbar-brand" >
-          <h1 className="NavName font-weight-light">Hiking for Stars</h1>
-          </div>
+        <div className="container-fluid">          
+          <h1 className="NavName font-weight-light">Hiking for Stars</h1>          
           <div>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item-home">              
