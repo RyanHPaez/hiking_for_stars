@@ -3,7 +3,6 @@ body {
     min-height: 100vh;
     display: flex;
     
-
      }
 
 #root {
@@ -15,14 +14,12 @@ body {
       }
 
 .App {
-        width: auto;
-         height: auto;
-         display: flex;
-         flex-direction: column;
-         justify-content: flex-start;
-         align-items: center;
-         background-size: contain;
-         text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;    
          
      }
 
@@ -50,6 +47,7 @@ transition: 0.6s
         --_t: 0;
         --_c: rgb(255, 250, 250);  
      }
+
 button{
     line-height: var(--h);
     color:rgb(163, 255, 3);
@@ -91,7 +89,7 @@ i:hover {
         
       }
 
-.profileUser{
+.profileUser {
     height: 250px;
     width: auto;
 }
@@ -99,12 +97,12 @@ i:hover {
 img {
     content: "";
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
-        display:inline;
+        /* display:inline;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         margin: 10px;
-        position: relative;
+        position: relative; */
         
         
         
