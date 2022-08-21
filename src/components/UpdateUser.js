@@ -44,7 +44,7 @@ function UpdateUser() {
       <form onSubmit={handleSubmit} className="container">
         <div className="row align-items-center">
           <div className="updateUser col-sm-12 shadow-lg p-1 mb-1  my-4">
-            <div className="col-sm-12 shadow-lg p-3 mb-1">
+            <div className="col-sm-12 shadow-lg p-3 mb-1 text-center">
             <img
                 className="rounded-circle my-3"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2L9Cs5Ckge8P0041ykigrZY9nzuI5pzw01g&usqp=CAU"
