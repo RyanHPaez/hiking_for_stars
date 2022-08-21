@@ -95,8 +95,8 @@ function Map() {
 
   return (
     <div className="col-sm-12 my-5 text-center">
-      <TrailSearchBar handleSearch={handleSearch} />
       <h2 className="font-weight-light">Search for Trails!</h2>
+      <TrailSearchBar handleSearch={handleSearch} />
       <MapData data={data} />
     </div>
   );

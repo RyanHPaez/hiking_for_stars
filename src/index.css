@@ -129,7 +129,22 @@ img {
         justify-content: flex-start;
         align-items: center;
         color:white
-
+        
             }
+
+.results {
+    margin: 20px;
+    width: auto;
+    height: 100px;
+    box-shadow:10px 20px 40px #eea301 ;
+    background-image:radial-gradient(  rgb(203, 203, 203),rgb(251, 250, 214),rgb(79, 70, 52));
+    border: 1px solid black;
+
+}
+
+.boxFont{
+    background-color: white;
+    width: 50%;
+}
 
 

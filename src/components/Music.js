@@ -32,11 +32,13 @@ function MusicSearch() {
   };
 
   return (
-    <div className="row align-items-start my-4 my-5">
+    <div className="container">
+      <div className="row">
+      <div className="col-sm-12 text-center justify-content-sm-center">
       <SearchBar handleSearch={handleSearch} />
       {message}
       <MusicGallery data={data} />
-    </div>
+    </div></div></div>
   );
   
 }

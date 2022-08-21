@@ -16,7 +16,7 @@ function User(props) {
   return (
     <div className="container">
       <div className="row">
-        <div className="img col-sm-12 shadow-lg p-1 mb-1 text-center">
+        <div className="img col-sm-12 shadow-lg p-1 mb-1 text-center my-3">
           <img
             className="profileUser rounded-circle my-3 "
             src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
@@ -40,6 +40,8 @@ function User(props) {
             <span className="profileBio ">
               Favorite Trails:{logUserData.favoriteTrails}
             </span>
+          </div>
+          <div className="profileInfo ">
             <span className="profileBio ">
               Previously Visited: {logUserData.favoriteTrails}
             </span>

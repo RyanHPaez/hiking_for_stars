@@ -30,8 +30,8 @@ function Signup() {
     <div className="Signup">
       <form onSubmit={handleSubmit} className="container">
         <div className="row align-items-center">
-          <div className="Signup col-sm-12 shadow-lg p-1 mb-1  my-5">
-            <div className="col-sm-12 shadow-lg p-3 mb-1  ">
+          <div className="Signup col-sm-12 shadow-lg p-1 mb-1  my-3">
+            <div className="col-sm-12 shadow-lg p-3 mb-1 text-center ">
               <img
                 className="rounded-circle my-3"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2L9Cs5Ckge8P0041ykigrZY9nzuI5pzw01g&usqp=CAU"
@@ -49,7 +49,7 @@ function Signup() {
                   onChange={(e) => setUserName(e.target.value)}
                 />
               </div>
-              <div className="FirstName">
+              <div className="FirstName my-2">
                 <label>FirstName</label>
                 <input
                   type="FirstName"
@@ -59,7 +59,7 @@ function Signup() {
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
-              <div className="LastName">
+              <div className="LastName my-2">
                 <label>LastName</label>
                 <input
                   type="LastName"
@@ -70,7 +70,7 @@ function Signup() {
                 />
               </div>
 
-              <div className="email">
+              <div className="email my-2">
                 <label>Email address</label>
                 <input
                   type="email"
@@ -80,7 +80,7 @@ function Signup() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="password">
+              <div className="password my-2">
                 <label>Password</label>
                 <input
                   type="password"

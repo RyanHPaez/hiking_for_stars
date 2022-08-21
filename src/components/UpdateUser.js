@@ -70,7 +70,7 @@ function UpdateUser() {
                   }}
                 />
               </div>
-              <div className="newPassWord">
+              <div className="newPassWord my-2">
                 <label htmlFor="password">New Password</label>
                 <input 
                 type="password" 
@@ -78,7 +78,7 @@ function UpdateUser() {
                 name="name" 
                 id="password" />
               </div>
-              <div className="confirmPassword">
+              <div className="confirmPassword my-2">
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <input 
                 type="password" 
@@ -107,7 +107,7 @@ function UpdateUser() {
                   }}
                 />
               </div>
-              <div className="LastName">
+              <div className="LastName my-2">
                 <label htmlFor="last_name">Last name</label>
                 <input
                   type="text"
@@ -125,7 +125,7 @@ function UpdateUser() {
                   }}
                 />
               </div>
-              <div className="email">
+              <div className="email my-2">
                 <label htmlFor="email">Email</label>
                 <input
                   type="text"

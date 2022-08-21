@@ -47,7 +47,7 @@ function Login({ setWelcomeUser }) {
     <div className="login">
       <form onSubmit={handleSubmit} className="container">
         <div className="row ">
-          <div className="login col-sm-12 shadow-lg p-1 mb-1 text-center my-5">
+          <div className="login col-sm-12 shadow-lg p-1 mb-1 text-center my-3">
             <h1 className="font-weight-light ">Login</h1>
             <img
               className="rounded-circle my-3"
