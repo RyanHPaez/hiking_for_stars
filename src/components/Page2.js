@@ -2,10 +2,12 @@ import { PromiseProvider } from "mongoose";
 import React, { useContext, useEffect, useState } from "react";
 import { PlaceDataContext } from "../context/placeDataContext";
 import TrailDetails from "./TrailDetails";
+import { NavLink } from "react-router-dom";
 
 function Page2(props) {
   const [userFavorite, setUserFavorite] = useState([]);
   const [hoverPopup, setHoverPopup] = useState(false);
+  const [userView, setUserView] = useState(false);
 
   useEffect(() => {}, []);
 
@@ -20,6 +22,10 @@ function Page2(props) {
     setUserFavorite(trail);
     window.alert(`Added ${trail.name} to your favorites!`);
   };
+  const ViewTrail = (trail) => {
+    setUserView(trail);
+    window.alert(`Want to see ${trail.name} to View!?`);
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -31,7 +37,7 @@ function Page2(props) {
     return (
       <div className="Page2">
         <form>
-          <h2 key={i}>{item.title}</h2>
+          {/* <h2 key={i}>{item.title}</h2> */}
           <img key={i} src={item.thumbnail}></img>
         </form>
       </div>
@@ -40,56 +46,41 @@ function Page2(props) {
 
   const display = placeData.map((item, i) => {
     return (
-      <div className="Page2">
-        <div className="container">
-          <div className="col-sm-12  my-5"
-           style={{
-            textAlign: "center",
-            display: "inline-table",
-          }}
-          >
-            <h3 className="font-weight-light text-center"></h3>
+      <div className="TrailName">
+        
+            <h3 className="font-weight-light"></h3>
             <form onSubmit={handleClick}>
-              <h3 className="font-weight-light my-3"
-               style={{
-                width: "auto",
-                height: "50px",
-                // marginBottom: "40px",
-                // marginTop: "30px",
-                padding: "5px",
-                // textAlign: "center",
-              }}
-              key={i}>
-                {item.name}
+              {/* TrailName */}
+              <h3 className="font-weight-light my-3"               
+              key={i}>{item.name}
               </h3>
-
-              <img
-              
+              <NavLink className="nav-link" to="/ViewTrail"              
+                onClick={() => {ViewTrail(item)}}                
+              ><i class='fas fa-info-circle'></i>
+              </NavLink>  
+              {/* TrailImage */}
+              <img              
                 src={item.thumbnail}
                 onMouseOut={() => {
                   setHoverPopup(true);
                   displayDetail(userFavorite);
                 }}
               ></img>
-
+              {/* Rating word */}
               <p class="my-3 font-weight-light">
                 <b>Rating: </b>
                 {item.rating}
                 <b />
               </p>
-
-              <button
+              {/* AddToFavoriteButton */}
+              <label
                 className="font-weight-light"
-                onClick={() => {
-                  favoritedTrail(item);
-                }}
-              >
-                Add to Favorites
-              </button>
+                onClick={() => {favoritedTrail(item)}}                
+              ><i class='far fa-heart'></i></label>                          
+                          
             </form>
           </div>
-        </div>
-      </div>
+      
     );
   });
 
@@ -114,7 +105,7 @@ function Page2(props) {
 
           <div className="container">
             <div className="row">
-              <div className="col-12 text-center">
+              <div className="col-md-12 text-center">
                 <h3> {display}</h3>
               </div>
             </div>
@@ -127,7 +118,7 @@ function Page2(props) {
           <div>
             <TrailDetails
               trigger={hoverPopup}
-              // setTrigger={setHoverPopup}
+              setTrigger={setHoverPopup}
               src={userFavorite.thumbnail}
             >
               <form>
@@ -137,12 +128,13 @@ function Page2(props) {
                 <div className="Page2">
                 <img
                   className="detailViewImg my-3"
-                  src={userFavorite.thumbnail}
+                  src={userFavorite.thumbnail}                  
                 ></img>
                 </div>
                 <div className="detailDescription text-center ">
                   <span className="description ">
                     {userFavorite.description}
+                    {userView.description}
                   </span>
                   <br />
                   Rating: {userFavorite.rating}
