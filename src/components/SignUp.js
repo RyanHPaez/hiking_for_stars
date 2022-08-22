@@ -11,6 +11,7 @@ function Signup() {
   let navigate = useNavigate();
 
   const handleSubmit = (e) => {
+    console.log('signup button clicked')
     e.preventDefault();
     const newUser = {
       user_name: userName,
