@@ -29,24 +29,10 @@ function Page2(props) {
 
   const displayDetail = (item, i) => {
     return (
-      <div
-        style={{
-          background: "black",
-          width: "280px",
-          height: "200px",
-          margin: "20px",
-          textAlign: "center",
-          display: "inline-table",
-          backgroundColor: "black",
-          color: "white",
-          borderRadius: "20px",
-          position: "relative",
-        }}
-      >
+      <div className="Page2">
         <form>
           <h2 key={i}>{item.title}</h2>
           <img key={i} src={item.thumbnail}></img>
-          <p key={i}>${item.price}</p>
         </form>
       </div>
     );
@@ -54,59 +40,55 @@ function Page2(props) {
 
   const display = placeData.map((item, i) => {
     return (
-      <div
-        className="col-md-3 my-2 text-center"
-        style={{
-          textAlign: "center",
-          display: "inline-table",
-        }}
-      >
-        <form onSubmit={handleClick}>
-          <h4
-            style={{
-              width: "auto",
-              height: "50px",
-              marginBottom: "40px",
-              marginTop: "30px",
-              padding: "5px",
-              textAlign: "center",
-            }}
-            className="font-weight-light "
-            key={i}
+      <div className="Page2">
+        <div className="container">
+          <div className="col-sm-12  my-5"
+           style={{
+            textAlign: "center",
+            display: "inline-table",
+          }}
           >
-            {item.name}
-          </h4>
+            <h3 className="font-weight-light text-center"></h3>
+            <form onSubmit={handleClick}>
+              <h3 className="font-weight-light my-3"
+               style={{
+                width: "auto",
+                height: "50px",
+                // marginBottom: "40px",
+                // marginTop: "30px",
+                padding: "5px",
+                // textAlign: "center",
+              }}
+              key={i}>
+                {item.name}
+              </h3>
 
-          <div className="column-md-3">
-            <img
-              style={{ width: "auto", height: "200px" }}
-              className="img-fluid"
-              src={item.thumbnail}
-              onMouseOver={() => {
-                setHoverPopup(true);
-                // displayDetail(userFavorite);
-              }}
-              onMouseOut={() => {
-                setHoverPopup(false);
-              }}
-            ></img>
+              <img
+              
+                src={item.thumbnail}
+                onMouseOut={() => {
+                  setHoverPopup(true);
+                  displayDetail(userFavorite);
+                }}
+              ></img>
+
+              <p class="my-3 font-weight-light">
+                <b>Rating: </b>
+                {item.rating}
+                <b />
+              </p>
+
+              <button
+                className="font-weight-light"
+                onClick={() => {
+                  favoritedTrail(item);
+                }}
+              >
+                Add to Favorites
+              </button>
+            </form>
           </div>
-
-          <p>
-            <b>Rating: </b>
-            {item.rating}
-            <b />
-          </p>
-          <p>
-            <button
-              onClick={() => {
-                favoritedTrail(item);
-              }}
-            >
-              Add to Favorites
-            </button>
-          </p>
-        </form>
+        </div>
       </div>
     );
   });
@@ -132,38 +114,47 @@ function Page2(props) {
 
           <div className="container">
             <div className="row">
-              <div className="col-12 img-fluid text-center">
-                <h5> {display}</h5>
+              <div className="col-12 text-center">
+                <h3> {display}</h3>
               </div>
             </div>
           </div>
 
-          <div className="col-sm-12 my-4 text-center">
+          <div className="Page2 col-sm-12 my-4 text-center">
             <p>“Not all those who wander are lost.” </p>
             <p>- J.R.R. Tolkien</p>
           </div>
           <div>
             <TrailDetails
               trigger={hoverPopup}
-              setTrigger={setHoverPopup}
+              // setTrigger={setHoverPopup}
               src={userFavorite.thumbnail}
             >
-              <h3 className="font-weight-light trailName">
-                {userFavorite.name}
-              </h3>
-              <img className="detailViewImg" src={userFavorite.thumbnail}></img>
-              <div className="detailDescription">
-                <span className="description">{userFavorite.description}</span>
-                <br />
-                Rating: {userFavorite.rating}
-                <br />
-                Difficulty: {userFavorite.difficulty}
-                <br />
-                Address: {userFavorite.address}
-                <br />
-                City: {userFavorite.city}
-                <br />
-              </div>
+              <form>
+                <h3 className="font-weight-light text-center trailName">
+                  {userFavorite.name}
+                </h3>
+                <div className="Page2">
+                <img
+                  className="detailViewImg my-3"
+                  src={userFavorite.thumbnail}
+                ></img>
+                </div>
+                <div className="detailDescription text-center ">
+                  <span className="description ">
+                    {userFavorite.description}
+                  </span>
+                  <br />
+                  Rating: {userFavorite.rating}
+                  <br />
+                  Difficulty: {userFavorite.difficulty}
+                  <br />
+                  Address: {userFavorite.address}
+                  <br />
+                  City: {userFavorite.city}
+                  <br />
+                </div>
+              </form>
             </TrailDetails>
           </div>
         </div>

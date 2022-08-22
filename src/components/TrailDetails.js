@@ -8,8 +8,8 @@ function TrailDetails (props) {
     return (props.trigger) ?(
         <div className="popup">
             <div key="" className="popup-inner">
-                <img src={props.thumbnail}
-                alt=''/>
+                {/* <img src={props.thumbnail}
+                alt=''/> */}
                 {props.children}
             </div>
         </div>

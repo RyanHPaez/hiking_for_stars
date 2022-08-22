@@ -97,17 +97,18 @@ i:hover {
 img {
     content: "";
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
-        /* display:inline;
+        display:inline;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         margin: 10px;
-        position: relative; */
+        position: relative;
         
         
         
     }  
- img:hover {
+
+img:hover {
     /* height: 450px; */
     width: auto;
     position:relative;
@@ -120,7 +121,7 @@ img {
     
     
     
- }   
+}   
     
 .navigation {
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
@@ -130,7 +131,7 @@ img {
         align-items: center;
         color:white
         
-            }
+}
 
 .results {
     margin: 20px;
@@ -145,6 +146,20 @@ img {
 .boxFont{
     background-color: white;
     width: 50%;
+
 }
 
+.Page2 img{
+    height: 285px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+
+.detailViewImg  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}
