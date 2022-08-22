@@ -3,7 +3,6 @@ body {
     min-height: 100vh;
     display: flex;
     
-
      }
 
 #root {
@@ -15,14 +14,12 @@ body {
       }
 
 .App {
-        width: auto;
-         height: auto;
-         display: flex;
-         flex-direction: column;
-         justify-content: flex-start;
-         align-items: center;
-         background-size: contain;
-         text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;    
          
      }
 
@@ -50,6 +47,7 @@ transition: 0.6s
         --_t: 0;
         --_c: rgb(255, 250, 250);  
      }
+
 button{
     line-height: var(--h);
     color:rgb(163, 255, 3);
@@ -90,8 +88,8 @@ i:hover {
         --_c: rgb(255, 250, 250);
         
       }
-      
-.profileUser{
+
+.profileUser {
     height: 250px;
     width: auto;
 }
@@ -109,7 +107,8 @@ img {
         
         
     }  
- img:hover {
+
+img:hover {
     /* height: 450px; */
     width: auto;
     position:relative;
@@ -122,7 +121,7 @@ img {
     
     
     
- }   
+}   
     
 .navigation {
         box-shadow: 0 0 10px 10px rgb(171, 171, 171);
@@ -130,7 +129,37 @@ img {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        color:white
+        
+}
 
-            }
+.results {
+    margin: 20px;
+    width: auto;
+    height: 100px;
+    box-shadow:10px 20px 40px #eea301 ;
+    background-image:radial-gradient(  rgb(203, 203, 203),rgb(251, 250, 214),rgb(79, 70, 52));
+    border: 1px solid black;
 
+}
 
+.boxFont{
+    background-color: white;
+    width: 50%;
+
+}
+
+.Page2 img{
+    height: 285px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.detailViewImg  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}

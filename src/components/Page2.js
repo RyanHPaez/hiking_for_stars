@@ -2,10 +2,12 @@ import { PromiseProvider } from "mongoose";
 import React, { useContext, useEffect, useState } from "react";
 import { PlaceDataContext } from "../context/placeDataContext";
 import TrailDetails from "./TrailDetails";
+import { NavLink } from "react-router-dom";
 
 function Page2(props) {
   const [userFavorite, setUserFavorite] = useState([]);
   const [hoverPopup, setHoverPopup] = useState(false);
+  const [userView, setUserView] = useState(false);
 
   useEffect(() => {}, []);
 
@@ -20,100 +22,65 @@ function Page2(props) {
     setUserFavorite(trail);
     window.alert(`Added ${trail.name} to your favorites!`);
   };
+  const ViewTrail = (trail) => {
+    setUserView(trail);
+    window.alert(`Want to see ${trail.name} to View!?`);
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
     let newFave = {};
     newFave = userFavorite;
+  };
 
-  }
-
-  const displayDetail = ((item, i) =>{
+  const displayDetail = (item, i) => {
     return (
-      <div
-      style={{
-        background: "black",
-        width: "280px",
-        height: "200px",
-        margin: "20px",
-        textAlign: "center",
-        display: "inline-table",
-        backgroundColor: "black",
-        color: "white",
-        borderRadius: "20px",
-        position: "relative",
-      }}
-    >
-      <form>
-        <h2 key={i}>{item.title}</h2>
-        <img key={i} src={item.thumbnail}></img>
-        <p key={i}>${item.price}</p>
-       
-      </form>
-    </div>
-    )
-  })
-
-
-
-
+      <div className="Page2">
+        <form>
+          {/* <h2 key={i}>{item.title}</h2> */}
+          <img key={i} src={item.thumbnail}></img>
+        </form>
+      </div>
+    );
+  };
 
   const display = placeData.map((item, i) => {
     return (
-      <div
-        className="col-md-3 my-2"
-        style={{
-          textAlign: "center",
-          display: "inline-table",
-        }}
-      >
-        <form onSubmit={handleClick}>
-          <h4
-            style={{
-              width: "auto",
-              height: "50px",
-              marginBottom: "40px",
-              marginTop:'30px',
-              padding:'5px',
-              textAlign:'center',
-            }}
-            className="font-weight-light "
-            key={i}
-          >
-            {item.name}
-          </h4>
-
-          <div className="column-md-3">
-            <img
-              style={{ width: "auto", height: "200px" }}
-              className="img-fluid"
-              src={item.thumbnail}
-              onMouseOver={() => {
-                setHoverPopup(true);
-                // displayDetail(userFavorite);
-              }}
-              onMouseOut={() => {
-                setHoverPopup(false);
-              }}
-            ></img>
+      <div className="TrailName">
+        
+            <h3 className="font-weight-light"></h3>
+            <form onSubmit={handleClick}>
+              {/* TrailName */}
+              <h3 className="font-weight-light my-3"               
+              key={i}>{item.name}
+              </h3>
+              <NavLink className="nav-link" to="/ViewTrail"              
+                onClick={() => {ViewTrail(item)}}                
+              ><i class='fas fa-info-circle'></i>
+              </NavLink>  
+              {/* TrailImage */}
+              <img              
+                src={item.thumbnail}
+                onMouseOut={() => {
+                  setHoverPopup(true);
+                  displayDetail(userFavorite);
+                }}
+              ></img>
+              {/* Rating word */}
+              <p class="my-3 font-weight-light">
+                <b>Rating: </b>
+                {item.rating}
+                <b />
+              </p>
+              {/* AddToFavoriteButton */}
+              <label
+                className="font-weight-light"
+                onClick={() => {favoritedTrail(item)}}                
+              ><i class='far fa-heart'></i></label>                          
+                          
+            </form>
           </div>
-
-          <p>
-            <b>Rating: </b>
-            {item.rating}
-            <b />
-          </p>
-          <p>
-            <button
-              onClick={() => {
-                favoritedTrail(item);
-              }}
-            >
-              Add to Favorites
-            </button>
-          </p>
-        </form>
-      </div>
+      
     );
   });
 
@@ -121,8 +88,10 @@ function Page2(props) {
     <div className="Page2">
       <div className="container">
         <div className="col-sm-12  my-5">
-          <h1 className="font-weight-light ">Favorite Hiking Spots</h1>
-          <form>
+          <h1 className="font-weight-light text-center">
+            Favorite Hiking Spots
+          </h1>
+          <form className="text-center">
             <input
               // ref={term}
               type="text"
@@ -136,16 +105,15 @@ function Page2(props) {
 
           <div className="container">
             <div className="row">
-              <div className="col-12 img-fluid">
-                <h5> {display}</h5>
+              <div className="col-md-12 text-center">
+                <h3> {display}</h3>
               </div>
             </div>
           </div>
 
-          <div className="col-sm-12 my-4">
-            <h1 className="font-weight-light">About:</h1>
-            <p>more Text or paragraph here!</p>
-            <p>- Team Hangout</p>
+          <div className="Page2 col-sm-12 my-4 text-center">
+            <p>“Not all those who wander are lost.” </p>
+            <p>- J.R.R. Tolkien</p>
           </div>
           <div>
             <TrailDetails
@@ -153,22 +121,32 @@ function Page2(props) {
               setTrigger={setHoverPopup}
               src={userFavorite.thumbnail}
             >
-              <h3 className="font-weight-light trailName">
-                {userFavorite.name}
-              </h3>
-              <img className="detailViewImg" src={userFavorite.thumbnail}></img>
-              <div className="detailDescription">
-                <span className="description">{userFavorite.description}</span>
-                <br />
-                Rating: {userFavorite.rating}
-                <br />
-                Difficulty: {userFavorite.difficulty}
-                <br />
-                Address: {userFavorite.address}
-                <br />
-                City: {userFavorite.city}
-                <br />
-              </div>
+              <form>
+                <h3 className="font-weight-light text-center trailName">
+                  {userFavorite.name}
+                </h3>
+                <div className="Page2">
+                <img
+                  className="detailViewImg my-3"
+                  src={userFavorite.thumbnail}                  
+                ></img>
+                </div>
+                <div className="detailDescription text-center ">
+                  <span className="description ">
+                    {userFavorite.description}
+                    {userView.description}
+                  </span>
+                  <br />
+                  Rating: {userFavorite.rating}
+                  <br />
+                  Difficulty: {userFavorite.difficulty}
+                  <br />
+                  Address: {userFavorite.address}
+                  <br />
+                  City: {userFavorite.city}
+                  <br />
+                </div>
+              </form>
             </TrailDetails>
           </div>
         </div>
