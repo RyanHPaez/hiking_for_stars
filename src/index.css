@@ -163,3 +163,9 @@ img:hover {
     margin-right: auto;
     width: 50%; 
 }
+
+.TrailName {
+    display: inline-table;
+    margin-right:20px;
+    margin-left:20px;
+}
