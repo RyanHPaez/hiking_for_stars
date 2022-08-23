@@ -62,10 +62,10 @@ function MapData(props){
 		}
 	};
 
-	fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.21994010863107&lon=-122.06889194045178&page=2&radius=50', options)
-		.then((response) => response.json())
-		.then((response) => setSearchData(response.data))
-		.catch(err => console.error(err));
+	// fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=37.21994010863107&lon=-122.06889194045178&page=2&radius=50', options)
+		// .then((response) => response.json())
+		// .then((response) => setSearchData(response.data))
+		// .catch(err => console.error(err));
 
     const display  = searchData.map((item, index) => {
          return (

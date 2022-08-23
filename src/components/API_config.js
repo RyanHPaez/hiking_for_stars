@@ -1,4 +1,4 @@
-const API_Key = '1fc73e876cmshbbb7a9c22b1c966p17aa01jsn612c4925dd8f';
+const API_Key = 'a6fe0d608bmshae54fa00330e272p19796ejsnd579a2a5230d';
 export {API_Key} ;
 //api location
 
