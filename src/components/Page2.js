@@ -56,9 +56,9 @@ function Page2(props) {
             <h3 className="font-weight-light"></h3>
             <form onSubmit={handleClick}>
               {/* TrailName */}
-              <h5 className="font-weight-light my-3"               
+              <h3 className="font-weight-light my-3"               
               key={i}>{item.name}
-              </h5>
+              </h3>
               {/* <NavLink className="nav-link" to="/ViewTrail"              
                 onClick={() => {ViewTrail(item)}}                
               ><i class='fas fa-info-circle'></i>
@@ -72,11 +72,11 @@ function Page2(props) {
                 }}
               ></img>
               {/* Rating word */}
-              <p class="my-3 font-weight-light">
+              <h6 class="my-3 font-weight-light">
                 <b>Rating: </b>
                 {item.rating}
                 <b />
-              </p>
+              </h6>
               {/* AddToFavoriteButton */}
               <label
                 className="font-weight-light"
