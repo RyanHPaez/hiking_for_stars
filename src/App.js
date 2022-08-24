@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3005/app/places")
+      .get("http://localhost:3005/app/places/")
       .then((response) => setPlaceData(response.data));
   }, []);
 
@@ -35,7 +35,9 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home user={welcomeUser}/>} />
+
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home user={welcomeUser}/>} />
           <Route path="/page2" element={<Page2 />} />
           <Route path="/Music" element={<Music />} />
           <Route path="/User" element={<User />} />

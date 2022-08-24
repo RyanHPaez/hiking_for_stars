@@ -3,7 +3,8 @@ const express = require("express");
 const app = express();
 const mongoose = require('mongoose')
 const cors = require('cors');
-const uri = process.env.MONGO_URI
+const uri = process.env.MONGODB_URI
+
 const methodOverride = require ('method-override')
 
 async function connect() {

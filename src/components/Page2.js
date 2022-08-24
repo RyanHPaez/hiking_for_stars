@@ -47,6 +47,11 @@ function Page2(props) {
   const display = placeData.map((item, i) => {
     return (
       <div className="TrailName">
+        <div className="container">
+        <div className="row ">
+        <div className="col">
+        
+
         
             <h3 className="font-weight-light"></h3>
             <form onSubmit={handleClick}>
@@ -54,10 +59,10 @@ function Page2(props) {
               <h3 className="font-weight-light my-3"               
               key={i}>{item.name}
               </h3>
-              <NavLink className="nav-link" to="/ViewTrail"              
+              {/* <NavLink className="nav-link" to="/ViewTrail"              
                 onClick={() => {ViewTrail(item)}}                
               ><i class='fas fa-info-circle'></i>
-              </NavLink>  
+              </NavLink>   */}
               {/* TrailImage */}
               <img              
                 src={item.thumbnail}
@@ -67,11 +72,11 @@ function Page2(props) {
                 }}
               ></img>
               {/* Rating word */}
-              <p class="my-3 font-weight-light">
+              <h6 class="my-3 font-weight-light">
                 <b>Rating: </b>
                 {item.rating}
                 <b />
-              </p>
+              </h6>
               {/* AddToFavoriteButton */}
               <label
                 className="font-weight-light"
@@ -79,6 +84,9 @@ function Page2(props) {
               ><i class='far fa-heart'></i></label>                          
                           
             </form>
+            </div>
+</div>
+</div>
           </div>
       
     );
