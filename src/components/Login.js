@@ -91,9 +91,9 @@ function Login({ setWelcomeUser }) {
           </div>
         </div>
       </form>
-      <User style="visibility:hidden;" filteredUserData={{ userData }}>
+      {/* <User style="visibility:hidden;" filteredUserData={{ userData }}>
         {" "}
-      </User>
+      </User> */}
     </div>
   );
 }
