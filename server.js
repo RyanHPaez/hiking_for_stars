@@ -7,21 +7,7 @@ const uri = process.env.MONGODB_URI
 
 const methodOverride = require ('method-override')
 
-async function connect() {
-  try {
-    mongoose.set("bufferCommands", false);
-    await mongoose.connect(
-      "mongodb+srv://newUser1:newPass01@cluster0.mupyl.mongodb.net/Hiking_for_stars",
-      { useNewUrlParser: true, useUnifiedTopology: true },
-      () => {
-        console.log("connected to mongoDB");
-      }
-    );
-  } catch (err) {
-    console.log(err);
-  }
-}
-connect();
+
 
 //Middleware
 app.use(express.json());
@@ -40,3 +26,19 @@ const userController = require("./src/backend/controller/UserController");
 app.use("/secapp", userController);
 
 app.listen(3005, () => console.log("Server is running on PORT 3005"));
+
+async function connect() {
+  try {
+    mongoose.set("bufferCommands", false);
+    await mongoose.connect(
+      "mongodb+srv://newUser1:newPass01@cluster0.mupyl.mongodb.net/Hiking_for_stars",
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      () => {
+        console.log("connected to mongoDB");
+      }
+    );
+  } catch (err) {
+    console.log(err);
+  }
+}
+connect();
