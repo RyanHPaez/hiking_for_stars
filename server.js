@@ -5,8 +5,7 @@ const mongoose = require('mongoose')
 const cors = require('cors');
 const uri = process.env.MONGODB_URI
 
-const methodOverride = require ('method-override')
-
+app.listen(3005, () => console.log("Server is running on PORT 3005"));
 
 //Middleware
 app.use(express.json());
@@ -24,7 +23,6 @@ app.use('/app', placeController)
 const userController = require("./src/backend/controller/UserController");
 app.use("/secapp", userController);
 
-app.listen(3005, () => console.log("Server is running on PORT 3005"));
 
 async function connect() {
   try {
