@@ -1,12 +1,6 @@
 {
   "name": "my-app",
-  "version": "0.1.0",  
-  "engines": {
-    "node": "16.14.2",
-    "npm": "8.13.1",
-    "proxy": "http://localhost:3005/app/places/",
-    "main":"server.js"
-  },
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -58,6 +52,27 @@
   "devDependencies": {
     "5": "^0.0.1",
     "webpack": "^5.74.0"
-  }
-  
+  },
+  "description": "- Create an account for hiking members\r - Login \r - View hiking places which shows from database\r ### Still working on...\r - Update account\r - Delete account\r - Getting Data from an API\r - Add profile picture \r - Map rendering",
+  "main": "migrate-mongo-config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanHPaez/hiking_for_stars.git"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanHPaez/hiking_for_stars/issues"
+  },
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.13.1",
+    "proxy": "https://hikingforstars.herokuapp.com/",
+    "main": "server.js"
+  },
+  "homepage": "https://github.com/RyanHPaez/hiking_for_stars#readme"
 }
