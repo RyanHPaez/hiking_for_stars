@@ -1,7 +1,5 @@
-const { default: userEvent } = require('@testing-library/user-event');
-const { eventWrapper } = require('@testing-library/user-event/dist/utils');
 const express = require('express');
-const { ReturnDocument } = require('mongodb');
+const db = require('mongodb');
 const router = express.Router();
 const User = require('../models/UserSchema');
 
@@ -56,14 +54,14 @@ router.get('/user', async (req, res) =>{
   })
 
  //update user route
-  router.post('/edit/:id', async (req,res)=>{
+  router.put('/edit/:id', async (req,res)=>{
     console.log('hit update route through edit/id')
    
     const obj = req.params
     console.log('object in update route', obj)
     User.findByIdAndUpdate(obj._id, obj)
     // .then(result => {
-      res.send('user', + req.params)
+      // res.send('user', + req.params)
 
     // })
     // res.status(200).json('Success')
