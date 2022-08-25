@@ -7,15 +7,14 @@ import axios from "axios";
 function UpdateUser() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [thumbnail, setThumbnail] = useState("");
 
   const navigate = useNavigate();
-  const location = useLocation();
   // const { from } = location.state
-  const { logUserData, setLogUserData } = useContext(UserDataContext);
+  const { logUserData } = useContext(UserDataContext);
 
   const handleChange = (event) => {};
 

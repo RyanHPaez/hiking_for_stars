@@ -8,17 +8,12 @@ function DeleteUser (props){
 
     const navigate = useNavigate();
 
-    const {logUserData, setLogUserData } = useContext(UserDataContext)
+    const {logUserData} = useContext(UserDataContext)
 
-    const userId = logUserData._id;
-    const handleEditClick = (e) => {
+  
 
-        e.preventDefault()
-        navigate('/Home', {logUserData})  
-    }
 
     useEffect( () => {
-        const res =
         axios
           .delete(`http://localhost:3005/secapp/delete/${logUserData._id}`)
           .then ((response) => console.log(response.data));

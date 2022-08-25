@@ -2,19 +2,16 @@ import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { UserDataContext } from "../context/userDataContext";
-import User from "./User";
+
 
 function Login({ setWelcomeUser }) {
   let navigate = useNavigate();
   const [userData, setUserData] = useState([]);
-  const [filteredUserData, setFilteredUserData] = useState([]);
-  const [userName, setUserName] = useState("");
-  const [userId, setUserId] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   useEffect(() => {}, []);
 
-  const { logUserData, setLogUserData } = useContext(UserDataContext);
+  const { setLogUserData } = useContext(UserDataContext);
 
   useEffect(() => {
     axios

@@ -1,4 +1,5 @@
 const { default: userEvent } = require('@testing-library/user-event');
+const { eventWrapper } = require('@testing-library/user-event/dist/utils');
 const express = require('express');
 const { ReturnDocument } = require('mongodb');
 const router = express.Router();
@@ -61,10 +62,10 @@ router.get('/user', async (req, res) =>{
     const obj = req.params
     console.log('object in update route', obj)
     User.findByIdAndUpdate(obj._id, obj)
-    .then(result => {
-      // res.json({ redirect: '/User '})
-    // console.log(results)
-    })
+    // .then(result => {
+      res.send('user', + req.params)
+
+    // })
     // res.status(200).json('Success')
     // try{
     //     res.render('inside update users route')

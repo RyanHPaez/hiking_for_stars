@@ -9,5 +9,5 @@ export { default as User } from "./User";
 export { default as UpdateUser } from "./UpdateUser";
 export { default as DeleteUser } from "./DeleteUser"
 export { default as Map} from "./Map";
-export { default as ViewTrail} from "./ViewTrail";
+
 

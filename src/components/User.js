@@ -5,9 +5,9 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import { Edit } from "./";
 
 function User(props) {
-  const navigate = useNavigate();
+  
 
-  const { logUserData, setLogUserData } = useContext(UserDataContext);
+  const { logUserData } = useContext(UserDataContext);
 
   const userId = logUserData._id;
 
@@ -19,7 +19,7 @@ function User(props) {
         <div className="img col-sm-12 shadow-lg p-1 mb-1 text-center my-3">
           <img
             className="profileUser rounded-circle my-3 "
-            src={logUserData.thumbnail}
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
             alt=""
           />
 
