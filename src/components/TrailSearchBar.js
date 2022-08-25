@@ -15,17 +15,16 @@ function TrailSearchBar(props) {
                 className="form-control"
                 placeholder="Input Latitude"
                 onChange={(e) => setLatitude(e.target.value)}
-              /></div>
-              <div className="col-sm-12 shadow-lg p-3 mb-1 text-center ">
+              />
+            </div>
+            <div className="col-sm-12 shadow-lg p-3 mb-1 text-center ">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Input Longitude"
                 onChange={(e) => setLongitude(e.target.value)}
               />
-              <input 
-              type="Submit">                
-              </input>
+              <input type="Submit"></input>
             </div>
           </div>
         </div>

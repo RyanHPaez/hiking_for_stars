@@ -7,7 +7,7 @@ function MusicSearch() {
   let [searchTerm, setSearchTerm] = useState("");
   let [data, setData] = useState([]);
   let [message, setMessage] = useState("");
-// this is where you fetch the data with the hook we made in MusicGallery. UseEffect lets us count state variables
+  // this is where you fetch the data with the hook we made in MusicGallery. UseEffect lets us count state variables
   useEffect(() => {
     if (searchTerm) {
       document.title = `${searchTerm} Music`;
@@ -34,13 +34,14 @@ function MusicSearch() {
   return (
     <div className="container">
       <div className="row">
-      <div className="col-sm-12 text-center justify-content-sm-center">
-      <SearchBar handleSearch={handleSearch} />
-      {message}
-      <MusicGallery data={data} />
-    </div></div></div>
+        <div className="col-sm-12 text-center justify-content-sm-center">
+          <SearchBar handleSearch={handleSearch} />
+          {message}
+          <MusicGallery data={data} />
+        </div>
+      </div>
+    </div>
   );
-  
 }
 
 export default MusicSearch;

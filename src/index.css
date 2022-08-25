@@ -109,14 +109,12 @@ img {
     }  
 
 img:hover {
-    /* height: 450px; */
     width: auto;
-    position:relative;
-   
+    position:relative;  
     bottom: 500px;
     opacity: 5;
     bottom: 1%;
-    /* z-index: 99; */
+    
     box-shadow: 0 0 10px 10px rgb(188, 157, 17);
     
     

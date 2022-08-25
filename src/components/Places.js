@@ -4,23 +4,27 @@ import { useContext } from "react";
 import { PlaceDataContext } from "../context/placeDataContext";
 
 function Places() {
-
   useEffect(() => {}, []);
 
   const placeData = useContext(PlaceDataContext);
-//This sets the state variable to the game that was clicked
- console.log('placeData', placeData)
+  //This sets the state variable to the game that was clicked
+  console.log("placeData", placeData);
 
-  const display = placeData.map((item, i) =>{
-
-    return(<div>
-      <h2 key={i} > {item.name}</h2>
-      <img src={item.thumbnail}></img>
-      <p><b>Rating:</b> {item.rating}</p>
-      <p><b>About the Trail:</b>{item.description}</p>
+  const display = placeData.map((item, i) => {
+    return (
+      <div>
+        <h2 key={i}> {item.name}</h2>
+        <img src={item.thumbnail}></img>
+        <p>
+          <b>Rating:</b> {item.rating}
+        </p>
+        <p>
+          <b>About the Trail:</b>
+          {item.description}
+        </p>
       </div>
-    )
-  })
+    );
+  });
 
   return (
     <div
@@ -31,9 +35,9 @@ function Places() {
       }}
     >
       <div>
-      {/* <a href='/cart'>Cart</a> */}
-      <h5>Trails </h5>
-      {display}
+        {/* <a href='/cart'>Cart</a> */}
+        <h5>Trails </h5>
+        {display}
       </div>
     </div>
   );

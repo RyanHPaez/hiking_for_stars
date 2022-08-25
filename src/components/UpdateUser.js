@@ -3,7 +3,6 @@ import { UserDataContext } from "../context/userDataContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
-
 function UpdateUser() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,21 +17,20 @@ function UpdateUser() {
 
   const handleChange = (event) => {};
 
- 
-  const handleSubmit = (event) =>{
-      event.preventDefault();
-      const user_id = logUserData._id
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const user_id = logUserData._id;
 
-      const updateUser ={
-        user_name: userName,
-        first_name: firstName.toLowerCase(),
-        last_name: lastName.toLowerCase(),
-        email: email.toLowerCase(),
-        password: password,
-        thumbnail: thumbnail
-      };
+    const updateUser = {
+      user_name: userName,
+      first_name: firstName.toLowerCase(),
+      last_name: lastName.toLowerCase(),
+      email: email.toLowerCase(),
+      password: password,
+      thumbnail: thumbnail,
+    };
 
-      // setLogUserData(updateUser)
+    // setLogUserData(updateUser)
     axios
       .put(`http://localhost:3005/secapp/edit/${user_id}`, logUserData)
       .then((response) => console.log(response.data));
@@ -41,7 +39,7 @@ function UpdateUser() {
   };
 
   console.log("inside UpdateUser page");
-  console.log(logUserData)
+  console.log(logUserData);
   // action={`/users/${logUserData._id}?_method=PUT`} method="POST"
   return (
     <div className="updateUser">
@@ -49,8 +47,8 @@ function UpdateUser() {
         <div className="row align-items-center">
           <div className="updateUser col-sm-12 shadow-lg p-1 mb-1  my-4">
             <div className="col-sm-12 shadow-lg p-3 mb-1 text-center">
-            <img
-                className="profileUser rounded-circle my-3"                
+              <img
+                className="profileUser rounded-circle my-3"
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png"
                 alt="us"
               />
@@ -76,19 +74,21 @@ function UpdateUser() {
               </div>
               <div className="newPassWord my-2">
                 <label htmlFor="password">New Password</label>
-                <input 
-                type="password" 
-                className="form-control"
-                name="name" 
-                id="password" />
+                <input
+                  type="password"
+                  className="form-control"
+                  name="name"
+                  id="password"
+                />
               </div>
               <div className="confirmPassword my-2">
                 <label htmlFor="confirmPassword">Confirm Password</label>
-                <input 
-                type="password" 
-                className="form-control"
-                name="name" 
-                id="confirmPassword" />
+                <input
+                  type="password"
+                  className="form-control"
+                  name="name"
+                  id="confirmPassword"
+                />
               </div>
 
               {/* <div className="col-md-12 my-2 text-center"> */}
@@ -147,31 +147,30 @@ function UpdateUser() {
                   }}
                 />
               </div>
-            
-            <div className="userImage">
-              <label htmlFor="image">Image</label>
-              <input
-                type="text"
-                className="form-control"
-                name="image"
-                id="image"
-                // value=
-                placeholder={logUserData.thumbnail}
-                onChange={(e) => {
-                  if (e.target.value > 0) {
-                    setThumbnail(e.target.value);
-                  } else {
-                    setThumbnail(logUserData.thumbnail);
-                  }
-                }}
-              />
-            </div>
+
+              <div className="userImage">
+                <label htmlFor="image">Image</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="image"
+                  id="image"
+                  // value=
+                  placeholder={logUserData.thumbnail}
+                  onChange={(e) => {
+                    if (e.target.value > 0) {
+                      setThumbnail(e.target.value);
+                    } else {
+                      setThumbnail(logUserData.thumbnail);
+                    }
+                  }}
+                />
+              </div>
             </div>
             <div className="col-md-12 my-2 text-center">
-            <input type="submit" />
+              <input type="submit" />
+            </div>
           </div>
-          </div>
-          
         </div>
       </form>
     </div>

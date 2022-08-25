@@ -48,47 +48,46 @@ function Page2(props) {
     return (
       <div className="TrailName">
         <div className="container">
-        <div className="row ">
-        <div className="col">
-        
-
-        
-            <h3 className="font-weight-light"></h3>
-            <form onSubmit={handleClick}>
-              {/* TrailName */}
-              <h3 className="font-weight-light my-3"               
-              key={i}>{item.name}
-              </h3>
-              {/* <NavLink className="nav-link" to="/ViewTrail"              
+          <div className="row ">
+            <div className="col">
+              <h3 className="font-weight-light"></h3>
+              <form onSubmit={handleClick}>
+                {/* TrailName */}
+                <h3 className="font-weight-light my-3" key={i}>
+                  {item.name}
+                </h3>
+                {/* <NavLink className="nav-link" to="/ViewTrail"              
                 onClick={() => {ViewTrail(item)}}                
               ><i class='fas fa-info-circle'></i>
               </NavLink>   */}
-              {/* TrailImage */}
-              <img              
-                src={item.thumbnail}
-                onMouseOut={() => {
-                  setHoverPopup(true);
-                  displayDetail(userFavorite);
-                }}
-              ></img>
-              {/* Rating word */}
-              <h6 class="my-3 font-weight-light">
-                <b>Rating: </b>
-                {item.rating}
-                <b />
-              </h6>
-              {/* AddToFavoriteButton */}
-              <label
-                className="font-weight-light"
-                onClick={() => {favoritedTrail(item)}}                
-              ><i class='far fa-heart'></i></label>                          
-                          
-            </form>
+                {/* TrailImage */}
+                <img
+                  src={item.thumbnail}
+                  onMouseOut={() => {
+                    setHoverPopup(true);
+                    displayDetail(userFavorite);
+                  }}
+                ></img>
+                {/* Rating word */}
+                <h6 class="my-3 font-weight-light">
+                  <b>Rating: </b>
+                  {item.rating}
+                  <b />
+                </h6>
+                {/* AddToFavoriteButton */}
+                <label
+                  className="font-weight-light"
+                  onClick={() => {
+                    favoritedTrail(item);
+                  }}
+                >
+                  <i class="far fa-heart"></i>
+                </label>
+              </form>
             </div>
-</div>
-</div>
           </div>
-      
+        </div>
+      </div>
     );
   });
 
@@ -134,10 +133,10 @@ function Page2(props) {
                   {userFavorite.name}
                 </h3>
                 <div className="Page2">
-                <img
-                  className="detailViewImg my-3"
-                  src={userFavorite.thumbnail}                  
-                ></img>
+                  <img
+                    className="detailViewImg my-3"
+                    src={userFavorite.thumbnail}
+                  ></img>
                 </div>
                 <div className="detailDescription text-center ">
                   <span className="description ">

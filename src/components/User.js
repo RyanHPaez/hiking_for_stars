@@ -5,7 +5,6 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import { Edit } from "./";
 
 function User(props) {
-  
   const { logUserData } = useContext(UserDataContext);
 
   const userId = logUserData._id;
