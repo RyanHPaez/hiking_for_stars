@@ -35,6 +35,7 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
+
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home user={welcomeUser}/>} />
           <Route path="/page2" element={<Page2 />} />
@@ -47,7 +48,6 @@ function App() {
           <Route path="/UpdateUser" element={<UpdateUser />} /> 
           <Route path="/DeleteUser" element={<DeleteUser/>}/>
           <Route path="/Map" element={<Map />} />
-
           <Route path="/ViewTrail" element={<ViewTrail />} />
         </Routes>
       </Router>

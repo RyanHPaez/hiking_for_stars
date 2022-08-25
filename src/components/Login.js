@@ -2,10 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { UserDataContext } from "../context/userDataContext";
-import {
-  faCommentDollar,
-  faCommentsDollar,
-} from "@fortawesome/free-solid-svg-icons";
 import User from "./User";
 
 function Login({ setWelcomeUser }) {
@@ -95,9 +91,9 @@ function Login({ setWelcomeUser }) {
           </div>
         </div>
       </form>
-      <User style="visibility:hidden;" filteredUserData={{ userData }}>
+      {/* <User style="visibility:hidden;" filteredUserData={{ userData }}>
         {" "}
-      </User>
+      </User> */}
     </div>
   );
 }

@@ -4,6 +4,8 @@ const { ReturnDocument } = require('mongodb');
 const router = express.Router();
 const User = require('../models/UserSchema');
 
+
+
 router.get('/users', async (req, res) => {
   
   console.log('route hit')
@@ -41,7 +43,7 @@ router.get('/user', async (req, res) =>{
   
   //show user
   router.get('/:id', (req, res) => {
-    const foundPlaces =  User.find()
+    const foundeUser =  User.find()
       .then(foundUser => {
         res.render('show', {
           user: foundUser
@@ -55,12 +57,15 @@ router.get('/user', async (req, res) =>{
  //update user route
   router.post('/edit/:id', async (req,res)=>{
     console.log('hit update route through edit/id')
-    const id = req.params.id
-    User.findByIdAndUpdate(id)
+   
+    const obj = req.params
+    console.log('object in update route', obj)
+    User.findByIdAndUpdate(obj._id, obj)
     .then(result => {
-      res.json({ redirect: '/Home '})
+      // res.json({ redirect: '/User '})
+    // console.log(results)
     })
-    res.status(200).json('Success')
+    // res.status(200).json('Success')
     // try{
     //     res.render('inside update users route')
     // }catch(err){

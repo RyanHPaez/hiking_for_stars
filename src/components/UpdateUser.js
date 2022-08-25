@@ -3,6 +3,7 @@ import { UserDataContext } from "../context/userDataContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
+
 function UpdateUser() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,26 +19,30 @@ function UpdateUser() {
 
   const handleChange = (event) => {};
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+ 
+  const handleSubmit = (event) =>{
+      event.preventDefault();
+      const user_id = logUserData._id
 
-    const updateUser = {
-      user_name: userName,
-      first_name: firstName.toLowerCase(),
-      last_name: lastName.toLowerCase(),
-      email: email.toLowerCase(),
-      password: password,
-      thumbnail: thumbnail,
-    };
+      const updateUser ={
+        user_name: userName,
+        first_name: firstName.toLowerCase(),
+        last_name: lastName.toLowerCase(),
+        email: email.toLowerCase(),
+        password: password,
+        thumbnail: thumbnail
+      };
 
+      // setLogUserData(updateUser)
     axios
-      .post(`http://localhost:3005/secapp/edit/${logUserData._id}`, updateUser)
+      .post(`http://localhost:3005/secapp/edit/${user_id}`, logUserData)
       .then((response) => console.log(response.data));
     window.alert("User has been updated");
     navigate("/user", { logUserData });
   };
 
   console.log("inside UpdateUser page");
+  console.log(logUserData)
   // action={`/users/${logUserData._id}?_method=PUT`} method="POST"
   return (
     <div className="updateUser">
