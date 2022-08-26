@@ -5,7 +5,7 @@
     "node": "16.14.2",
     "npm": "8.13.1",
     "proxy": "https://hikingforstar.herokuapp.com/",
-    "main": "server.js"
+    "npm-run-all": "react-scripts --max_old_space_size=4096 start  server.js"
   },
   "private": true,
   "dependencies": {
@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
+    "concurrently": "^7.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -33,7 +34,8 @@
     "webpack-dev-server": "^4.10.0"
   },
   "scripts": {
-    "start": "react-scripts --max_old_space_size=4096 start",
+    "start": "concurrently \"npm run server\" \"react-scripts --max_old_space_size=4096 start && npm start\"",
+    "server": "nodemon server.js",
     "build": "react-scripts --max_old_space_size=4096 build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "5": "^0.0.1",
+    "npm-run-all": "^4.1.5",
     "webpack": "^5.74.0"
   }
 }
