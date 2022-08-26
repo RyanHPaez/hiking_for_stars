@@ -6,7 +6,7 @@ const cors = require('cors');
 const uri = process.env.MONGODB_URI
 
 app.listen(3005, () => console.log("Server is running on PORT 3005"));
-
+const methodOverride = require ('method-override')
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
