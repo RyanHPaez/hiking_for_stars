@@ -1,11 +1,9 @@
 # Hiking For Stars
 
 TO LAUNCH FULL APP:
-# FRONTEND
+# FRONTEND&BACKEND
 do: npm start
 
-## BACKEND
-then: nodemon server.js
 
 # Heroku will only deploy FrontEnd
 https://hikingforstars.herokuapp.com/Home
