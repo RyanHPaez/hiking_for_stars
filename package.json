@@ -4,8 +4,8 @@
   "engines": {
     "node": "16.14.2",
     "npm": "8.13.1",
-    "proxy": "https://hikingforstar.herokuapp.com/",
-    "npm-run-all": "react-scripts --max_old_space_size=4096 start  server.js"
+    "proxy": "concurrently \"npm run server\" \"react-scripts --max_old_space_size=4096 start && npm start\"",
+    "npm-run-all": "concurrently \"npm run server\" \"react-scripts --max_old_space_size=4096 start && npm start\""
   },
   "private": true,
   "dependencies": {
