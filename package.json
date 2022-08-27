@@ -4,7 +4,7 @@
   "engines": {
     "node": "16.14.2",
     "npm": "8.13.1",
-    "proxy": "https://ryanpaezportfolio.herokuapp.com/"
+    "proxy": "3005"
     
   },
   "private": true,
