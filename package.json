@@ -5,7 +5,6 @@
     "node": "16.14.2",
     "npm": "8.13.1",
     "proxy": "3005"
-    
   },
   "private": true,
   "dependencies": {
@@ -16,6 +15,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
     "concurrently": "^7.3.0",
     "cors": "^2.8.5",
@@ -62,5 +62,17 @@
     "5": "^0.0.1",
     "npm-run-all": "^4.1.5",
     "webpack": "^5.74.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dcodeIO/bcrypt.js/issues"
+  },
+  "keywords": [
+    "bcrypt",
+    "password",
+    "auth",
+    "authentication",
+    "encryption",
+    "crypt",
+    "crypto"
+  ]
 }
